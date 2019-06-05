@@ -7,9 +7,10 @@
   <body>
     <h1>JavaScript and the DOM</h1>
     <p>Making a Web Page Interactive</p>
-    <!-- -->
-    <div class="exampleCollection">
-      <h3>Example 1: Modifying Content using HTMLElement.style</h3>
+    <!-- EX 1-->
+    <div class="exampleCollection" id="ex1">
+      <h3>Example 1: Modify Content using the HTMLElement.style Property</h3>
+      <p>This example demonstrates how to <em>modify content 'styles' of a targeted element that is bound to a 'click' event</em>. The result is that the text color, background-color, border, font-size, font-weight, text-alignment and line-height styles for the element will change when the user clicks the element.</p>
       
       <div class="codeGroup">
         <div>
@@ -26,13 +27,48 @@
       
       <p>This function starts by creating a variable that can reference the targeted elements. The <em>document<b>.getElementById&#40;&#41;</b> Method</em> is one of several options that targets Elements for selection: this option targets the <em><b>id 'textStyles'</b></em> that is coded into the HTML &#60;p&#62; element.</p>
       <p>Next, the <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textStyles' to listen for browser events. The first argument of this method is the 'type of event' that is expected: 'click' is the scheduled event that this listener is waiting for. The second argument of this method involves the functions that will be invoked by the listener whenever the user 'clicks' the element.</p>
-      <p>Inside of the listener, the variable name is referenced again along with the <em><b>HTMLElement.style</b> Property</em>, which is used to specify a value to modify the elements content. In this example, the text color, background-color, border, font-weight, text-alignment, line-height and font-size are all being modified.</p>
+      <p>Inside of the listener, the variable name is referenced again along with the <em><b>HTMLElement.style</b> Property</em>, which is used to specify a value to modify the elements content.</p>
       
       <div class="exampleArea">
         <p id="textStyles">Click this text to modify its content.</p>
       </div>
       
     </div>
+    <!-- -->
+    <hr style="margin-top: 24px;">
+    <hr>
+    <hr>
+    <hr>
+    <!-- EX 2 -->
+    <div class="exampleCollection" id="ex2">
+      <h3>Example 2: Use a Button to Reset Modified Content</h3>
+      <p>This example demonstrates how to <em>reset modified content 'styles' of a targeted element that is bound to a 'click' event</em>. All that was required was to include a &#60;button&#62; element with an id that could be used to target the 'textStylesZ' element: this is done by adding an event listener for the &#60;button&#62;. The difference between the two listeners is that the &#60;button&#62; listener targets the variable created to reference the &#60;p&#62; element.</p>
+      <p>The result is that the styles applied to the &#60;p&#62; on user-click will return to its original state.</p>
+      
+      <div class="codeGroup">
+        <div>
+          <h4><small><em style="color: grey;">index.html</em></small></h4>
+          <p>[a] <code>Select Elements from HTML</code></p>
+          <img src="img/examples/ex2html.png">   
+        </div>
+        <div>
+          <h4><small><em style="color: grey;">example1.js</em></small></h4>
+          <p>[b] <code>Add Event Listener with Functions</code></p>
+          <img src="img/examples/ex2function.png">    
+        </div>
+      </div>
+      
+      <p>This function starts by creating a new variable that can reference the targeted elements using the <em>document<b>.getElementById&#40;&#41;</b> Method</em> to target the <em><b>id 'textStyleZ'</b></em> that is coded into the HTML &#60;p&#62; element and the <em><b>id 'resetButton'</b></em> that is coded into the HTML &#60;button&#62; element.</p>
+      <p>A new <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'resetButton' to listen for browser events on the &#60;button&#62;.</p>
+      <p>Inside of the listener, a 'click' event-type is passed as the first argument, but the second argument of this method allows events on the &#60;button&#62; element to occur on the &#60;p&#62; element.</p>
+      
+      <div class="exampleArea">
+        <p id="textStyleZ">Click this text to modify its content.</p>
+        <button id="resetButton">Reset Modified Text</button>
+      </div>
+      
+    </div>
+    <!-- -->
     <!-- -->
     
      <!-- Link to app.js File -->

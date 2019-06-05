@@ -1,3 +1,4 @@
+/*  EXAMPLE 1: MODIFY CONTENT using HTMLElement.style Property  */
 //  SELECT (Reference) an Element
 const textStyles = document.getElementById('textStyles');
 
@@ -9,10 +10,36 @@ textStyles.addEventListener('click', () => {
   textStyles.style.border = '2px dashed gold';  // Set Border 
   textStyles.style.fontSize = '2em';            // Set Font-Size
   textStyles.style.fontWeight = '100';          // Set Font-Weight 
-  textStyles.style.textAlign = 'center';        // Set Text-Alignment
   textStyles.style.lineHeight = '2';            // Set Line-Height
+  textStyles.style.textAlign = 'center';        // Set Text-Alignment
 });
 
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+/*  EXAMPLE 2: RESET Modified Content */
+//  SELECT (Reference) an Element
+const textStyleZ = document.getElementById('textStyleZ');
+const resetButton = document.getElementById('resetButton');
+
+//  Event Listener to 'Listen for' Mouse-Clicks
+  //  Function to 'Modify Content' on 'Mouse-Click'
+textStyleZ.addEventListener('click', () => {
+  textStyleZ.style.color = 'red';               // Set Text-Color on 'textStyleZ'
+  textStyleZ.style.backgroundColor = 'black';   // Set Background-Color    
+});
+
+  //  Function to 'Reset' Modified Content on 'Mouse-Click'
+resetButton.addEventListener('click', () => {
+  textStyleZ.style.color = 'black';             // Reset Text-Color
+  textStyleZ.style.backgroundColor = '#eff6ff';   // Reset Background-Color    
+});
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
 
 
 /*
