@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript and the DOM</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1 id="myHeading">JavaScript and the DOM</h1>
+    <p>The <b>Document Object Model &#40;DOM&#41;</b> is a programming interface for HTML and anything that is viewable in a web browser. The DOM is a data representation of all HTML loaded into the browser.</p>
+    <p>An <b><em>Interface</em></b> is an Object structured to enforce specific properties on an <b><em>Object</em></b> &#40;or Class&#41;:  Interfaces are designed as Objects, and ALL Objects are Properties of the Global Variable <b><em>Window Interface</em></b>, which represents a window containing a DOM Document and all of its Objects.</p>
+    <p>The creation of an Object begins by 'selecting' an &#60;html&#62; Element for a specified function referenced in the script. The reference is then used to manipulate it in the <b><em>Document Interface</em></b>, which is the Root Node of the HTML document itself. The <em>Document</em> serves as an entry point into the web page's content were <b><em>Properties</em></b> and <b><em>Methods</em></b> are used to control the structure, style, content and functionality of a Document on the web in a multitude of ways. These entry points are specific to the DOM Tree acting as Nodes that are accessible via <b><em>Selectors</em></b> aka &#60;html&#62; Elements.</p>    
+    
+    <table>
+      <tr>
+        <th colspan="2">Sequence to Control an Element with JavaScript:</th>
+      </tr>
+      <tr>
+        <td>1<sup>st</sup></td>
+        <td>Select an Element</td>
+      </tr>
+      <tr>
+        <td>2<sup>nd</sup></td>
+        <td>Read or Change an Element</td>
+      </tr>
+      <tr>
+        <td>3<sup>rd</sup></td>
+        <td>Respond to User Events (Event Listening)</td>
+      </tr>
+    </table>
+    
+    <hr>
+    
+    <h4><a href="example1.html" target="_blank">Example 1</a></h4>
+    
+    
+    <!--<h1 id="myHeading">JavaScript and the DOM</h1>
+    <p></p>
+    <p>DOM stands for Document Object Model. The DOM is a representation of a webpage that JavaScript can use. In a Top-Down fashion, &#60;html&#62; elements are structured like a tree turned upside-down where the head of the family is the DOM, its descendants have siblings, so on and so forth~</p>
+    <p>Basic concepts include <span class="jargon">Selecting Elements</span>, <span class="jargon">Manipulating Element</span> and <span class="jargon">Listening for Events</span>. An example of this is when the browser loads a page, &#60;form&#62; fields start 'listening' for the cursor to hover over them.  The field itself can 'listen' to its content, in case a user misspells their email.</p>
+    <hr>
+    <p>Below you will find mini-tutorials that I created for quick reference. Perhaps it can be of use to you as well!</p>
+    <h4>Ch.1 <a href="selecting_elements.html" target="_blank">Selecting Elements</a> and <a href="selector_practice.html" target="_blank">Selector Practice</a></h4>
+    <h4>Ch.2 <a href="manipulate_dom.html" target="_blank">Manipulating the DOM</a></h4>
+    <h4>Ch.3 <a href="respond_userinteraction.html" target="_blank">Responding to User Interaction</a></h4>
+    <hr>
+    <h2>Resources</h2>
+    <h3>~Selecting Elements~</h3>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors" target="_blank">CSS Selectors</a></p>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank">The DOM</a></p>
+      <p>Document.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank">getElementByID&#40;&#41;</a></p>
+      <p>Document.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName" target="_blank">getElementsByTagName&#40;&#41;</a></p>
+      <p>Document.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" target="_blank">getElementsByClassName&#40;&#41;</a></p>
+      <p>Document.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank">querySelector&#40;&#41;</a></p>
+      <p>Document.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_blank">querySelectorAll&#40;&#41;</a></p>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers" target="_blank">Global Event Handlers</a></p>
+    <hr>
+    <h3>~Making Changes in the DOM~</h3>
+      <p>Node.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent" target="_blank">textContent</a></p>
+      <p>Element.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">innerHTML</a></p>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">List of Attributes</a></p>
+      <p>HTMLElement.<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">style</a></p>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference" target="_blank">List of CSS Properties</a></p>
+      <p>Document.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">createElement&#40;&#41;</a></p>
+      <p>Node.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank">appendChild&#40;&#41;</a></p>
+      <p>Node.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_blank">removeChild&#40;&#41;</a></p>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM Event Types</a></p>
+      <p>Window.<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout" target="_blank">setTimeout</a></p>
+      <p>EventTarget.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_blank">addEventListener&#40;&#41;</a></p>
+      <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event Object</a> &#40;Interface&#41;</p>
+      <p>Element.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName" target="_blank">tagName</a></p>
+      <p>Event.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/target" target="_blank">target</a></p>-->    
+  </body>
+</html>
