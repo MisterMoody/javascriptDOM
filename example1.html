@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript and the DOM</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1>JavaScript and the DOM</h1>
+    <p>Making a Web Page Interactive</p>
+    <!-- -->
+    <div class="exampleCollection">
+      <h3>Example 1: Modifying HTML Content</h3>
+      
+      <div class="codeGroup">
+        <div>
+          <h4><small><em style="color: grey;">index.html</em></small></h4>
+          <p>[a] <code>Select Elements from HTML</code></p>
+          <img src="img/examples/ex1html.png">   
+        </div>
+        <div>
+          <p>[b] <code>Add Event Listener with Functions</code></p>
+          <img src="img/examples/ex1function.png">    
+        </div>
+      </div>
+      
+      <p>This function starts by selecting the element with the id 'textStyles' from the HTML &#60;p&#62; element then passing it into the document object using the 'getElementById' method.</p>
+      <p>Next, the 'addEventListener' method is defined to use the variable reference 'textStyles' to listen for browser events. The first argument of this method is the 'type of event' that is expected: 'click' is the scheduled event that this listener is waiting for. The second argument of this method involves the functions that will be invoked by the listener whenever the user 'clicks' the element.</p>
+      <p>Inside of the listener, the variable name is referenced again along with the style property followed by a CSS property that is equal to a specified value to modify the elements content. In this example, the text color, background-color, border, font-weight, text-alignment, line-height and font-size are all being modified.</p>
+      
+      <div class="exampleArea">
+        <p id="textStyles">Click this text to modify its content.</p>
+      </div>
+      
+    </div>
+    <!-- -->
+    
+     <!-- Link to app.js File -->
+    <script src="js/example1.js"></script>
+  </body>
+</html>
