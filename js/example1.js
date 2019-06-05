@@ -8,7 +8,7 @@ textStyles.addEventListener('click', () => {
   textStyles.style.backgroundColor = 'black';   // Set Background-Color    
   textStyles.style.border = '2px dashed gold';  // Set Border 
   textStyles.style.fontWeight = '100';          // Set Font-Weight 
-  textStyles.style.textAlign = 'center';         // Set Text-Alignment
+  textStyles.style.textAlign = 'center';        // Set Text-Alignment
   textStyles.style.lineHeight = '2';            // Set Line-Height
   textStyles.style.fontSize = '2em';            // Set Font-Size
 });
