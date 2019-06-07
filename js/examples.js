@@ -42,6 +42,25 @@ resetButton.addEventListener('click', () => {
 ////////////////////////////////////////////////////////////////////////
 
 
+/*  EXAMPLE 3:  Use 'Input' to Modify Content */
+//  SELECT (Reference) an Element
+const textInputStyle = document.getElementById('textInputStyle');
+const inputButton = document.getElementById('inputButton');
+const textInput = document.getElementById('textInput');
+
+//  Event Listener to 'Listen for' Mouse-Clicks
+  //  Functions to 'Modify Content' on 'Input'
+inputButton.addEventListener('click', () => {
+  // Use Input to Set Text-Color on 'textInputStyle'
+  textInputStyle.style.color = textInput.value;  
+});
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
 /*
     Selecting Elements via /selecting_elements.html FILE
 */
