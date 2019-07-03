@@ -16,55 +16,66 @@
       <br>
       &#91;3&#93; End by passing the referenced selector variable to an <b><em>Event Listener</em></b> and specify its functionality.
     </p>
-    <!-- -->
-    <!-- -->
     <hr>
     <!-- -->
     <!-- -->
-    <h2>&#91;1&#93; Target and Select &#60;HTML&#62; Elements</h2>
-    <div>
-      <p>HTML elements can be targeted for selection by their class-name, id or actual tag. The &#60;html&#62; model below offers five kinds of <em>tags, a class and an id</em> that could be targeted for selection.</p>
+    <!-- -->
+    <!-- [1 + 2] Target + Store Elements -->
+    <div class="codeGroup">
       <div>
-        &nbsp;&#60;div class&#61;&#39;className&#39;&#62;<br>
-        &nbsp;&nbsp;&nbsp;&#60;h2 id&#61;&#39;idName&#39;&#62;&#62;TITLE&#60;/h2&#62;<br>
-        &nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem ipsum dolar et inuit a lah zo'men&#60;/p&#62;<br>
-        &nbsp;&nbsp;&nbsp;&#60;ul&#62;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item A&#60;li&#62;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item B&#60;li&#62;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item C&#60;li&#62;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item D&#60;li&#62;<br>
-        &nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br>
-        &nbsp;&#60;/div&#62;
+        <h2>&#91;1&#93; Target and Select &#60;HTML&#62; Elements</h2>
+        <div>
+          <p>HTML elements can be targeted for selection by their class-name, id or actual tag. The &#60;html&#62; model below offers five kinds of <em>tags, a class and an id</em> that could be targeted for selection.</p>
+          <div>
+            &nbsp;&#60;div class&#61;&#39;className&#39;&#62;<br>
+            &nbsp;&nbsp;&nbsp;&#60;h2 id&#61;&#39;idName&#39;&#62;&#62;TITLE&#60;/h2&#62;<br>
+            &nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem ipsum dolar et inuit a lah zo'men&#60;/p&#62;<br>
+            &nbsp;&nbsp;&nbsp;&#60;ul&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item A&#60;li&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item B&#60;li&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item C&#60;li&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item D&#60;li&#62;<br>
+            &nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br>
+            &nbsp;&#60;/div&#62;
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div>
+        <h2>&#91;2&#93; Store Element in a Variable for Reference</h2>
+        <div>
+          <p>After selecting an element, utilize it by creating a variable that incorporates the Document interface with a Method that belongs to that document object: from here, the element is stored and will called upon once that variable is activated.</p>
+          <div>
+            <div>var varName &#61; <em>document</em>.<b>getElementById&#40; '&#35;id' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>getElementsByTagName&#40; 'li' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>getElementsByClassName&#40; '.class' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>querySelector&#40; '&#35;id OR tag OR .class' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '&#35;id OR tag OR .class' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '<code>&#91;attribute=value&#93;</code>' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; 'li:<code>&#91;nth-child&#40;odd&#41;&#93;</code>' &#41;</b>;</div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- -->
-    <!-- -->
     <hr>
     <!-- -->
     <!-- -->
-    <h2>&#91;2&#93; Store Element in Variable using the Document Interface</h2>
-    <div>
-      <p>After selecting an element, utilize it by creating a variable that incorporates the Document interface with a Method that belongs to that document object: from here, the element is stored and will called upon once that variable is activated.</p>
-      <div>
-        <div>var varName &#61; <em>document</em>.<b>getElementById&#40; '&#35;id' &#41;</b>;</div>
-        <div>var varName &#61; <em>document</em>.<b>getElementsByTagName&#40; 'li' &#41;</b>;</div>
-        <div>var varName &#61; <em>document</em>.<b>getElementsByClassName&#40; '.class' &#41;</b>;</div>
-        <div>var varName &#61; <em>document</em>.<b>querySelector&#40; '&#35;id OR tag OR .class' &#41;</b>;</div>
-        <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '&#35;id OR tag OR .class' &#41;</b>;</div>
-        <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '<code>&#91;attribute=value&#93;</code>' &#41;</b>;</div>
-        <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; 'li:<code>&#91;nth-child&#40;odd&#41;&#93;</code>' &#41;</b>;</div>
-      </div>
-    </div>
-    <!-- -->
-    <!-- -->
-    <hr>
     <!-- -->
     <!-- -->
     <h2>&#91;3&#93; Utilize Event Listener</h2>
     <div>
-      <p>xxx</p>
+      <p>With the selected element stored in a variable, an Event Listener is invoked to perform a specified function that will be called whenever the event is triggered. The syntax appends the targeted selector to the <em>.addEventListener&#40;&#41;</em> method, which takes two parameters. The first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>object or function</em> that is used to manipulate the element wjem am evemt is triggered.</p>
       <div>
-        <div>selector<b>.addEventListener&#40;</b>b>'click', &#40;&#41; &#61;&#62; &#123;&#125;<b>&#41;;</b></div>  
+        targetedSelector<b>.addEventListener&#40;</b>'click', &#40;&#41; &#61;&#62; &#123;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;selectorFunction.xxx.yyy &#61; &#39;zzz&#39;;<br>
+        &#125; &#41;;
+      </div>
+      <p>There is a long list of <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">Event Types</a> that can be applied to a listener, but the more common ones include animation/transition, clipboard, form, keyboard and mouse events. This tutorial explores the use of click and input event types.</p>
+      <div class="notes">
+        <div><em>HTMLElement.style.property</em></div>
+        <div>selector.style.color &#61; &#39;red&#39;;</div>
+        <div><em>HTMLElement.style.property</em></div>
+        <div>selector.style.color &#61; inputSelector<b>.value</b>;</div>
       </div>
     </div>
     <!-- -->
@@ -78,6 +89,7 @@
     <h4><a href="examples.html#ex1" target="_blank">Example 1:</a>&nbsp;&nbsp; Modify Content using the HTMLElement.style Property</h4>
     <h4><a href="examples.html#ex2" target="_blank">Example 2:</a>&nbsp;&nbsp; Use a Button to Reset Modified Content</h4>
     <h4><a href="examples.html#ex3" target="_blank">Example 3:</a>&nbsp;&nbsp; Use an Input to Change the Color of Content</h4>
+    <h4><a href="examples.html#ex4" target="_blank">Example 4:</a>&nbsp;&nbsp; Use a for() Loop to Target a Set of Elements to Style</h4>
     <!--<h4><a href="example3.html" target="_blank">Example 3:</a>&nbsp;&nbsp;</h4>
     <h4><a href="example4.html" target="_blank">Example 4:</a>&nbsp;&nbsp;</h4>
     <h4><a href="example5.html" target="_blank">Example 5:</a>&nbsp;&nbsp;</h4>-->
