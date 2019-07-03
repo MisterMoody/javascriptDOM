@@ -64,7 +64,7 @@ inputButton.addEventListener('click', () => {
 /*  EXAMPLE 4:   */
 //  SELECT (Reference) an Element
 const myList = document.getElementsByTagName('li')
-//  Functions to 'Iterate over all <li>'
+//  Function to 'Iterate over all <li>'
   //  Makes color for all <li> 'purple'
 for (let i = 0; i < myList.length; i += 1) {
   myList[i].style.color = 'purple';
@@ -72,13 +72,19 @@ for (let i = 0; i < myList.length; i += 1) {
 
 //  SELECT (Reference) an Element
 const notPurple = document.getElementsByClassName('not-purple')
-//  Functions to 'Iterate over <li> with class="not-purple" '
+//  Function to 'Iterate over <li> with class="not-purple" '
   //  Makes color 'red' for <li> with the class 'not-purple'
 for (let i = 0; i < notPurple.length; i += 1) {
   notPurple[i].style.color = 'red';
 }
 
-
+//  SELECT (Reference) an Element
+const evens = document.querySelectorAll('li:nth-child(even)');
+//  Function to 'Iterate over all <li>'
+  //  Makes the background color for every-other <li> 'lightgray'
+for (let i = 0; i < evens.length; i += 1) {
+  evens[i].style.backgroundColor = 'lightgray';
+}
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
