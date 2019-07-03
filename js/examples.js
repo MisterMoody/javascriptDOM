@@ -62,10 +62,39 @@ inputButton.addEventListener('click', () => {
 
 
 /*  EXAMPLE 4:   */
+//  SELECT (Reference) an Element
+const myList = document.getElementsByTagName('li')
+//  Functions to 'Iterate over all <li>'
+  //  Makes color for all <li> 'purple'
+for (let i = 0; i < myList.length; i += 1) {
+  myList[i].style.color = 'purple';
+}
+
+//  SELECT (Reference) an Element
+const notPurple = document.getElementsByClassName('not-purple')
+//  Functions to 'Iterate over <li> with class="not-purple" '
+  //  Makes color 'red' for <li> with the class 'not-purple'
+for (let i = 0; i < notPurple.length; i += 1) {
+  notPurple[i].style.color = 'red';
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+/*  EXAMPLE 5:   */
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
 
 
 
