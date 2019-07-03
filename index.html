@@ -24,7 +24,34 @@
     <h4><a href="example4.html" target="_blank">Example 4:</a>&nbsp;&nbsp;</h4>
     <h4><a href="example5.html" target="_blank">Example 5:</a>&nbsp;&nbsp;</h4>-->
     
-    
+    <h2>Selecting Elements</h2>
+    <div>
+      <p>HTML elements can be targeted for selection by their class-name, id or actual tag.</p>
+      <p>After selecting an element, utilize it by creating a variable that incorporates the Document interface with a Method that belongs to that document object: from here, the element is stored and will called upon once that variable is activated.</p>
+      <div>
+        <div>var varName &#61; <em>document</em>.<b>getElementById&#40; '&#35;id' &#41;</b>;</div>
+        <div>var varName &#61; <em>document</em>.<b>getElementsByTagName&#40; 'li' &#41;</b>;</div>
+        <div>var varName &#61; <em>document</em>.<b>getElementsByClassName&#40; '.class' &#41;</b>;</div>
+        <div>var varName &#61; <em>document</em>.<b>querySelector&#40; '&#35;id OR tag OR .class' &#41;</b>;</div>
+        <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '&#35;id OR tag OR .class' &#41;</b>;</div>
+      </div>
+    </div>
+    <br>
+    <div class="notes">
+      <div><div>Using a <span class="jargon">Complex</span> Selector</div></div>
+      <div>.querySelector&#40;'<code>ul&#46;odds &#62; li&#58;nth&#45;child&#40;odd&#41;</code>'&#41;</div>
+      <div><div>Using an <span class="jargon">attribute</span> Selector</div></div>
+      <div>.querySelectorAll&#40;'<code>&#91;attribute=value&#93;</code>'&#41;</div>
+      <div><div>Using the <span class="jargon">:nth-child</span> Selector</div></div>
+      <div>.querySelectorAll&#40;'li:<code>&#91;nth-child&#40;odd&#41;&#93;</code>'&#41;</div>
+    </div>
+    <hr>
+    <div>
+      <p>The Selector can then be passed to that method within the Event Listener:</p>
+        <div>
+          <div><b>selector.addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;&#125;&#41;;</b></div>  
+        </div>
+    </div>
     <!--
     <hr>
     <p>Below you will find mini-tutorials that I created for quick reference. Perhaps it can be of use to you as well!</p>
