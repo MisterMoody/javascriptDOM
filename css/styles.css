@@ -20,6 +20,7 @@ code {
 .notes {
   display: grid;
   grid-template-columns: auto 1fr;  
+  grid-gap: 10px;
 }
 @media only screen and (min-width: 1111px) {
   .codeGroup {
@@ -27,10 +28,10 @@ code {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px 16px;
   }
-  .notes {
+  /*.notes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);  
-  }
+  }*/
 }
 /*Highlights Code-Jargon*/
 .jargon {
@@ -67,19 +68,18 @@ img {
   padding: 4px 12px;
 }
 h4, h5 {margin: 0 auto;}
-
+/* Table */
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  padding: 0;
 }
-
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
-
 tr:nth-child(even) {
   background-color: #dddddd;
 }
@@ -89,7 +89,7 @@ tr:nth-child(even) {
 
 @media only screen and (min-width: 600px) {
   body {
-  padding: .45em 2.65em 3em;
+    padding: .45em 2.65em 3em;
   }
 }
 body {
@@ -109,14 +109,15 @@ h1 {
 }*/
 ul {
   padding-left: 0;
-  list-style: none;
 }
 li {
-  padding: .45em .5em;
-  margin-bottom: .35em;
+  padding-left: 16px;
+  margin: 0 0 0 ;
   display: flex;
   align-items: center;
 }
+h5 + p { margin-top: -5px;}
+p + ul { margin-top: -10px;}
 input,
 button {
   font-size: .85em;
@@ -128,16 +129,9 @@ input {
   border: 1px solid #dcdcdc;
   margin-right: 1em;
 }
-/*div {
-  margin-top: 2.8em;
-  padding: 1.5em 0 .5em;
-  border-top: 1px dotted #637a91;
-}*/
-/*p.description,
-p:nth-of-type(2) {
-  font-weight: bold;
-}*/
-/* Buttons */
+
+/* 
+  Buttons 
 button {
   color: white;
   background: #508abc;
@@ -168,3 +162,4 @@ li button {
   font-size: .75em;
   padding: .5em .65em;
 }
+*/
