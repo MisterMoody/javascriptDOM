@@ -23,7 +23,7 @@
     <!-- [1 + 2] Target + Store Elements -->
     <div class="codeGroup">
       <div>
-        <h2>&#91;1&#93; Target and Select &#60;HTML&#62; Elements</h2>
+        <h2>&#91;1a&#93; Target and Select &#60;HTML&#62; Elements</h2>
         <div>
           <p>HTML elements can be targeted for selection by their class-name, id or actual tag. The &#60;html&#62; model below offers five kinds of <em>tags, a class and an id</em> that could be targeted for selection.</p>
           <div>
@@ -42,7 +42,7 @@
       </div>
       <!-- -->
       <div>
-        <h2>&#91;2&#93; Store Element in a Variable for Reference</h2>
+        <h2>&#91;1b&#93; Store Element in a Variable for Reference</h2>
         <div>
           <p>After selecting an element, utilize it by creating a variable that incorporates the Document interface with a Method that belongs to that document object: from here, the element is stored and will called upon once that variable is activated.</p>
           <div>
@@ -56,27 +56,64 @@
           </div>
         </div>
       </div>
-    </div>
-    <hr>
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <h2>&#91;3&#93; Utilize Event Listener</h2>
-    <div>
-      <p>With the selected element stored in a variable, an Event Listener is invoked to perform a specified function that will be called whenever the event is triggered. The syntax appends the targeted selector to the <em>.addEventListener&#40;&#41;</em> method, which takes two parameters. The first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>object or function</em> that is used to manipulate the element wjem am evemt is triggered.</p>
+      <!-- -->
       <div>
-        targetedSelector<b>.addEventListener&#40;</b>'click', &#40;&#41; &#61;&#62; &#123;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;selectorFunction.xxx.yyy &#61; &#39;zzz&#39;;<br>
-        &#125; &#41;;
+        <h2>&#91;2a&#93; Utilize Event Listener</h2>
+        <div>
+          <p>With the selected element stored in a variable, the <em>Event Listener</em> Method is invoked to perform the function that is called whenever the event is triggered.</p>
+          <div>
+            selector<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;...&#125; &#41;</b>;
+          </div>
+          <p>The syntax appends the selector to the <em>.addEventListener&#40;&#41;</em> method, which takes two parameters. The first parameter defines the <em>type of event</em> to listen for. (See 2b)</p>
+          <!--<p>There is a long list of <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">Event Types</a> that can be applied to a listener, but the more common ones include animation/transition, clipboard, form, keyboard and mouse events. This tutorial explores the use of click and input event types.</p>-->
+        </div>
       </div>
-      <p>There is a long list of <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">Event Types</a> that can be applied to a listener, but the more common ones include animation/transition, clipboard, form, keyboard and mouse events. This tutorial explores the use of click and input event types.</p>
-      <div class="notes">
-        <div><em>HTMLElement.style.property</em></div>
-        <div>selector.style.color &#61; &#39;red&#39;;</div>
-        <div><em>HTMLElement.style.property</em></div>
-        <div>selector.style.color &#61; inputSelector<b>.value</b>;</div>
+      <!-- -->
+      <div>
+        <h2>&#91;2b&#93; Add a Function to Element</h2>
+        <!-- Selector = Element -->
+        <p>There are a plethora of properties and methods that can be utilized to assign a function to an element: simply place inside of an event listener.</p>
+        <div>
+          .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          <b>&nbsp;selector.property &#61; &#39;value&#39;;&nbsp;</b>
+          &#125; &#41;;
+        </div>
+        <p>The second parameter represents the <em>function</em> (or object) that is used to manipulate the element when an event is triggered.</p>
       </div>
+    </div>    
+    <!-- -->
+    <!-- -->
+    <div>
+      <h5>Modify Text</h5>
+      <p><em>Element.textContent</em> can be used to modify text.</p>
+      <ul>
+        <li>selector.textContent &#61; &#39;This is the main title.&#39;</li>
+        <li>selector.textContent &#61; inputSelector.value;</li>
+      </ul>
+      <!-- -->
+      <h5>Modify Attributes</h5>
+      <p><em>Element.attribute</em> gets or sets an elements attribute. Creating a tooltip is an example. Review the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">List of Attributes</a>.</p>
+      <ul>
+        <li>selector.title &#61; &#39;Tooltip Content&#39;</li>
+      </ul>
+      <!-- -->
+      <h5>Style Elements</h5>
+      <p><em>Element.style.property</em> can be used to <em>set the CSS styles of an element</em>. Toggling the display of an element is an example.</p>
+      <ul>
+        <li>selector.style.backgroundColor &#61; &#39;red&#39;;</li>
+        <li>selector.style.color &#61; &#39;red&#39;;</li>
+        <li>selector.style.color &#61; inputSelector.value;</li>
+        <li>selector.style.display &#61; &#39;none&#39;;</li>
+      </ul>
+      <!-- -->
+      <h5>Create Elements</h5>
+      <p>Not only can a function be written to modify an element, it can also be used to create a new element as illustrated below. The first line creates a new &#60;ul&#62; variable to store &#60;ul&#62; elements. The second line creates the new &#60;li&#62; element(s) and assigns it to a variable. The third line sets the text that we want &#60;li&#62; element to contain from the input selector. And the fourth line appends the new &#60;li&#62; (line two) to the &#60;ul&#62; element!</p>
+      <ul>
+        <li>let ul = document.getElementsByTagName('ul')[0];</li>
+        <li>let li = document.createElement('li');</li>
+        <li>li.textContent = inputSelector.value</li>
+        <li>ul.appendChild(li);</li>
+      </ul>
     </div>
     <!-- -->
     <!-- -->
@@ -86,13 +123,18 @@
     <h2>Functional Scripts</h2>
     <p>Below you will find a list of functional scripts that I created.</p>
     <h4><a href="example2.html" target="_blank"><b>Development PRACTICE</b></a></h4>
+    <br>
+    <h3>Part I: Selecting Elements</h3>
     <h4><a href="examples.html#ex1" target="_blank">Example 1:</a>&nbsp;&nbsp; Modify Content using the HTMLElement.style Property</h4>
     <h4><a href="examples.html#ex2" target="_blank">Example 2:</a>&nbsp;&nbsp; Use a Button to Reset Modified Content</h4>
     <h4><a href="examples.html#ex3" target="_blank">Example 3:</a>&nbsp;&nbsp; Use an Input to Change the Color of Content</h4>
     <h4><a href="examples.html#ex4" target="_blank">Example 4:</a>&nbsp;&nbsp; Use a for() Loop to Target a Set of Elements to Style</h4>
-    <!--<h4><a href="example3.html" target="_blank">Example 3:</a>&nbsp;&nbsp;</h4>
-    <h4><a href="example4.html" target="_blank">Example 4:</a>&nbsp;&nbsp;</h4>
-    <h4><a href="example5.html" target="_blank">Example 5:</a>&nbsp;&nbsp;</h4>-->
+    <br>
+    <h3>Part II: Manipulating Elements</h3>
+    <h4><a href="examples.html#ex5" target="_blank">Example 5:</a>&nbsp;&nbsp; xyz</h4>
+    <!--
+    <h4><a href="examples.html#ex6" target="_blank">Example 6:</a>&nbsp;&nbsp;</h4>
+    <h4><a href="examples.html#ex7" target="_blank">Example 7:</a>&nbsp;&nbsp;</h4>-->
     
     
     <!--
