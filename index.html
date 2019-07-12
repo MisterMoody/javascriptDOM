@@ -27,14 +27,14 @@
         <div>
           <p>HTML elements can be targeted for selection by their class-name, id or actual tag. The &#60;html&#62; model below offers five kinds of <em>tags, a class and an id</em> that could be targeted for selection.</p>
           <div>
-            &nbsp;&#60;div class&#61;&#39;className&#39;&#62;<br>
-            &nbsp;&nbsp;&nbsp;&#60;h2 id&#61;&#39;idName&#39;&#62;&#62;TITLE&#60;/h2&#62;<br>
+            &nbsp;&#60;div <code>class&#61;&#34;className&#34;</code>&#62;<br>
+            &nbsp;&nbsp;&nbsp;&#60;h2 <code>id&#61;&#34;idName&#34;&#62;</code>TITLE&#60;/h2&#62;<br>
             &nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem ipsum dolar et inuit a lah zo'men&#60;/p&#62;<br>
             &nbsp;&nbsp;&nbsp;&#60;ul&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item A&#60;li&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item B&#60;li&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item C&#60;li&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Item D&#60;li&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item A&#60;<code>/li</code>&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item B&#60;<code>/li</code>&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item C&#60;<code>/li</code>&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item D&#60;<code>/li</code>&#62;<br>
             &nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br>
             &nbsp;&#60;/div&#62;
           </div>
@@ -46,11 +46,11 @@
         <div>
           <p>After selecting an element, utilize it by creating a variable that incorporates the Document interface with a Method that belongs to that document object: from here, the element is stored and will called upon once that variable is activated.</p>
           <div>
-            <div>var varName &#61; <em>document</em>.<b>getElementById&#40; '&#35;id' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>getElementsByTagName&#40; 'li' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>getElementsByClassName&#40; '.class' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>querySelector&#40; '&#35;id OR tag OR .class' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '&#35;id OR tag OR .class' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>getElementById&#40; '<code>&#35;id</code>' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>getElementsByTagName&#40; '<code>li</code>' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>getElementsByClassName&#40; '<code>.class</code>' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>querySelector&#40; '<code>&#35;id OR tag OR .class</code>' &#41;</b>;</div>
+            <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '<code>&#35;id OR tag OR .class</code>' &#41;</b>;</div>
             <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '<code>&#91;attribute=value&#93;</code>' &#41;</b>;</div>
             <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; 'li:<code>&#91;nth-child&#40;odd&#41;&#93;</code>' &#41;</b>;</div>
           </div>
