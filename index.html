@@ -115,9 +115,37 @@
         <li>ul.appendChild(li);</li>
       </ul>
     </div>
-    <!-- -->
-    <!-- -->
     <hr>
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <div>
+      <h2>Events</h2>
+      <p>Anytime you interact with a webpage, you generate different kinds of events. An <b>Event</b> is something that occurs on a webpage such as a user action (ie clicking on a link) to automated notifications. JavaScript was created to <em>listen for events and respond to them</em>: actually, the browser listens for events while JavaScript is used to respond accordingly.</p>
+      <p>Events are represented by an Object, based on the Event Interface. There are more than 100 JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event-types</a> defined in official specifications that can be utilized to create an event.</p>
+      <p>The representation of an Object is a Function, and functions can be passed as a Parameter to an Event Listener.</p>
+      <h5>Delay Execution</h5>
+      <p>The <b>setTimeout</b> Function <em>sets a timer which will execute a function once the timer expires</em>.</p>
+      <ul>
+        <li>var varName = window.setTimeout();</li>
+      </ul>
+      <div><img src="img/examples/setTimeout.png"></div>
+      <!-- -->
+      <br>
+      <!-- -->
+      <h2>The Event Listener</h2>
+      <p>The EventTarget.addEventListener() Method registers a listener on the EventTarget (ie element in Document or Window Interface) it's called on. The first parameter is an event-type: the event to listen for. The second parameter is the JavaScript Function (ie Callback Function aka Event Handler) to be implemented when an event takes place.</p>
+      <div><img src="img/examples/addEventListener.png"></div>
+      <p>In the code above, a forLoop() is used to iterate through all &#60;li&#62;: when user hovers over any of the content, it will appear as UPPERCASE; it will revert to lowercase otherwise.</p>
+      <p>Event Bubbling and Delegation is imperative at this juncture. The <b><a href="https://teamtreehouse.com/library/the-event-object-2" target="_blank">event.target</a></b> Property can be used in order to implement event delegation.</p>
+      <!-- -->
+      <br>
+      <!-- -->
+    </div>
+    <hr>
+    <!-- -->
+    <!-- -->
     <!-- -->
     <!-- -->
     <h2>Functional Scripts</h2>
