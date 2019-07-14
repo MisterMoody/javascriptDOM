@@ -93,6 +93,7 @@ tr:nth-child(even) {
   }
 }
 body {
+  margin: 0 8em;
   color: #484848;
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
