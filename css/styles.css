@@ -3,6 +3,9 @@
 
 
 /* +++++++++++++++++++MY Styles +++++++++++++++++++++++++++++++ */
+article {background-color: mistyrose;}
+article:nth-child(odd) {  background-color: lightsteelblue;}
+section {background-color: lemonchiffon;}
 ul.table {
   /*background-color: lime;*/
   display: grid;
@@ -25,7 +28,7 @@ code {
 @media only screen and (min-width: 1111px) {
   .codeGroup {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     grid-gap: 8px 16px;
   }
   /*.notes {
@@ -67,7 +70,7 @@ img {
   border-radius: 4px;
   padding: 4px 12px;
 }
-h4, h5 {margin: 0 auto;}
+h5 {margin: 0 auto;}
 /* Table */
 table {
   font-family: arial, sans-serif;
@@ -87,16 +90,18 @@ tr:nth-child(even) {
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media only screen and (min-width: 600px) {
-  body {
-    padding: .45em 2.65em 3em;
-  }
-}
+
 body {
-  margin: 0 8em;
+  margin: 0 2em;
   color: #484848;
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
+}
+@media only screen and (min-width: 1000px) {
+  body {
+  margin: 0 8em;
+    padding: .45em 2.65em 3em;
+  }
 }
 h1 {
   margin-bottom: 0;
@@ -117,6 +122,8 @@ li {
   display: flex;
   align-items: center;
 }
+h4 + div.codeGroup { margin-top: -32px;}
+h4 + p { margin-top: -20px;}
 h5 + p { margin-top: -5px;}
 p + ul { margin-top: -10px;}
 input,
