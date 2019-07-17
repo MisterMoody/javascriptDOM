@@ -29,40 +29,44 @@
         <br>
         &#91;2&#93; Pass the element to an <em>.addEventListener()</em> method. 
         <br>
-        &#91;3&#93; Write the function to be performed when an event is triggered. .
+        &#91;3&#93; Write the function to be performed when an event is triggered.
       </p>
-      <!-- [1] Select and Element + Store Element in a Variable -->
+      <!-- [1] Select Element + Store Element in a Variable -->
       <article>
         <h3>[1] Select an <em>&#60;html&#62;</em> Element and Store in a Variable</h3>
         <h4>Selecting an Element</h4>
-        <p>
-          The first step in this process is quite simple: select an element to be used for manipulation and store it in a variable. Selection is a way to identify an element so that the browser can find and make it available for us to do something with it using JavaScript.
-        </p>
-        <p>
-          Elements can be selected by id, class name or tag: individually or as a collection. The &#60;html&#62; model below highlights <em>elements</em> that could be targeted for selection:
-        </p>
+        <div class="codeGroup">
           <div>
-            &nbsp;&#60;div <code>class&#61;&#34;className&#34;</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&#60;h2 <code>id&#61;&#34;idName&#34;&#62;</code>Title&#60;/h2&#62;<br>
-            &nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem ipsum dolar et inuit a lah zo'men&#60;/p&#62;<br>
-            &nbsp;&nbsp;&nbsp;&#60;ul&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item A&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item B&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item C&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item D&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br>
-            &nbsp;&#60;/div&#62;
+            <p>
+              The first step in this process is quite simple: select an element to be used for manipulation and store it in a variable. Selection is a way to identify an element so that the browser can find and make it available for us to do something with it using JavaScript.
+            </p>
+            <p>
+              Elements can be selected by id, class name or tag: individually or as a collection. The &#60;html&#62; model  highlights <em>elements</em> that could be targeted for selection, which is essentially anything below the fold:
+            </p>
           </div>
+          <div>
+            <p>&nbsp;&#60;div <code>class&#61;&#34;className&#34;</code>&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#60;h2 <code>id&#61;&#34;idName&#34;&#62;</code>Title&#60;/h2&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem ipsum dolar a lah zo'men&#60;/p&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item A&#60;<code>/li</code>&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item B&#60;<code>/li</code>&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item C&#60;<code>/li</code>&#62;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br>
+            &nbsp;&#60;/div&#62;</p>
+          </div>
+        </div>
         <h4>Selection Methods</h4>
         <p>
-          There are five methods that can be used to select an element when proceeding to store it in a variable, all of which are structured in similar fashion: 
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const varName = document.<b>method('selector')</b>;
+          When storing an element in a variable, the variable name should reflect the element and its function. There are five methods that can be used to select an element when proceeding to store it in a variable, all of which are structured in similar fashion: 
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const varName = document.<b>method('<code>selector</code>')</b>;
         </p>
+        <p>The document interface is employed here as a <em>constructor</em> to create a new Document object as a <em>GlobalEventHandler</em>, simultaneously acting as a reference to be called in the callback function later on.</p>
         <p>
           The .<b>getElementById&#40; '<code>id</code>' &#41;</b>; method is use when selecting an <em>#id</em>: this is the most commonly used method for manipulating or getting data from an individual element on your document. 
         </p>
         <p>
-           The .<b>getElementsByClassName&#40; '<code>className</code>' &#41;</b>; and .<b>getElementsByTagName&#40; '<code>li</code>' &#41;</b>; methods are commonly used to return a collection of all elements in the document with the specified <em>.className</em> or <em>&#60;tag&#62;</em>, respectively, as a <em>NodeList object</em>. The NodeList object represents a collection of nodes that can be accessed by index numbers, starting at 0. You can use the length property of the NodeList object to determine the number of elements, then you can loop through all elements and extract the info you want.
+           The .<b>getElementsByClassName&#40; '<code>className</code>' &#41;</b>; and .<b>getElementsByTagName&#40; '<code>li</code>' &#41;</b>; methods are commonly used to return a collection of all elements in the document with the specified <em>.className</em> or <em>&#60;tag&#62;</em>, respectively, as a <em>NodeList object</em>. The NodeList object represents a collection of nodes that can be accessed by index numbers, starting at 0. You can use the length property of the NodeList object to determine the number of elements, then you can loop through all elements and extract the info you want. <br><em>*A collection is like an array: gain access via its indices or loop over it in its entirety to access all items. The objective of targeting a collection is completed with the use of a for&#40;&#41; loop due to the need to iterate over all items.</em>
         </p>
         <p>
           The aforementioned methods will <em>return live DOM elements</em> whereas any changes are reflected in the NodeList object. Sometimes it is best not to return live DOM elements and this can be done using a query method.
@@ -78,8 +82,59 @@
       </article>
       <!-- [2] Pass Element to .addEventListener() -->
       <article>
-        <h3>[2] Pass Element to .addEventListener() Method</h3>
-        <p>When being stored in a variable, the variable name should reflect the element and its function.  lorem ipsum blah blah blah</p>
+        <h3>[2] Pass Selector to .addEventListener() Method</h3>
+        <p>
+          With the selected element stored in a variable, the <em>.addEventListener()</em> method can be appended to the <em>target</em> (ie selector) to instantiate a function-block that will be called whenever the event is triggered.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; target<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;function&#125; &#41;</b>;
+        </p>
+        <p>
+          This method takes two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>function</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. Once the event is triggered, the function will initiate is manipulative powers!
+        </p>
+        <p>
+          Events are represented by an object based on its <em>EventTarget</em>: Element, Document or Window Interface. The most common event types include mouse and keyboard events, but there are more than 100 <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event types</a> defined in official specifications that can be utilized to create an event.
+        </p>
+        <table>
+          <tr>
+            <th>Event Type</th>
+            <th>Fired when~</th>
+          </tr>
+          <tr>
+            <td>Mouse</td>
+            <td>click / dblclick / mousedown</td>
+          </tr>
+          <tr>
+            <td>Keyboard</td>
+            <td>keydown / keyup / keypress</td>
+          </tr>
+          <tr>
+            <td>Resource</td>
+            <td>load / unload / abort / error</td>
+          </tr>
+          <tr>
+            <td>Form</td>
+            <td>reset / submit</td>
+          </tr>
+          <tr>
+            <td>View</td>
+            <td>resize / scroll / fullscreenchange</td>
+          </tr>
+          <tr>
+            <td>Progress</td>
+            <td>abort / error / load / timeout</td>
+          </tr>
+          <tr>
+            <td>Clipboard</td>
+            <td>cut / copy / paste</td>
+          </tr>
+          <tr>
+            <td>CSS Animation</td>
+            <td>animationstart / animationiteration</td>
+          </tr>
+          <tr>
+            <td>CSS Transition</td>
+            <td>transitionend / transitioncancel</td>
+          </tr>
+        </table>
       </article>
       <!-- [3] Add Function to Listener -->
       <article>
@@ -90,55 +145,7 @@
     <!-- -->
     <!-- -->
     <!-- -->
-    <!-- [1 + 2] Target + Store Elements -->
-    <div class="codeGroup">
-      <div>
-        <!--<h2>&#91;1a&#93; Target and Select &#60;HTML&#62; Elements</h2>
-        <div>
-          <p> HTML elements can be targeted for selection by their class-name, id or actual tag. The &#60;html&#62; model below offers five kinds of <em>tags, a class and an id</em> that could be targeted for selection.</p>
-          <div>
-            &nbsp;&#60;div <code>class&#61;&#34;className&#34;</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&#60;h2 <code>id&#61;&#34;idName&#34;&#62;</code>Title&#60;/h2&#62;<br>
-            &nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem ipsum dolar et inuit a lah zo'men&#60;/p&#62;<br>
-            &nbsp;&nbsp;&nbsp;&#60;ul&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item A&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item B&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item C&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item D&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br>
-            &nbsp;&#60;/div&#62;
-          </div>
-        </div>-->
-      </div>
-      <!-- -->
-      <div>
-        <!--<h2>&#91;1b&#93; Store Element in a Variable for Reference</h2>
-        <div>
-          <p>After selecting an element, utilize it by creating a variable that incorporates the Document interface with a Method that belongs to that document object: from here, the element is stored and will called upon once that variable is activated.</p>
-          <div>
-            <div>var varName &#61; <em>document</em>.<b>getElementById&#40; '<code>&#35;id</code>' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>getElementsByTagName&#40; '<code>li</code>' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>getElementsByClassName&#40; '<code>.class</code>' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>querySelector&#40; '<code>&#35;id OR tag OR .class</code>' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '<code>&#35;id OR tag OR .class</code>' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; '<code>&#91;attribute=value&#93;</code>' &#41;</b>;</div>
-            <div>var varName &#61; <em>document</em>.<b>querySelectorAll&#40; 'li:<code>&#91;nth-child&#40;odd&#41;&#93;</code>' &#41;</b>;</div>
-          </div>
-        </div>-->
-      </div>
-      <!-- -->
-      <div>
-        <h2>&#91;2a&#93; Utilize Event Listener</h2>
-        <div>
-          <p>With the selected element stored in a variable, the <em>Event Listener</em> Method is invoked to perform the function that is called whenever the event is triggered.</p>
-          <div>
-            selector<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;...&#125; &#41;</b>;
-          </div>
-          <p>The syntax appends the selector to the <em>.addEventListener&#40;&#41;</em> method, which takes two parameters. The first parameter defines the <em>type of event</em> to listen for. (See 2b)</p>
-          <!--<p>There is a long list of <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">Event Types</a> that can be applied to a listener, but the more common ones include animation/transition, clipboard, form, keyboard and mouse events. This tutorial explores the use of click and input event types.</p>-->
-        </div>
-      </div>
-      <!-- -->
+    <!-- [2] Event Listener -->
       <div>
         <h2>&#91;2b&#93; Add a Function to Element</h2>
         <!-- Selector = Element -->
@@ -148,9 +155,7 @@
           <b>&nbsp;selector.property &#61; &#39;value&#39;;&nbsp;</b>
           &#125; &#41;;
         </div>
-        <p>The second parameter represents the <em>function</em> (or object) that is used to manipulate the element when an event is triggered.</p>
-      </div>
-    </div>    
+      </div>  
     <!-- -->
     <!-- -->
     <div>
@@ -193,21 +198,18 @@
     <!-- -->
     <!-- -->
     <div>
+    <!-- 
+    Tutorial: https://teamtreehouse.com/library/what-is-an-event
+    -->
+      <!--
       <h2>Events</h2>
       <p>Anytime you interact with a webpage, you generate different kinds of events. An <b>Event</b> is something that occurs on a webpage such as a user action (ie clicking on a link) to automated notifications. JavaScript was created to <em>listen for events and respond to them</em>: actually, the browser listens for events while JavaScript is used to respond accordingly.</p>
-      <p>Events are represented by an Object, based on the Event Interface. There are more than 100 JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event-types</a> defined in official specifications that can be utilized to create an event.</p>
-      <p>The representation of an Object is a Function, and functions can be passed as a Parameter to an Event Listener.</p>
-      <h5>Delay Execution</h5>
-      <p>The <b>setTimeout</b> Function <em>sets a timer which will execute a function once the timer expires</em>.</p>
-      <ul>
-        <li>var varName = window.setTimeout();</li>
-      </ul>
-      <div><img src="img/examples/setTimeout.png"></div>
-      <!-- -->
+      <p>Any time a user interacts with a webpage &#45;whether moving the mouse, scrolling or clicking a link, an <span class="jargon">event</span> is generated. Browsers 'listen' for events and JavaScript allows developers to do something in response to an Event.</p>
+      <p>DOM Events are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the Event interface, and may have additional custom fields and/or functions used to get additional information about what happened. Events can represent everything from basic user interactions to automated notifications of things happening in the rendering model.</p>
+       -->
       <br>
       <!-- -->
       <h2>The Event Listener</h2>
-      <p>The EventTarget.addEventListener() Method registers a listener on the EventTarget (ie element in Document or Window Interface) it's called on. The first parameter is an event-type: the event to listen for. The second parameter is the JavaScript Function (ie Callback Function aka Event Handler) to be implemented when an event takes place.</p>
       <div><img src="img/examples/addEventListener.png"></div>
       <p>In the code above, a forLoop() is used to iterate through all &#60;li&#62;: when user hovers over any of the content, it will appear as UPPERCASE; it will revert to lowercase otherwise.</p>
       <p>Event Bubbling and Delegation is imperative at this juncture. The <b><a href="https://teamtreehouse.com/library/the-event-object-2" target="_blank">event.target</a></b> Property can be used in order to implement event delegation.</p>
