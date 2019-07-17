@@ -85,10 +85,10 @@
         <h3>[2] Pass Selector to .addEventListener() Method</h3>
         <p>
           With the selected element stored in a variable, the <em>.addEventListener()</em> method can be appended to the <em>target</em> (ie selector) to instantiate a function-block that will be called whenever the event is triggered.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; target<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;function&#125; &#41;</b>;
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; target<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;listener&#125; &#41;</b>;
         </p>
         <p>
-          This method takes two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>function</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. Once the event is triggered, the function will initiate is manipulative powers!
+          This method takes two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. Once the event is triggered, the function will initiate is manipulative powers!
         </p>
         <p>
           Events are represented by an object based on its <em>EventTarget</em>: Element, Document or Window Interface. The most common event types include mouse and keyboard events, but there are more than 100 <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event types</a> defined in official specifications that can be utilized to create an event.
@@ -139,23 +139,70 @@
       <!-- [3] Add Function to Listener -->
       <article>
         <h3>[3] Add Function to Listener</h3>
-        <p>lorem ipsum blah blah blah</p>
+        <p>
+          The event handler does just that: handle events. Any code comprised within the handler is the <em>function</em> that will be triggered when called upon. Functions are used as parameters because you can apply DOM methods to set a function that triggers an action in response to an event affording a greater level of control over when and how that function gets executed.
+        </p>
+        <p>
+          Not all functions are created equally: when working in the DOM, a standard function declaration holds less water than an arrow function which cannot be used as a constructor among other <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">limitations</a>. Got that? Me neither, but the show must go on so lets quickly review functions before moving forward!
+        </p>
+        <p>
+          There are a plethora of properties and methods that can be utilized to assign a function to an element and all of that action takes place inside of an event listener.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; target.addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          <b>&nbsp;selector.property &#61; &#39;value&#39;;&nbsp;</b>
+          &#125; &#41;;
+        </p>
+        <details>
+          <summary>Overview of Functions</summary>
+          
+    <div class="codeGroup">
+      <div>
+        <h5>Function Declaration</h5> 
+        <img src="img/functions/functionDeclaration.png"> 
+      </div>
+      <div> 
+        <p>
+          The standard for writing functions begins with a <em>Declaration</em> (ie Statement). All declarations begin with the keyword <em>function</em> followed by its name. The parenthesis holds arguments while the curly brackets defines the function. In the first example, a function called <em>say</em> is declared, accepting a <em>single parameter</em>, which is called with the <em>console.log</em>. 
+          <br>In the second example, a function called <em>exec</em> uses the previous function as a parameter. The <em>func</em> keyword represents the <em>function say&#40;&#41;&#123;&#125;</em> while the <em>arg</em> keyword represents the actual argument. When called, the function passes the say function and a string as arguments.
+        </p>
+      </div>
+      <div>
+        <h5>Function Expression</h5> 
+        <img src="img/functions/functionExpression.png"> 
+      </div>
+      <div> 
+        <p>
+          A function <em>Expression</em> allows usage of a function as a parameter for another function. In this example, the <em>function say&#40;&#41;&#123;&#125;</em> is passed directly into the <em>function exec&#40;&#41;&#123;&#125;</em> as a <em>parameter</em>, transforming the Declaration into an Expression!<!--An expression can be used as a IIFE (Immediately Invoked Function Expression) which runs as soon as it is defined.-->
+        </p>
+      </div>
+      <div>
+        <h5>Anonymous Function</h5> 
+        <img src="img/functions/anonFunction.png">  
+      </div>
+      <div>
+        <p>
+          The main difference between the declaration and expression above is the function name. When a function is passed as a parameter, its name can be omitted during definition: the result is an anonymous function. 
+        </p>
+      </div>
+        <div>
+          <h5>Arrow Function</h5> 
+          <img src="img/functions/arrowFunction.png"> 
+          <!-- Example of Arrow Function:  
+https://teamtreehouse.com/community/how-would-you-do-this-same-example-of-passing-a-function-into-another-function-using-arrow-functions-instead
+-->
+        </div>
+      <div>
+        <p>
+          An arrow function expression is a syntactically compact alternative to a regular function expression. When using arrow functions keep in mind that such expressions are ill suited as methods.
+        </p>
+      </div>
+    </div>
+          To conclude, the sum of each declaration or expression will produce the exact same result. <!--To be clear: a function can be passed as an argument/parameter, returned as values, contain methods and properties, and be stored in variables.-->
+        </details>
       </article>
     </section>
     <!-- -->
     <!-- -->
-    <!-- -->
-    <!-- [2] Event Listener -->
-      <div>
-        <h2>&#91;2b&#93; Add a Function to Element</h2>
-        <!-- Selector = Element -->
-        <p>There are a plethora of properties and methods that can be utilized to assign a function to an element: simply place inside of an event listener.</p>
-        <div>
-          .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
-          <b>&nbsp;selector.property &#61; &#39;value&#39;;&nbsp;</b>
-          &#125; &#41;;
-        </div>
-      </div>  
+    <!-- --> 
     <!-- -->
     <!-- -->
     <div>
