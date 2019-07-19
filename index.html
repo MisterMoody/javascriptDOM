@@ -121,7 +121,7 @@
         </table>
         <p>
           With the selected element stored in a variable, the <em>.addEventListener()</em> method can be appended to the <em>target</em> (ie selector) to instantiate a function-block that will be called whenever the event is triggered.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; target<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;listener&#125; &#41;</b>;
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;listener&#125; &#41;</b>;
         </p>
         <p>
           This method registers an event handler to a specific event type on the element and takes two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. When an Event Handler is called, it receives an Object as its first parameter: the object contains useful information as properties to handle the event inside of the handler.
@@ -184,8 +184,8 @@
         </details>
         <p>
           Setting up a function requires use of properties that are triggered inside of the handler.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; target.addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
-          <b>&nbsp;selector.property &#61; &#39;value&#39;;&nbsp;</b>
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector.addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          <b>&nbsp;<!--selector.property &#61; &#39;value&#39;;-->Listener&nbsp;</b>
           &#125; &#41;;
         </p>
         <p>
@@ -219,17 +219,99 @@
           </tr>
         </table>-->
         <p>DOM events allow JavaScript to register different event handlers on elements in an HTML document. A document containing HTML is described using the Document interface, which is extended by the HTML: for example, the Element interface is enhanced to become HTMLElement.</p>
-        <h5>HTMLElement</h5>
+        <div></div>
+        <h5>HTMLElement Interface</h5>
         <p>
            The <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement" target="_blank">HTMLElement Interface</a> represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it. Properties of this interface practiced here include <em>style</em>, <em>title</em> and <em>innerText</em>.
         </p>
-        <!-- -->
-        <h5>Node</h5>
         <p>
-            
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement.style</a></em> property is used to set the inline style of an element. There are a plethora of CSS <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference" target="_blank">styling properties</a></em> that can be accessed from JavaScript. The syntax for this property appends a specific CSS property to itself then assigns a value. Setting the value to null or an empty string will reset a style declaration.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          &nbsp;target<b>.style</b>.property &#61; &#39;value&#39;;&nbsp;
+          &#125; &#41;;
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">HTMLElement.title</a></em> property represents the title of an element displayed as a <em>tooltip</em> when a user places a mouse over a node. <em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">HTML attributes</a></em> exist as properties on element objects and can be modified in this same fashion. 
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          &nbsp;target<b>.title</b> &#61; &#39;value&#39;;&nbsp;
+          &#125; &#41;;
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">HTMLElement.innerText</a></em> property of the HTMLElement interface represents the "rendered" text content of a node and its descendants
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          &nbsp;target<b>.innerText</b> &#61; &#39;text string&#39;;&nbsp;
+          &#125; &#41;;
         </p>
         <!-- -->
-        <h5>Element</h5>
+        <table>
+          <tr>
+            <th><em>HTMLElement</em> Property</th>
+            <th>Usage</th>
+          </tr>
+          <tr>
+            <td>target.style<b>.backgroundColor</b> &#61; &#39;red&#39;;</td>
+            <td>Set Background Color</td>
+          </tr>
+          <tr>
+            <td>target.style<b>.color</b> &#61; &#39;red&#39;;</td>
+            <td>Set Text Color</td>
+          </tr>
+          <tr>
+            <td>target.style<b>.display</b> &#61; &#39;none&#39;;</td>
+            <td>Toggle Display</td>
+          </tr>
+          <tr>
+            <td>target.style<b>.fontSize</b> &#61; &#39;1.2em&#39;;</td>
+            <td>Set Font-Size</td>
+          </tr>
+          <tr>
+            <td>target.style<b>.property</b> &#61; <b>inputSelector.value</b>;</td>
+            <td>User Assigned Value</td>
+          </tr>
+          <tr>
+            <td>target<b>.title</b> &#61; &#39;Definition/Summary&#39;;</td>
+            <td>Create a Tooltip</td>
+          </tr>
+          <tr>
+            <td>target<b>.innerText</b> &#61; &#39;text string&#39;;</td>
+            <td>Displays Rendered HTML Node Content</td>
+          </tr>
+        </table>
+        <!-- --><br>
+        <h5>Node Interface</h5>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node Interface</a></em> is one of which the Document and Element Interfaces inherits Node object types as well as their properties and methods. This interface inherits properties from its parent: EventTarget.
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">Node.textContent</a></em> property represents the text content of a node and its descendants. This property is often confused with the aforementioned <em>HTMLElement.innerText</em> property as well as the <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">Element.innerHTML</a></em> property. Where <em>.innerText</em> is aware of its rendered appearance, <em>.textContent</em> returns content for all elements, thus, it could produce visually disturbing results. In contrast with the <em>.innerHTML</em> property, which sets HTML markup of an element, <em>.textContent</em> has better performance for setting markup because its value is not parsed as HTML, essentially preventing XSS attacks.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          &nbsp;target<b>.textContent</b> &#61; &#39;text string&#39;;&nbsp;
+          &#125; &#41;;
+        </p>
+        <table>
+          <tr>
+            <th><em>Node</em> Property</th>
+            <th>Usage</th>
+          </tr>
+          <tr>
+            <td>target<b>.textContent</b> &#61; &#39;text string&#39;;</td>
+            <td>Set HTML Markup</td>
+          </tr>
+          <tr>
+            <td>target<b>.textContent</b> &#61; target.textContent<b>.toUpperCase()</b>;</td>
+            <td>Set Markup to Upper case</td>
+          </tr>
+          <tr>
+            <td>target<b>.textContent</b> &#61; target.textContent<b>.toLowerCase()</b>;</td>
+            <td>Set Markup to Lower case</td>
+          </tr>
+          <tr>
+            <td>target<b>.textContent</b> &#61; <b>inputSelector.value</b>;</td>
+            <td>User Assigned Value</td>
+          </tr>
+        </table>
+        <!-- --><br>
+        <h5>Element Interface</h5>
         <p>
             
         </p>
@@ -252,30 +334,6 @@
     <!-- -->
     <!-- -->
     <div>
-      <h5>Modify Text</h5>
-      <p><em>Element.textContent</em> can be used to modify text.</p>
-      <ul>
-        <li>selector.textContent &#61; &#39;This is the main title.&#39;</li>
-        <li>selector.textContent &#61; inputSelector.value;</li>
-        <li>selector.textContent &#61; selector.textContent.toUpperCase();</li>
-        <li>selector.textContent &#61; selector.textContent.toLowerCase();</li>
-      </ul>
-      <!-- -->
-      <h5>Modify Attributes</h5>
-      <p><em>Element.attribute</em> gets or sets an elements attribute. Creating a tooltip is an example. Review the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">List of Attributes</a>.</p>
-      <ul>
-        <li>selector.title &#61; &#39;Tooltip Content&#39;</li>
-      </ul>
-      <!-- -->
-      <h5>Style Elements</h5>
-      <p><em>Element.style.property</em> can be used to <em>set the CSS styles of an element</em>. Toggling the display of an element is an example.</p>
-      <ul>
-        <li>selector.style.backgroundColor &#61; &#39;red&#39;;</li>
-        <li>selector.style.color &#61; &#39;red&#39;;</li>
-        <li>selector.style.color &#61; inputSelector.value;</li>
-        <li>selector.style.display &#61; &#39;none&#39;;</li>
-      </ul>
-      <!-- -->
       <h5>Create Elements</h5>
       <p>Not only can a function be written to modify an element, it can also be used to create a new element as illustrated below. The first line creates a new &#60;ul&#62; variable to store &#60;ul&#62; elements. The second line creates the new &#60;li&#62; element(s) and assigns it to a variable. The third line sets the text that we want &#60;li&#62; element to contain from the input selector. And the fourth line appends the new &#60;li&#62; (line two) to the &#60;ul&#62; element!</p>
       <ul>
