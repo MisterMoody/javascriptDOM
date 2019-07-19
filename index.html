@@ -85,23 +85,13 @@
         <h3>[2] Pass Selector to .addEventListener() Method</h3>
         <!-- https://teamtreehouse.com/library/what-is-an-event -->
         <p>
-          Anytime you interact with a webpage, you generate different kinds of events. An <em>Event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) to automated notifications. JavaScript was created to <em>listen for events and respond to them</em>: actually, the browser listens for events while JavaScript is used to respond accordingly.
+          Anytime a user interacts with a webpage, you generate different kinds of events. An <em>Event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) to automated notifications. JavaScript was created to <em>listen for events and respond to them</em>: actually, the browser listens for events while JavaScript is used to respond accordingly. DOM Events are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the Event interface, and may have additional custom fields and/or functions used to get additional information about what happened.
         </p>
         <p>
-          Any time a user interacts with a webpage &#45;whether moving the mouse, scrolling or clicking a link, an event is generated. Browsers 'listen' for events and JavaScript allows developers to do something in response to an Event. DOM Events are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the Event interface, and may have additional custom fields and/or functions used to get additional information about what happened. Events can represent everything from basic user interactions to automated notifications of things happening in the rendering model.
+          The EventTarget method <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener()</a></em> sets up a function that will be called whenever the specified event is delivered to the target. Common event targets are <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">Element</a></em>, <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank">Document</a></em>, and <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window</a></em>, but the target may be any object that supports events (such as XMLHttpRequest). This method works by adding a function or an object that implements <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">EventListener</a></em> to the list of event listeners for the specified event type on the <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" target="_blank">EventTarget</a></em> on which it's called. 
         </p>
         <p>
-          With the selected element stored in a variable, the <em>.addEventListener()</em> method can be appended to the <em>target</em> (ie selector) to instantiate a function-block that will be called whenever the event is triggered.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; target<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;listener&#125; &#41;</b>;
-        </p>
-        <p>
-          This method registers an event handler to a specific event type on the element and takes two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. When an Event Handler is called, it receives an Object as its first parameter: the object contains useful information as properties to handle the event inside of the handler.
-        </p>
-        <p>
-          Adding an Event Listener to an element is useful for handling events that take place on its ancestors: this is called <em>Event Bubbling</em>. The <em><a href="https://teamtreehouse.com/library/the-event-object-2" target="_blank">.target</a></em> property, which is often used with a handler to <em>reference an object that dispatched the event</em>, can be used in order to implement event delegation.
-        </p>
-        <p>
-          Events are represented by an object based on its <em>EventTarget</em>: Element, Document or Window Interface. The most common event types include mouse and keyboard events, but there are more than 100 <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event types</a> defined in official specifications that can be utilized to create an event.
+          The event listener can be specified as either a <em>Callback Function</em> or an <em>Object</em> that implements EventListener and is served as a callback. In this case, the callback accepts a single parameter: an object based on <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event</a></em> describing the event which has occurred, and it returns nothing. The most common event types include mouse and keyboard events, but there are more than 100 <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event types</a> defined in official specifications that can be utilized to create an event.
         </p>
         <table>
           <tr>
@@ -125,26 +115,20 @@
             <td>reset / submit</td>
           </tr>
           <tr>
-            <td>View</td>
-            <td>resize / scroll / fullscreenchange</td>
-          </tr>
-          <tr>
-            <td>Progress</td>
-            <td>abort / error / load / timeout</td>
-          </tr>
-          <tr>
-            <td>Clipboard</td>
-            <td>cut / copy / paste</td>
-          </tr>
-          <tr>
             <td>CSS Animation</td>
             <td>animationstart / animationiteration</td>
           </tr>
-          <tr>
-            <td>CSS Transition</td>
-            <td>transitionend / transitioncancel</td>
-          </tr>
         </table>
+        <p>
+          With the selected element stored in a variable, the <em>.addEventListener()</em> method can be appended to the <em>target</em> (ie selector) to instantiate a function-block that will be called whenever the event is triggered.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; target<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;listener&#125; &#41;</b>;
+        </p>
+        <p>
+          This method registers an event handler to a specific event type on the element and takes two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. When an Event Handler is called, it receives an Object as its first parameter: the object contains useful information as properties to handle the event inside of the handler.
+        </p>
+        <p>
+          Adding an Event Listener to an element is useful for handling events that take place on its ancestors: this is called <em><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture" target="_blank">Event Bubbling</a></em>. The <em><a href="https://teamtreehouse.com/library/the-event-object-2" target="_blank">.target</a></em> property, which is often used with a handler to <em>reference an object that dispatched the event</em>, can be used in order to implement event delegation.
+        </p>
       </article>
       <!-- [3] Add Function to Listener -->
       <article>
@@ -210,13 +194,11 @@
         <table>
           <tr>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank">Document</a></td>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">Element</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" target="_blank">EventTarget</a></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank">Document</a></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window</a></td>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node</a></td>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList" target="_blank">NodeList</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window</a></td>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode" target="_blank">ParentNode</a></td>
           </tr>
         </table>
@@ -355,7 +337,7 @@
       <p>Node.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_blank">removeChild&#40;&#41;</a></p>
       <p><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM Event Types</a></p>
       <p>Window.<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout" target="_blank">setTimeout</a></p>
-      <p>EventTarget.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_blank">addEventListener&#40;&#41;</a></p>
+      <p>EventTarget.<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener&#40;&#41;</a></p>
       <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event Object</a> &#40;Interface&#41;</p>
       <p>Element.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName" target="_blank">tagName</a></p>
       <p>Event.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/target" target="_blank">target</a></p> 
