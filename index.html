@@ -220,32 +220,9 @@
         </table>-->
         <p>DOM events allow JavaScript to register different event handlers on elements in an HTML document. A document containing HTML is described using the Document interface, which is extended by the HTML: for example, the Element interface is enhanced to become HTMLElement.</p>
         <div></div>
-        <h5>HTMLElement Interface</h5>
-        <p>
-           The <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement" target="_blank">HTMLElement Interface</a> represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it. Properties of this interface practiced here include <em>style</em>, <em>title</em> and <em>innerText</em>.
-        </p>
-        <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement.style</a></em> property is used to set the inline style of an element. There are a plethora of CSS <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference" target="_blank">styling properties</a></em> that can be accessed from JavaScript. The syntax for this property appends a specific CSS property to itself then assigns a value. Setting the value to null or an empty string will reset a style declaration.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
-          &nbsp;target<b>.style</b>.property &#61; &#39;value&#39;;&nbsp;
-          &#125; &#41;;
-        </p>
-        <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">HTMLElement.title</a></em> property represents the title of an element displayed as a <em>tooltip</em> when a user places a mouse over a node. <em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">HTML attributes</a></em> exist as properties on element objects and can be modified in this same fashion. 
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
-          &nbsp;target<b>.title</b> &#61; &#39;value&#39;;&nbsp;
-          &#125; &#41;;
-        </p>
-        <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">HTMLElement.innerText</a></em> property of the HTMLElement interface represents the "rendered" text content of a node and its descendants
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
-          &nbsp;target<b>.innerText</b> &#61; &#39;text string&#39;;&nbsp;
-          &#125; &#41;;
-        </p>
-        <!-- -->
         <table>
           <tr>
-            <th><em>HTMLElement</em> Property</th>
+            <th><em>HTMLElement</em> Properties</th>
             <th>Usage</th>
           </tr>
           <tr>
@@ -278,19 +255,40 @@
           </tr>
         </table>
         <!-- --><br>
+        <h5>Document Interface</h5>
+        <p>
+          The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document Interface</a></em> represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <em>DOM tree</em>: elements such as &#60;body&#62; and &#60;table&#62;that provides functionality globally to the document. <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Properties">Properties</a></em> and <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods">methods</a></em> of this interface practiced here include <em>body</em> and <em>createElement()</em>.
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">Document.createElement()</a></em> method creates the HTML element specified by tagName, which is a string that specifies the type of element to be created. The node of the created element is initialized with the value of tagName, returning the new element.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          var element = document<b>.createElement(</b>tagName<b>)</b>;
+        </p>
+        <!-- --><br>
         <h5>Node Interface</h5>
         <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node Interface</a></em> is one of which the Document and Element Interfaces inherits Node object types as well as their properties and methods. This interface inherits properties from its parent: EventTarget.
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node</a></em> is an interface that the Document and Element Interfaces inherits Node object types, properties and methods from: it inherits properties and methods from its parent, EventTarget, for itself. Properties and methods of this interface practiced here include <em>textContent</em>, <em>appendChild</em>, and <em>removeChild</em>.
         </p>
         <p>
           The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">Node.textContent</a></em> property represents the text content of a node and its descendants. This property is often confused with the aforementioned <em>HTMLElement.innerText</em> property as well as the <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">Element.innerHTML</a></em> property. Where <em>.innerText</em> is aware of its rendered appearance, <em>.textContent</em> returns content for all elements, thus, it could produce visually disturbing results. In contrast with the <em>.innerHTML</em> property, which sets HTML markup of an element, <em>.textContent</em> has better performance for setting markup because its value is not parsed as HTML, essentially preventing XSS attacks.
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
-          &nbsp;target<b>.textContent</b> &#61; &#39;text string&#39;;&nbsp;
-          &#125; &#41;;
+          &nbsp;target<b>.textContent</b> &#61; &#39;text string&#39;;&nbsp;&#125; &#41;;
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank">Node.appendChild()</a></em> method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position. Its syntax accepts a single argument: the node to append to the given parent node, and this is most often an HTML tag. Use of this method will require the <em>Document.createElement()</em> method to enable the addition of a new node. The syntax below illustrates how to amalgamate these methods, resulting in the creation of a new &#60;p&#62; element that is appended to the end of the document &#60;body&#62;. <small><em>ES6 introduced the <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">ParentNode.append()</a></em> method to replace this method as it supports multiple arguments and appending strings.</em></small>
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          var <em>p</em> = document<b>.createElement(</b><em>"p"</em><b>);</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          document.body<b>.appendChild(</b><em>p</em><b>)</b>;
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_blank">Node.removeChild()</a></em> method removes a child node from the DOM and returns the removed node, which still exists in memory, but is no longer part of the DOM. The removed node can be referenced for later usage using the first syntax, but an error will be thrown for the second.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          var oldChild = node<b>.removeChild(</b><em>child</em><b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          node<b>.removeChild(</b><em>child</em><b>)</b>;
         </p>
         <table>
           <tr>
-            <th><em>Node</em> Property</th>
+            <th><em>Node</em> Properties</th>
             <th>Usage</th>
           </tr>
           <tr>
@@ -311,9 +309,41 @@
           </tr>
         </table>
         <!-- --><br>
+        <h5>HTMLElement Interface</h5>
+        <p>
+           The <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement" target="_blank">HTMLElement Interface</a> represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it. Properties of this interface practiced here include <em>style</em>, <em>title</em> and <em>innerText</em>.
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement.style</a></em> property is used to set the inline style of an element. There are a plethora of CSS <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference" target="_blank">styling properties</a></em> that can be accessed from JavaScript. The syntax for this property appends a specific CSS property to itself then assigns a value. Setting the value to null or an empty string will reset a style declaration.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          &nbsp;target<b>.style</b>.property &#61; &#39;value&#39;;&nbsp;
+          &#125; &#41;;
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">HTMLElement.title</a></em> property represents the title of an element displayed as a <em>tooltip</em> when a user places a mouse over a node. <em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">HTML attributes</a></em> exist as properties on element objects and can be modified in this same fashion. 
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          &nbsp;target<b>.title</b> &#61; &#39;value&#39;;&nbsp;
+          &#125; &#41;;
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">HTMLElement.innerText</a></em> property of the HTMLElement interface represents the "rendered" text content of a node and its descendants
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          &nbsp;target<b>.innerText</b> &#61; &#39;text string&#39;;&nbsp;
+          &#125; &#41;;
+        </p>
+        <!-- --><br>
         <h5>Element Interface</h5>
         <p>
             
+        </p>
+        <p>
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">Element.innerHTML</a></em> property gets or sets the HTML or XML markup contained within the element.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
+          &nbsp;target<b>.innerHTML</b> &#61; &#39;THMLstring&#39;;&nbsp;
+          &#125; &#41;;
+        </p>
+        <p>
+          Setting the value of innerHTML removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string htmlString: this lets you easily replace the existing contents of an element with new content.
         </p>
         <!-- -->
         <h5></h5>
