@@ -184,8 +184,8 @@
         </details>
         <p>
           Setting up a function requires use of properties that are triggered inside of the handler.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector.addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
-          <b>&nbsp;<!--selector.property &#61; &#39;value&#39;;-->Listener&nbsp;</b>
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;
+          <b>&nbsp;<!--selector.property &#61; &#39;value&#39;;-->listener&nbsp;</b>
           &#125; &#41;;
         </p>
         <p>
@@ -193,18 +193,15 @@
         </p>
         <table>
           <tr>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">Element</a></td>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank">Document</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window</a></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">Element</a></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement</a></td>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node</a></td>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList" target="_blank">NodeList</a></td>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode" target="_blank">ParentNode</a></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window</a></td>
           </tr>
         </table>
-        <!--<p>
-          The <em>Element</em> class which is the class from which the document interface inherits its objects. Moreover, ways in which a property acts is dependent on the listeners event type: that is to say that an element can often be used to perform a specific action in a variety of ways.
-        </p>-->
         <h4>Examples of DOM Events</h4>
         <!--<table>
           <tr>
@@ -219,41 +216,6 @@
           </tr>
         </table>-->
         <p>DOM events allow JavaScript to register different event handlers on elements in an HTML document. A document containing HTML is described using the Document interface, which is extended by the HTML: for example, the Element interface is enhanced to become HTMLElement.</p>
-        <div></div>
-        <table>
-          <tr>
-            <th><em>HTMLElement</em> Properties</th>
-            <th>Usage</th>
-          </tr>
-          <tr>
-            <td>target.style<b>.backgroundColor</b> &#61; &#39;red&#39;;</td>
-            <td>Set Background Color</td>
-          </tr>
-          <tr>
-            <td>target.style<b>.color</b> &#61; &#39;red&#39;;</td>
-            <td>Set Text Color</td>
-          </tr>
-          <tr>
-            <td>target.style<b>.display</b> &#61; &#39;none&#39;;</td>
-            <td>Toggle Display</td>
-          </tr>
-          <tr>
-            <td>target.style<b>.fontSize</b> &#61; &#39;1.2em&#39;;</td>
-            <td>Set Font-Size</td>
-          </tr>
-          <tr>
-            <td>target.style<b>.property</b> &#61; <b>inputSelector.value</b>;</td>
-            <td>User Assigned Value</td>
-          </tr>
-          <tr>
-            <td>target<b>.title</b> &#61; &#39;Definition/Summary&#39;;</td>
-            <td>Create a Tooltip</td>
-          </tr>
-          <tr>
-            <td>target<b>.innerText</b> &#61; &#39;text string&#39;;</td>
-            <td>Displays Rendered HTML Node Content</td>
-          </tr>
-        </table>
         <!-- --><br>
         <h5>Document Interface</h5>
         <p>
@@ -331,31 +293,54 @@
           &nbsp;target<b>.innerText</b> &#61; &#39;text string&#39;;&nbsp;
           &#125; &#41;;
         </p>
+        <table>
+          <tr>
+            <th><em>HTMLElement</em> Properties</th>
+            <th>Usage</th>
+          </tr>
+          <tr>
+            <td>target.style<b>.backgroundColor</b> &#61; &#39;red&#39;;</td>
+            <td>Set Background Color</td>
+          </tr>
+          <tr>
+            <td>target.style<b>.color</b> &#61; &#39;red&#39;;</td>
+            <td>Set Text Color</td>
+          </tr>
+          <tr>
+            <td>target.style<b>.display</b> &#61; &#39;none&#39;;</td>
+            <td>Toggle Display</td>
+          </tr>
+          <tr>
+            <td>target.style<b>.fontSize</b> &#61; &#39;1.2em&#39;;</td>
+            <td>Set Font-Size</td>
+          </tr>
+          <tr>
+            <td>target.style<b>.property</b> &#61; <b>inputSelector.value</b>;</td>
+            <td>User Assigned Value</td>
+          </tr>
+          <tr>
+            <td>target<b>.title</b> &#61; &#39;Definition/Summary&#39;;</td>
+            <td>Create a Tooltip</td>
+          </tr>
+          <tr>
+            <td>target<b>.innerText</b> &#61; &#39;text string&#39;;</td>
+            <td>Displays Rendered HTML Node Content</td>
+          </tr>
+        </table>
         <!-- --><br>
         <h5>Element Interface</h5>
         <p>
-            
+          <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element</a></em> is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. Most functionality is specified further down the class hierarchy.
         </p>
         <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">Element.innerHTML</a></em> property gets or sets the HTML or XML markup contained within the element.
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">Element.innerHTML</a></em> property can be used to set HTML markup for an element.
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addEventListener&#40;'click', &#40;&#41; &#61;&#62; &#123;
-          &nbsp;target<b>.innerHTML</b> &#61; &#39;THMLstring&#39;;&nbsp;
+          &nbsp;target<b>.innerHTML</b> &#61; &#39;HTMLstring&#39;;&nbsp;
           &#125; &#41;;
         </p>
         <p>
           Setting the value of innerHTML removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string htmlString: this lets you easily replace the existing contents of an element with new content.
         </p>
-        <!-- -->
-        <h5></h5>
-        <p>
-            
-        </p>
-        <!-- -->
-        <h5></h5>
-        <p>
-            
-        </p>
-        <!-- -->
       </article>
     </section>
     <!-- -->
@@ -363,16 +348,6 @@
     <!-- --> 
     <!-- -->
     <!-- -->
-    <div>
-      <h5>Create Elements</h5>
-      <p>Not only can a function be written to modify an element, it can also be used to create a new element as illustrated below. The first line creates a new &#60;ul&#62; variable to store &#60;ul&#62; elements. The second line creates the new &#60;li&#62; element(s) and assigns it to a variable. The third line sets the text that we want &#60;li&#62; element to contain from the input selector. And the fourth line appends the new &#60;li&#62; (line two) to the &#60;ul&#62; element!</p>
-      <ul>
-        <li>let ul = document.getElementsByTagName('ul')[0];</li>
-        <li>let li = document.createElement('li');</li>
-        <li>li.textContent = inputSelector.value</li>
-        <li>ul.appendChild(li);</li>
-      </ul>
-    </div>
     <hr>
     <!-- -->
     <!-- -->
@@ -401,7 +376,10 @@
     <!-- -->
     <!-- -->
     <div>
-    <h2>Resources</h2>
+      <h2>Resources</h2>
+      <table>
+
+      </table>
       <p><a href="https://eloquentjavascript.net/15_event.html" target="_blank">Eloquent JS Tutorial</a></p>
       <p><a href="https://www.w3schools.com/js/js_htmldom_events.asp" target="_blank">DOM Event Examples</a></p>
       <p><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM Event References</a></p>
