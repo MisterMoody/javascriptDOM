@@ -4,36 +4,40 @@
     <title>JavaScript and the DOM</title>
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
-    <h1 id="myHeading">JavaScript and the DOM</h1>
-    <!--<h2>What is the DOM?</h2>-->
-    <p>
-      The <b>Document Object Model &#40;DOM&#41;</b> is a programming interface for HTML and anything that is viewable in a web browser. The DOM is a data representation of all HTML loaded into the browser.
-    </p>
-    <p>
-      An <b><em>Interface</em></b> is an Object structured to enforce specific properties on an <b><em>Object</em></b> &#40;or Class&#41;:  Interfaces are designed as Objects, and ALL Objects are properties of the global variable <b><em>Window Interface</em></b>, which represents a window containing a DOM Document and all of its Objects. The <b><em>Document Interface</em></b> serves as an entry point into the web page's content were <b><em>Properties</em></b> and <b><em>Methods</em></b> are used to control the structure, style, content and functionality of a Document on the web. The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document. This interface describes the common properties and methods for any kind of document and inherits from the Node and EventTarget interfaces.
-    </p>
-    <p>
-      These entry points are specific to the DOM Tree acting as Nodes that are accessible via <b><em>Selectors</em></b> &#40;ie &#60;html&#62; elements&#41; that are appended to the document interface where it is stored in a variable. Targeted elements properly stored in this fashion can then be passed to an <b><em>.addEventListener()</em></b> method to perform a specified function whenever an event is triggered.
-    </p>
-    <hr>
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
+  <body>    
+    <!-- *********************** -->
     <section>
-      <h2>The Process of Working with the DOM</h2>
-      <p>Selecting and manipulating elements while listening for events is the basic gist of working in the DOM. An example of this is when the browser loads a page, &#60;form&#62; fields start 'listening' for the cursor to hover over them. The field itself can 'listen' to its content, in case a user misspells their email.
-        <br>
-        &#91;1&#93; Select <em>an &#60;html&#62; element</em> and store it in a variable.
-        <br>
-        &#91;2&#93; Pass the element to an <em>.addEventListener()</em> method. 
-        <br>
-        &#91;3&#93; Write the function to be performed when an event is triggered.
+      <h1 id="myHeading">JavaScript and the DOM</h1>
+    </section>
+    <!-- *********************** -->
+    <hr>
+    
+    <!-- *********************** -->
+
+    <section>
+      <!-- *********************** -->
+      <h2>What is the DOM?</h2>
+      <p>
+        The <b>Document Object Model &#40;DOM&#41;</b> is a programming interface for and is an object-based data representation of all HTML loaded into the browser. Acting as an API, the DOM allows programs to read and manipulate the content, structure and style of an HTML document using JavaScript to implement such changes in the browser.
       </p>
+      <p>
+        Web browsers use the DOM to make web pages amenable to manipulation via what is called an <b>Interface</b>: an <em>object</em> structured as a data type to enforce specific properties when implemented. There are a plethora of interfaces that developers can use, but the most commonly used objects include the <em>Document</em>, <em>Element</em>, <em>Node</em> and <em>Window</em> interfaces. Whereas the <em>window interface</em> represents the browser, the <em>document interface</em> is the root of the document. The <em>element and node interfaces</em> provide many of the methods and properties that are used on HTML elements, regularly referred to as <em>nodes</em>.
+      </p>
+      <h2>How does the DOM Work?</h2>
+      <p>
+        The <em>document interface</em> serves as an entry point to content embedded in a web page, granting developers access to specific nodes on the DOM Tree. HTML elements -their attributes, classes and ids, are utilized as <em>Selectors</em> and this is the first step to make when preparing to work in the DOM. Selectors are stored in a variable where they are appended to the document object, but they are then passed to an <em>EventTarget Interface</em> method to perform a specified function whenever an event occurs in the browser.
+      </p>
+      <p>
+        The basic gist of working in the DOM involves programming selected elements to listen for events and invoke manipulation of such elements in the form of a function when an event actually occurs. An example of this is when a user places a mouse over an image or text, which produces a tooltip with greater details about that content.
+      </p>
+      <p>That said, this tutorial aims to outline the process of working in the DOM using a step-by-step instructional guide that can be broken down into three phases. By the end of this tut, we should have a functional DOM &#60;script&#62;.</p>
+      <!-- *********************** -->
+      
+      <!-- *********************** -->
       <!-- [1] Select Element + Store Element in a Variable -->
       <article>
         <h3>[1] Select an <em>&#60;html&#62;</em> Element and Store in a Variable</h3>
+        <p>&#91;1&#93; Select <em>an &#60;html&#62; element</em> and store it in a variable</p>
         <h4>Selecting an Element</h4>
         <div class="codeGroup">
           <div>
@@ -84,6 +88,7 @@
       <article>
         <h3>[2] Pass Selector to .addEventListener() Method</h3>
         <!-- https://teamtreehouse.com/library/what-is-an-event -->
+        <p>&#91;2&#93; Pass the element to an <em>.addEventListener()</em> method</p>
         <p>
           Anytime a user interacts with a webpage, you generate different kinds of events. An <em>Event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) to automated notifications. JavaScript was created to <em>listen for events and respond to them</em>: actually, the browser listens for events while JavaScript is used to respond accordingly. DOM Events are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the Event interface, and may have additional custom fields and/or functions used to get additional information about what happened.
         </p>
@@ -133,6 +138,7 @@
       <!-- [3] Add Function to Listener -->
       <article>
         <h3>[3] Add Function to Listener</h3>
+        <p>&#91;3&#93; Write the function to be performed when an event is triggered</p>
         <p>
           The event handler does just that: handle events. Any code comprised within the handler is the <em>function</em> that will be triggered when called upon. Functions are used as parameters because you can apply DOM methods to set a function that triggers an action in response to an event affording a greater level of control over when and how that function gets executed.
         </p>
@@ -191,17 +197,15 @@
         <p>
           All properties work within the confines of a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">DOM Interface</a>; interfaces practiced here include:
         </p>
-        <table>
-          <tr>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank">Document</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">Element</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList" target="_blank">NodeList</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode" target="_blank">ParentNode</a></td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window</a></td>
-          </tr>
-        </table>
+        <ul class="table">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank">Document</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">Element</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList" target="_blank">NodeList</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode" target="_blank">ParentNode</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window</a></li>
+        </ul>
         <h4>Examples of DOM Events</h4>
         <!--<table>
           <tr>
@@ -220,6 +224,9 @@
         <h5>Document Interface</h5>
         <p>
           The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document Interface</a></em> represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <em>DOM tree</em>: elements such as &#60;body&#62; and &#60;table&#62;that provides functionality globally to the document. <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Properties">Properties</a></em> and <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods">methods</a></em> of this interface practiced here include <em>body</em> and <em>createElement()</em>.
+          <!-- 
+          It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document. This interface describes the common properties and methods for any kind of document and inherits from the Node and EventTarget interfaces.
+          -->
         </p>
         <p>
           The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">Document.createElement()</a></em> method creates the HTML element specified by tagName, which is a string that specifies the type of element to be created. The node of the created element is initialized with the value of tagName, returning the new element.
@@ -341,6 +348,11 @@
         <p>
           Setting the value of innerHTML removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string htmlString: this lets you easily replace the existing contents of an element with new content.
         </p>
+        <!-- -->
+        <h5>Window Interface</h5>
+        <p>
+          The <b><em>Window Interface</em></b> represents a window containing a DOM Document and all of its Objects. 
+        </p>
       </article>
     </section>
     <!-- -->
@@ -384,6 +396,7 @@
         <li><a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">DOM Event References</a></li>
       </ul>
       <ul class="table">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">The DOM</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName" target="_blank">getElementsByTagName&#40;&#41;</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" target="_blank">getElementsByClassName&#40;&#41;</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank">getElementByID&#40;&#41;</a></li>
