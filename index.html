@@ -7,7 +7,7 @@
   <body>    
     <!-- *********************** -->
     <section>
-      <h1 id="myHeading">JavaScript and the DOM</h1>
+      <h1>JavaScript and the DOM</h1>
     </section>
     <!-- *********************** -->
     <hr>
@@ -30,65 +30,77 @@
       <p>
         The basic gist of working in the DOM involves programming selected elements to listen for events and invoke manipulation of such elements in the form of a function when an event actually occurs. An example of this is when a user places a mouse over an image or text, which produces a tooltip with greater details about that content.
       </p>
-      <p>That said, this tutorial aims to outline the process of working in the DOM using a step-by-step instructional guide that can be broken down into three phases. By the end of this tut, we should have a functional DOM &#60;script&#62;.</p>
+      <p>
+        That said, this tutorial aims to outline the process of working in the DOM using a step-by-step instructional guide that can be broken down into three phases. By the end of this tut, we should have a functional DOM &#60;script&#62;.
+      </p>
       <!-- *********************** -->
       
       <!-- *********************** -->
       <!-- [1] Select Element + Store Element in a Variable -->
       <article>
-        <h3>[1] Select an <em>&#60;html&#62;</em> Element and Store in a Variable</h3>
-        <p>&#91;1&#93; Select <em>an &#60;html&#62; element</em> and store it in a variable</p>
-        <h4>Selecting an Element</h4>
-        <div class="codeGroup">
-          <div>
-            <p>
-              The first step in this process is quite simple: select an element to be used for manipulation and store it in a variable. Selection is a way to identify an element so that the browser can find and make it available for us to do something with it using JavaScript.
-            </p>
-            <p>
-              Elements can be selected by id, class name or tag: individually or as a collection. The &#60;html&#62; model  highlights <em>elements</em> that could be targeted for selection, which is essentially anything below the fold:
-            </p>
-          </div>
-          <div>
-            <p>&nbsp;&#60;div <code>class&#61;&#34;className&#34;</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&#60;h2 <code>id&#61;&#34;idName&#34;&#62;</code>Title&#60;/h2&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem ipsum dolar a lah zo'men&#60;/p&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item A&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item B&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;<code>li</code>&#62;Item C&#60;<code>/li</code>&#62;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br>
-            &nbsp;&#60;/div&#62;</p>
-          </div>
-        </div>
+        <h2>[1] Selecting <em>&#60;html&#62;</em> Elements</h2>
+        <p>
+          &#91;a&#93; Select <em>an &#60;html&#62; element</em>
+          <br>&#91;b&#93; Choose a <em>Selection Method</em>
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Append <em>element</em> to the <em>document object</em>
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Store <em>element</em> in a <em>Variable</em>
+        </p>
+        <h3>[a] Select an Element</h3>
+        <p>
+          Selection is a way to identify an element so that the browser can find and make it available for us to do something with using JavaScript. It is at this juncture that you are determining which node of the DOM will be targeted for manipulation. Elements can be selected by id, class name or tag: individually or as a collection. 
+        </p>
+        <ul class="table2">
+          <li>&#60;div&#62;...&#60;/div&#62;</li>
+          <li>&#60;p&#62;...&#60;/p&#62;</li>
+          <li>&#60;h1 id&#61;&#34;idName&#34;&#62;...&#60;/h1&#62;</li>
+          <li>&#60;form class&#61;&#34;className&#34;&#62;...&#60;/form&#62;</li>
+          <li>&#60;ul&#62;.. &#60;li&#62;...&#60;/li&#62; ..&#60;/ul&#62;</li>
+        </ul>
+        <p>
+          The table above exemplifies how elements could be targeted for selection.
+        </p>
+        <h3>[b] Choose a Selection Method</h3>
+        <p>
+          After targeting an element for selection, you must create a variable to store it then choose one of five selection methods from the <em>element interface</em> before appending it to the <em>document interface</em>. When storing an element in a variable, the variable name should reflect the element and its function. 
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const varName = <em>document</em>.<b>method('element')</b>;
+        </p>
+        <p>
+          The document interface is employed here as a <em>constructor</em> to create a new document object as a <em>GlobalEventHandler</em>, which simultaneously acts as a reference for a callback function that will be called later on.
+        </p>
         <h4>Selection Methods</h4>
         <p>
-          When storing an element in a variable, the variable name should reflect the element and its function. There are five methods that can be used to select an element when proceeding to store it in a variable, all of which are structured in similar fashion: 
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const varName = document.<b>method('<code>selector</code>')</b>;
-        </p>
-        <p>The document interface is employed here as a <em>constructor</em> to create a new Document object as a <em>GlobalEventHandler</em>, simultaneously acting as a reference to be called in the callback function later on.</p>
-        <p>
-          The .<b>getElementById&#40; '<code>id</code>' &#41;</b>; method is use when selecting an <em>#id</em>: this is the most commonly used method for manipulating or getting data from an individual element on your document. 
+          <b>getElementById&#40;</b> '<em>id</em>' <b>&#41;</b>; is used to select an element by its <em>#id</em>: this is the most commonly used method for manipulating or getting data from an individual element on your document. 
         </p>
         <p>
-           The .<b>getElementsByClassName&#40; '<code>className</code>' &#41;</b>; and .<b>getElementsByTagName&#40; '<code>li</code>' &#41;</b>; methods are commonly used to return a collection of all elements in the document with the specified <em>.className</em> or <em>&#60;tag&#62;</em>, respectively, as a <em>NodeList object</em>. The NodeList object represents a collection of nodes that can be accessed by index numbers, starting at 0. You can use the length property of the NodeList object to determine the number of elements, then you can loop through all elements and extract the info you want. <br><em>*A collection is like an array: gain access via its indices or loop over it in its entirety to access all items. The objective of targeting a collection is completed with the use of a for&#40;&#41; loop due to the need to iterate over all items.</em>
+          <b>getElementsByClassName&#40;</b> '<em>className</em>' <b>&#41;</b>; is used to return a collection of all elements in the document with the specified <em>.className</em> as a <em>NodeList object</em>. 
         </p>
         <p>
-          The aforementioned methods will <em>return live DOM elements</em> whereas any changes are reflected in the NodeList object. Sometimes it is best not to return live DOM elements and this can be done using a query method.
+          A collection is like an array: gain access via its indices or loop over it in its entirety to access all items. The objective of targeting a collection is completed with the use of a for&#40;&#41; loop due to the need to iterate over all items. The NodeList object represents a collection of nodes that can be accessed by index numbers, starting at 0. You can use the length property of the NodeList object to determine the number of elements, then you can loop through all elements and extract the info you want.
         </p>
         <p>
-          The .<b>querySelector&#40; '<code>#id</code>' &#41;</b>; and .<b>querySelectorAll&#40; '<code>.class</code>' &#41;</b>; methods return the first element or all elements in a document, respectively, that matches a specified selector, as a static NodeList object. These methods might appear to have magical powers as much can be done for precise specification of targeting elements. Check out some of their cool features:
+          <b>getElementsByTagName&#40;</b> '<em>h1</em>' <b>&#41;</b>; works exactly as the previously described method: simply replace the <em>.className</em> with a <em>&#60;tag&#62;</em>. Both methods will <em>return live DOM elements</em> whereas any changes are reflected in the NodeList object. Sometimes it is best <em>not</em> to return live DOM elements and this can be done using a query method.
         </p>
-        <div>
-          <div><em>document</em>.querySelectorAll&#40; <b>'<code>&#91;attribute=value&#93;</code>'</b> &#41;;</div>
-          <div><em>document</em>.querySelectorAll&#40; <b>'li:<code>&#91;nth-child&#40;odd&#41;&#93;</code>'</b> &#41;;</div>
-          <div><em>document</em>.querySelector&#40; <b>'<code>ul&#46;odds &#62; li&#58;nth&#45;child&#40;odd&#41;</code>'</b> &#41;;</div>
-        </div>
+        <p>
+          <b>querySelector&#40; '<em>#id</em>' &#41;</b>; is used to return the first element that matches a specified selector, as a static NodeList object.
+        </p>
+        <p>
+          <b>querySelectorAll&#40; '<em>.class</em>' &#41;</b>; is used exactly as the previously described method with the exception that it will return all elements of the same type.  
+        </p>
+        <p>
+          Query methods might appear to have magical powers as much can be done for precise specification of targeting elements.
+          <br>document.querySelectorAll&#40; <b>'&nbsp;<em>#id</em>&nbsp;'</b> &#41;;
+          <br>document.querySelectorAll&#40; <b>'&nbsp;<em>.class</em>&nbsp;'</b> &#41;;
+          <br>document.querySelectorAll&#40; <b>'&nbsp;<em>h1</em>&nbsp;'</b> &#41;;
+          <br>document.querySelectorAll&#40; <b>'&nbsp;<em>&#91;attribute=value&#93;</em>&nbsp;'</b> &#41;;
+          <br>document.querySelectorAll&#40; <b>'&nbsp;li:<em>&#91;nth-child&#40;odd&#41;&#93;</em>&nbsp;'</b> &#41;;
+          <br>document.querySelector&#40; <b>'&nbsp;<em>ul&#46;odds &#62; li&#58;nth&#45;child&#40;odd&#41;</em>&nbsp;'</b> &#41;;
+        </p>
       </article>
       <!-- [2] Pass Element to .addEventListener() -->
       <article>
-        <h3>[2] Pass Selector to .addEventListener() Method</h3>
+        <h3>[2] Pass Selector to an Event Listener</h3>
         <!-- https://teamtreehouse.com/library/what-is-an-event -->
-        <p>&#91;2&#93; Pass the element to an <em>.addEventListener()</em> method</p>
+        <p>[c] Pass the element to an <em>.addEventListener()</em> method</p>
         <p>
           Anytime a user interacts with a webpage, you generate different kinds of events. An <em>Event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) to automated notifications. JavaScript was created to <em>listen for events and respond to them</em>: actually, the browser listens for events while JavaScript is used to respond accordingly. DOM Events are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the Event interface, and may have additional custom fields and/or functions used to get additional information about what happened.
         </p>
@@ -138,7 +150,7 @@
       <!-- [3] Add Function to Listener -->
       <article>
         <h3>[3] Add Function to Listener</h3>
-        <p>&#91;3&#93; Write the function to be performed when an event is triggered</p>
+        <p>[d] Write the function to be performed when an event is triggered</p>
         <p>
           The event handler does just that: handle events. Any code comprised within the handler is the <em>function</em> that will be triggered when called upon. Functions are used as parameters because you can apply DOM methods to set a function that triggers an action in response to an event affording a greater level of control over when and how that function gets executed.
         </p>
@@ -195,16 +207,16 @@
           &#125; &#41;;
         </p>
         <p>
-          All properties work within the confines of a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">DOM Interface</a>; interfaces practiced here include:
+          All properties work within the confines of a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">DOM Interface</a>; interfaces practiced here include (in order of hierarchy):
         </p>
         <ul class="table">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window</a></li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank">Document</a></li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">Element</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement</a></li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">HTMLElement</a></li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList" target="_blank">NodeList</a></li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode" target="_blank">ParentNode</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window</a></li>
         </ul>
         <h4>Examples of DOM Events</h4>
         <!--<table>
