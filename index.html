@@ -21,7 +21,7 @@
         The <b>Document Object Model &#40;DOM&#41;</b> is a programming interface for and is an object-based data representation of all HTML loaded into the browser. Acting as an API, the DOM allows programs to read and manipulate the content, structure and style of an HTML document using JavaScript to implement such changes in the browser.
       </p>
       <p>
-        Web browsers use the DOM to make web pages amenable to manipulation via what is called an <b>Interface</b>: an <em>object</em> structured as a data type to enforce specific properties when implemented. There are a plethora of interfaces that developers can use, but the most commonly used objects include the <em>Document</em>, <em>Element</em>, <em>Node</em> and <em>Window</em> interfaces. Whereas the <em>window interface</em> represents the browser, the <em>document interface</em> is the root of the document. The <em>element and node interfaces</em> provide many of the methods and properties that are used on HTML elements, regularly referred to as <em>nodes</em>.
+        Web browsers use the DOM to make web pages amenable to manipulation via what is called an <b>Interface</b>: an <em>object</em> structured as a data type to enforce specific properties when implemented. There are a plethora of interfaces that developers can use, but the most commonly used objects include the <em>Window</em>,<em>Document</em>, <em>Element</em> and <em>Node</em> interfaces. Whereas the <em>window interface</em> represents the browser, the <em>document interface</em> is the root of the document. The <em>element and node interfaces</em> provide many of the methods and properties that are used on HTML elements, regularly referred to as <em>nodes</em>.
       </p>
       <h2>How does the DOM Work?</h2>
       <p>
@@ -201,7 +201,7 @@
           &#125; &#41;;
         </p>
         <p>
-          Functions are used as parameters because you can apply DOM methods to set a function that triggers an action in response to an event affording a greater level of control over when and how that function gets executed. Just keep in mind that the function is only as good as the event that it is tied to!
+          Functions are used as parameters because you can apply DOM methods to set a function that triggers an action in response to an event affording a greater level of control over when and how that function gets executed. Just keep in mind that the function is only as good as the event that binds it!
         </p>
         <!--<p>
           All properties work within the confines of a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">DOM Interface</a>; interfaces practiced here include (in order of hierarchy):
@@ -218,7 +218,26 @@
         <h4>Examples of DOM Events</h4>-->
         <h4>Window Interface</h4>
         <p>
-          The <b><em>Window Interface</em></b> represents a window containing a DOM Document and all of its Objects. 
+          The <b><em>Window Interface</em></b> represents a window containing a DOM Document that points to the <em>document interface</em> that is loadded into that window. 
+        </p>
+        <p>
+          The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">Window.alert()</a></em> method is used to display a message in a modal window: it has a button to close the modal in acknowledgement of the transmitted message.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          window<b>.alert(</b>message<b>)</b>;
+        </p>
+        <p>
+          The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/console">Window.console()</a></em> property is used for debugging purposes <em>only</em>: it returns a reference to the <em>console</em> object, which provides methods for logging information into the browser's console. This property is in fact from the <em>Console interface</em>, thus, it can be referenced without an interface heading. The syntax illustrates how this property can be used to output a single object or multiple objects.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <b>console.log(</b>varName<b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <b>console.log(</b>"This is lorem ipsum", varName, "."<b>)</b>; 
+        </p>
+        <p>
+          The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo()</a></em> method will scroll to a particular set of coordinates in a document. An argument can be applied to specify is horizontal and vertical axis positioning or a set of parameters detailing the scroll event can be set. 
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          window<b>.scrollTo(</b>x-coord, y-coord<b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          window<b>.scrollTo(</b>0, 100<b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          window<b>.scrollTo(</b>options<b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          window<b>.scrollTo(</b>top: 100, left: 100, behavior: 'smooth'<b>)</b>;
         </p>
         <!-- -->
         <h4>Document Interface</h4>
