@@ -49,7 +49,7 @@
         <p>
           Selection is a way to identify an element so that the browser can find and make it available for us to do something with using JavaScript. It is at this juncture that you are determining which node of the DOM will be targeted for manipulation. Elements can be selected by id, class name or tag: individually or as a collection. 
         </p>
-        <ul class="table2">
+        <ul class="table">
           <li>&#60;div&#62;...&#60;/div&#62;</li>
           <li>&#60;p&#62;...&#60;/p&#62;</li>
           <li>&#60;h1 id&#61;&#34;idName&#34;&#62;...&#60;/h1&#62;</li>
@@ -61,11 +61,8 @@
         </p>
         <h3>[b] Choose a Selection Method</h3>
         <p>
-          After targeting an element for selection, you must create a variable to store it then choose one of five selection methods from the <em>element interface</em> before appending it to the <em>document interface</em>. When storing an element in a variable, the variable name should reflect the element and its function. 
+          After targeting an element for selection, you must create a variable to store it, choose a selection method from the <em>element interface</em> then append it to the <em>document interface</em>, which in this case, is used as a <em>constructor</em> to create a new document object that can be referenced by a callback function that will be called later on. When storing an element in a variable, the variable name should reflect the element and its function. 
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const varName = <em>document</em>.<b>method('element')</b>;
-        </p>
-        <p>
-          The document interface is employed here as a <em>constructor</em> to create a new document object as a <em>GlobalEventHandler</em>, which simultaneously acts as a reference for a callback function that will be called later on.
         </p>
         <h4>Selection Methods</h4>
         <p>
