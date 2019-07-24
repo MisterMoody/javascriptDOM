@@ -5,25 +5,57 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <h1>JavaScript and the DOM</h1>
-    <p>
-      Planning is the most essential factor when working with &#60;html&#62; elements in the DOM. A clearly defined objective will help determine a specific approach for writing JavaScript functions that coordinate DOM events with user actions. The most common user actions that will trigger an event occur when a user clicks or mouses-over an element, or manually inputs data using the keyboard. <small>For all intents and purposes, <em>only</em> user events are discussed here: page loads, displaying messages or closing windows may be evaluated in the future.</small>
-    </p>
-    <!-- -->
-    <h2>Mouse Events</h2>
-    <p>
-      The <em>MouseEvent Interface</em> represents any event that comes about as the result of a user interacting with a web page using a pointing device, and emulated on touch devices. The list below includes important events pertaining to this category.
-    </p>
-    <ul class="table">
-      <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/click">click</a></li>
-      <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events">dblclick</a></li>
-      <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events">contextmenu</a></li>
-      <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events">mousedown</a></li>
-      <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events">mouseup</a></li>
-      <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events">mouseover</a></li>
-      <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events">mouseout</a></li>
-      <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events">mousemove</a></li>
-    </ul>
+    <section>
+      <!-- -->
+      <h1>JavaScript and the DOM</h1>
+      <p>
+        Planning is the most essential factor when working with &#60;html&#62; elements in the DOM. A clearly defined objective will help determine a specific approach for writing JavaScript functions that coordinate DOM events with user actions. The most common user actions that will trigger an event occur when a user clicks or mouses-over an element, or manually inputs data using the keyboard. <small>For all intents and purposes, <em>only</em> user events are discussed here: page loads, displaying messages or closing windows may be evaluated in the future.</small>
+      </p>
+      <!-- -->
+      <article>
+        <h2>Mouse Events</h2>
+        <p>
+          The <em>MouseEvent Interface</em> represents any event that comes about as the result of a user interacting with a web page using a pointing device, and emulated on touch devices. The list below includes important events pertaining to this category:
+        </p>
+        <ul class="notes">
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mousedown">mousedown</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseup">mouseup</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseover">mouseover</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseout">mouseout</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mousemove">mousemove</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/click">click</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/dblclick">dblclick</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/">contextmenu</a></li>
+        </ul>
+        <p>
+          A <b>mouseover</b> event is fired when a user places the mouse pointer over an element, without clicking it.
+        </p>
+        <p>
+          A <b>mousedown</b> event is fired when a user presses down on the primary mouse button as a user hovers the mouse over an element.
+        </p>
+        <p>
+          A <b>'mouseup'</b> event is fired when a user releases the primary mouse button.
+        </p>
+        <p>
+          A <b>'mouseout'</b> event is fired when a user moves the mouse and its cursor outside of an element.
+        </p>
+        <p>
+          A <b>'mousemove'</b> event is fired when a user moves the mouse while inside an element, 
+        </p>
+        <p>
+          A <b>'click'</b> event is fired when a user presses then releases the primary mouse button inside of an element. This event takes place after both the <em>mousedown</em> and <em>mouseup</em> events have fired.
+        </p>
+        <p>
+          A <b>'dblclick'</b> event is fired when a user clicks an element twice: quickly and without delay.
+        </p>
+        <p>
+          A <b>'contextmenu'</b> event fires when a user attempts to open a context menu by pressing.
+        </p>
+        <!-- -->
+      </article>
+      <article></article>
+      <article></article>
+    </section>
     <!-- EX 1-->
     <div class="exampleCollection" id="ex1">
       <h3>Example 1: Modify Content using the HTMLElement.style Property</h3>
