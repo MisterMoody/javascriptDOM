@@ -12,6 +12,12 @@ ul.table {
   grid-auto-rows: auto;
   grid-gap: 8px 0;
 }
+ul.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 125px);
+  grid-auto-rows: auto;
+  grid-gap: 8px 0;
+}
 .codeGroup {
   display: grid;
   grid-auto-flow: row;  
@@ -106,23 +112,13 @@ img {
   width: 100%;
   height: auto;
 }
-/* 
-  Buttons 
+ 
 button {
   color: white;
   background: #508abc;
   border: solid 1px;
   border-color: rgba(0, 0, 0, .1);
   cursor: pointer;
-}
-button + button {
-  margin-left: .5em;
-}
-p + button {
-  background: #52bab3;
-}
-.list button + button {
-  background: #768da3;
 }
 .list li button + button {
   background: #508abc;
@@ -132,10 +128,5 @@ li button:first-child {
   background: #52bab3;
 }
 .list li button:last-child {
-  background: #768da3;
+  background: #508abc;
 }
-li button {
-  font-size: .75em;
-  padding: .5em .65em;
-}
-*/
