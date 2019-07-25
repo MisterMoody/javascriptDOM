@@ -83,7 +83,7 @@ const tooltip = document.getElementById('tooltip');
 tooltip.title = "the quality or condition of being specific";
 // ----------------------------------------------
 
-// Toggle Element -------- **BROKEN** -----------
+// Toggle Element (on HOVER) ---- **BROKEN** ----
   //  this function does HIDE the List....
   //  ...but does NOT REVEAL the list on re-click
 const toggler = document.getElementById('toggler');
@@ -104,7 +104,7 @@ toggler.addEventListener('click', () => {
 });
 // ----------------------------------------------
 
-
+// Toggle Element (on CLICK) -------------------
 const hoverList = document.querySelector('.hoverList');
 hoverList.addEventListener('mouseover', (event) => {
   if (event.target.tagName == 'LI') {
@@ -116,3 +116,15 @@ hoverList.addEventListener('mouseout', (event) => {
     event.target.textContent = event.target.textContent.toLowerCase();
   }
 });
+// ----------------------------------------------
+
+
+// Modify Text ----------------------------------
+const p = document.querySelector('p.description');
+const modifyInput = document.querySelector('input.description');
+const modifyBTN = document.querySelector('button.description');
+
+modifyBTN.addEventListener('click', () => {
+  p.textContent = modifyInput.value;
+});
+// ----------------------------------------------
