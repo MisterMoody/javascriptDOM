@@ -13,9 +13,9 @@
       </p>
       <!-- -->
       <article>
-        <h2>Mouse Events</h2>
+        <h2>Common Events</h2>
         <p>
-          The <em>MouseEvent Interface</em> represents any event that comes about as the result of a user interacting with a web page using a pointing device, and emulated on touch devices. The list below includes important events pertaining to this category:
+          The <b>MouseEvent Interface</b> represents any event that comes about as the result of a user interacting with a web page using a pointing device, and emulated on touch devices. The list below includes important events pertaining to this category:
         </p>
         <ul class="notes">
           <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mousedown">mousedown</a></li>
@@ -23,45 +23,190 @@
           <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseover">mouseover</a></li>
           <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseout">mouseout</a></li>
           <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mousemove">mousemove</a></li>
-          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/click">click</a></li>
-          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/dblclick">dblclick</a></li>
-          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/">contextmenu</a></li>
+          <li>
+            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/click">click</a>&nbsp; / &nbsp;
+            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/dblclick">dblclick</a>
+          </li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/input">input</a></li>
         </ul>
         <p>
-          A <b>mouseover</b> event is fired when a user places the mouse pointer over an element, without clicking it.
+          A <b>'click'</b> event is fired when a user presses then releases the primary mouse button inside of an element. This event takes place after both the <em>mousedown</em> and <em>mouseup</em> events have fired. In contrast, a <b>'dblclick'</b> event is fired when a user clicks an element twice: quickly and without delay.
         </p>
         <p>
-          A <b>mousedown</b> event is fired when a user presses down on the primary mouse button as a user hovers the mouse over an element.
+          A <b>'mousedown'</b> event is fired when a user presses down on the primary mouse button as a user hovers the mouse over an element. In contrast, a <b>'mouseup'</b> event is fired when a user releases the primary mouse button.
         </p>
         <p>
-          A <b>'mouseup'</b> event is fired when a user releases the primary mouse button.
+          A <b>'mouseover'</b> event is fired when a user places the mouse pointer over an element, without clicking it. In contrast, a <b>'mouseout'</b> event is fired when a user moves the mouse and its cursor outside of an element.
         </p>
         <p>
-          A <b>'mouseout'</b> event is fired when a user moves the mouse and its cursor outside of an element.
+          The <b>'mouseenter'</b> and <b>'mouseleave'</b> events act similarly to the <em>mouseover</em> and <em>mouseout</em> events with one exception: they are only utilized for complex UI scenarios that do not <em>hierarchy bubbling</em>. Because these events can cause performance issues, it is best to use them like the CSS <em>:hover</em> pseudo-class. 
         </p>
         <p>
-          A <b>'mousemove'</b> event is fired when a user moves the mouse while inside an element, 
+          A <b>'mousemove'</b> event is fired when a user moves the mouse while inside an element. 
         </p>
+        <!-- -->
         <p>
-          A <b>'click'</b> event is fired when a user presses then releases the primary mouse button inside of an element. This event takes place after both the <em>mousedown</em> and <em>mouseup</em> events have fired.
+          An <b>'input'</b> event is fired when the value of <em>&#60;input&#62;</em>, <em>&#60;select&#62;</em> and <em>&#60;textarea&#62;</em> elements have been modified.
         </p>
-        <p>
-          A <b>'dblclick'</b> event is fired when a user clicks an element twice: quickly and without delay.
-        </p>
-        <p>
-          A <b>'contextmenu'</b> event fires when a user attempts to open a context menu by pressing.
-        </p>
-        <p></p>
+        <!-- -->
+        <p>With commonly used events defined, we can explore how they can be utilized as programmed events.</p>
         <!-- -->
       </article>
-      <article></article>
+      <article>
+        <h2>Common Functions</h2>
+        <p>
+          
+        </p>
+        <div class="exampleCollection" id="xxx">
+          <h3>Display a User Notification</h3>
+          <p>Function Explanation</p>
+          <div class="codeGroup">
+            <div>
+              <h4><small><em style="color: grey;">index.html</em></small></h4>
+              <p>[a] <code>Select Elements from HTML</code></p>
+              <img src="img/">   
+            </div>
+            <div>
+              <h4><small><em style="color: grey;">examples.js</em></small></h4>
+              <p>[b] <code>Add Event Listener with Functions</code></p>
+              <img src="img/">    
+            </div>
+          </div>
+          <p>Elaborate Function Code</p>
+          <div class="exampleArea">
+            <button id="alertBTN">Code Example</button>
+          </div>
+        </div>
+        <!-- -->
+        <!--<div class="exampleCollection" id="xxx">
+          <h3>Function Title</h3>
+          <p>Function Explanation</p>
+          <div class="codeGroup">
+            <div>
+              <h4><small><em style="color: grey;">index.html</em></small></h4>
+              <p>[a] <code>Select Elements from HTML</code></p>
+              <img src="img/">   
+            </div>
+            <div>
+              <h4><small><em style="color: grey;">examples.js</em></small></h4>
+              <p>[b] <code>Add Event Listener with Functions</code></p>
+              <img src="img/">    
+            </div>
+          </div>
+          <p>Elaborate Function Code</p>
+          <div class="exampleArea">
+            <p id="...">Code Example</p>
+          </div>
+        </div>
+        <div class="exampleCollection" id="xxx">
+          <h3>Function Title</h3>
+          <p>Function Explanation</p>
+          <div class="codeGroup">
+            <div>
+              <h4><small><em style="color: grey;">index.html</em></small></h4>
+              <p>[a] <code>Select Elements from HTML</code></p>
+              <img src="img/">   
+            </div>
+            <div>
+              <h4><small><em style="color: grey;">examples.js</em></small></h4>
+              <p>[b] <code>Add Event Listener with Functions</code></p>
+              <img src="img/">    
+            </div>
+          </div>
+          <p>Elaborate Function Code</p>
+          <div class="exampleArea">
+            <p id="...">Code Example</p>
+          </div>
+        </div>
+        <div class="exampleCollection" id="xxx">
+          <h3>Function Title</h3>
+          <p>Function Explanation</p>
+          <div class="codeGroup">
+            <div>
+              <h4><small><em style="color: grey;">index.html</em></small></h4>
+              <p>[a] <code>Select Elements from HTML</code></p>
+              <img src="img/">   
+            </div>
+            <div>
+              <h4><small><em style="color: grey;">examples.js</em></small></h4>
+              <p>[b] <code>Add Event Listener with Functions</code></p>
+              <img src="img/">    
+            </div>
+          </div>
+          <p>Elaborate Function Code</p>
+          <div class="exampleArea">
+            <p id="...">Code Example</p>
+          </div>
+        </div>
+        <div class="exampleCollection" id="xxx">
+          <h3>Function Title</h3>
+          <p>Function Explanation</p>
+          <div class="codeGroup">
+            <div>
+              <h4><small><em style="color: grey;">index.html</em></small></h4>
+              <p>[a] <code>Select Elements from HTML</code></p>
+              <img src="img/">   
+            </div>
+            <div>
+              <h4><small><em style="color: grey;">examples.js</em></small></h4>
+              <p>[b] <code>Add Event Listener with Functions</code></p>
+              <img src="img/">    
+            </div>
+          </div>
+          <p>Elaborate Function Code</p>
+          <div class="exampleArea">
+            <p id="...">Code Example</p>
+          </div>
+        </div>
+        <div class="exampleCollection" id="xxx">
+          <h3>Function Title</h3>
+          <p>Function Explanation</p>
+          <div class="codeGroup">
+            <div>
+              <h4><small><em style="color: grey;">index.html</em></small></h4>
+              <p>[a] <code>Select Elements from HTML</code></p>
+              <img src="img/">   
+            </div>
+            <div>
+              <h4><small><em style="color: grey;">examples.js</em></small></h4>
+              <p>[b] <code>Add Event Listener with Functions</code></p>
+              <img src="img/">    
+            </div>
+          </div>
+          <p>Elaborate Function Code</p>
+          <div class="exampleArea">
+            <p id="...">Code Example</p>
+          </div>
+        </div>
+        <div class="exampleCollection" id="xxx">
+          <h3>Function Title</h3>
+          <p>Function Explanation</p>
+          <div class="codeGroup">
+            <div>
+              <h4><small><em style="color: grey;">index.html</em></small></h4>
+              <p>[a] <code>Select Elements from HTML</code></p>
+              <img src="img/">   
+            </div>
+            <div>
+              <h4><small><em style="color: grey;">examples.js</em></small></h4>
+              <p>[b] <code>Add Event Listener with Functions</code></p>
+              <img src="img/">    
+            </div>
+          </div>
+          <p>Elaborate Function Code</p>
+          <div class="exampleArea">
+            <p id="...">Code Example</p>
+          </div>
+        </div>-->
+      </article>
       <article></article>
     </section>
     <!-- EX 1-->
     <div class="exampleCollection" id="ex1">
       <h3>Example 1: Modify Content using the HTMLElement.style Property</h3>
-      <p>This example demonstrates how to <em>modify content 'styles' of a targeted element that is bound to a 'click' event</em>. The result is that the text color, background-color, border, font-size, font-weight, text-alignment and line-height styles for the element will change when the user clicks the element.</p>
-      
+      <p>
+        This example demonstrates how to <em>modify content 'styles' of a targeted element that is bound to a 'click' event</em>. The result is that the text color, background-color, border, font-size, font-weight, text-alignment and line-height styles for the element will change when the user clicks the element.
+      </p>
       <div class="codeGroup">
         <div>
           <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -73,16 +218,19 @@
           <p>[b] <code>Add Event Listener with Functions</code></p>
           <img src="img/examples/ex1function.png">    
         </div>
-      </div>
-      
-      <p>This function starts by creating a variable that can reference the targeted elements. The <em>document<b>.getElementById&#40;&#41;</b> Method</em> is one of several options that targets Elements for selection: this option targets the <em><b>id 'textStyles'</b></em> that is coded into the HTML &#60;p&#62; element.</p>
-      <p>Next, the <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textStyles' to listen for browser events. The first argument of this method is the 'type of event' that is expected: 'click' is the scheduled event that this listener is waiting for. The second argument of this method involves the functions that will be invoked by the listener whenever the user 'clicks' the element.</p>
-      <p>Inside of the listener, the variable name is referenced again along with the <em><b>HTMLElement.style</b> Property</em>, which is used to specify a value to modify the elements content.</p>
-      
+      </div>     
+      <p>
+        This function starts by creating a variable that can reference the targeted elements. The <em>document<b>.getElementById&#40;&#41;</b> Method</em> is one of several options that targets Elements for selection: this option targets the <em><b>id 'textStyles'</b></em> that is coded into the HTML &#60;p&#62; element.
+      </p>
+      <p>
+        Next, the <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textStyles' to listen for browser events. The first argument of this method is the 'type of event' that is expected: 'click' is the scheduled event that this listener is waiting for. The second argument of this method involves the functions that will be invoked by the listener whenever the user 'clicks' the element.
+      </p>
+      <p>
+        Inside of the listener, the variable name is referenced again along with the <em><b>HTMLElement.style</b> Property</em>, which is used to specify a value to modify the elements content.
+      </p>
       <div class="exampleArea">
         <p id="textStyles">Click this text to modify its content.</p>
       </div>
-      
     </div>
     <!-- -->
     <hr style="margin-top: 24px;">

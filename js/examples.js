@@ -71,4 +71,9 @@ for (let i = 0; i < evens.length; i += 1) {
 }
 ////////////////////////////////////////////////////////////////////////
 
-
+// Alert Button Notification --------------------
+const alertBTN = document.getElementById('alertBTN');
+alertBTN.addEventListener('click', () => {
+  alert('This is a user notification. Add content here to display a useful message notifiying the user of important information.')
+});
+// ----------------------------------------------
