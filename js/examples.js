@@ -123,8 +123,31 @@ hoverList.addEventListener('mouseout', (event) => {
 const p = document.querySelector('p.description');
 const modifyInput = document.querySelector('input.description');
 const modifyBTN = document.querySelector('button.description');
-
+//  Listen for User-Interaction
+//  Calls .addEventListener(); Method on Button
 modifyBTN.addEventListener('click', () => {
+  //  'click' will use "value of" <input> to 'Set <p>
   p.textContent = modifyInput.value;
+});
+// ----------------------------------------------
+
+
+// BROKEN ON this-page-only = CODE WORKS!
+///  Add + Remove Elements with Buttons ----------
+const addItemInput = document.querySelector('input.addItemInput');
+const addItemButton = document.querySelector('button.addItemButton');
+const removeItemButton = document.querySelector('button.removeItemButton');
+
+addItemButton.addEventListener('click', () => {
+  let ul = document.getElementsByTagName('ul')[0];
+  let li = document.createElement('li');
+  li.textContent = addItemInput.value;
+  ul.appendChild(li);
+  addItemInput.value = '';
+});
+removeItemButton.addEventListener('click', () => {
+  let ul = document.getElementsByTagName('ul')[0];
+  let li = document.querySelector('li:last-child');
+  ul.removeChild(li);
 });
 // ----------------------------------------------

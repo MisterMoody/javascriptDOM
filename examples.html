@@ -120,17 +120,46 @@
         <!-- Modify Text -->
         <div class="exampleCollection" id="xxx">
           <h3>Modify Text</h3>
+          <p>Remember that <em>innerHTML</em> and <em>textContent</em> are interchangeable when modifying text.</p>
           <div class="exampleArea">
             <div>
               <p class="description">I am TEXT that can be modified!</p>
-              <input class="description" type="text" placeholder="Change Text Description">
+              <input id="addItemInput" class="description" type="text" placeholder="Change Text Description">
               <button class="description">Click to Change</button>
             </div>
           </div>
         </div>
-        <!-- Creating DOM Elements-->
+        <!-- Creating DOM Elements -->
         <div class="exampleCollection" id="xxx">
           <h3>Creating DOM Elements</h3>
+          <p><em>Broken Function but...<b>Code DOES WORK!</b> Other code on this page causes the function issues.</em> <small>Conflict with another &#60;input&#62; element.</small></p>
+          <div class="exampleArea">
+            <ul id="addRemove">
+              <li>Old 1</li>
+              <li>Old 2</li>
+              <li>Old 3</li>
+              <li>Old 4</li>
+            </ul>
+            <input class="addItemInput" type="text" placeholder="Enter Text Here">
+            <button class="addItemButton">Add Item</button>
+            <button class="removeItemButton">Remove Item</button>
+          </div>
+          <!--<p>
+            The document <b>.createElement&#40;&#41;</b> method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized. It requires a 'tagName' to specify the type of element that you want to create: the 'tagName' value is applied to the element when initialized.  When called on an HTML document, createElement() converts tagName to lower case before creating the element.
+          </p>
+          <p>
+            Application of the createElement&#40;&#41; method alone does not make the new element appear on a page: the Node <b>appendChild()</b> method is used to facilitate the process of inserting content into the DOM. Its sole argument is the childNode
+          </p>
+          <p>
+            The Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position. However, there is no requirement to remove the node from its parent node before appending it to some other node.
+          </p>
+          <p>
+            The process of removing an element from the DOM is completed by using the <b>removeChild()</b> method, which removes a child node while returning the removed node. It is used similarly to the appendChild() method, but with less work.
+          </p>-->
+        </div>
+        <!-- ...... -->
+        <div class="exampleCollection" id="xxx">
+          <h3>...</h3>
           <div class="exampleArea">
             <button id="xx">Code Example</button>
           </div>
