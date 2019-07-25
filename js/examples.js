@@ -77,3 +77,9 @@ alertBTN.addEventListener('click', () => {
   alert('This is a user notification. Add content here to display a useful message notifiying the user of important information.')
 });
 // ----------------------------------------------
+
+// Tooltip Description --------------------------
+const tooltip = document.getElementById('tooltip');
+tooltip.title = "the quality or condition of being specific";
+
+// ----------------------------------------------
