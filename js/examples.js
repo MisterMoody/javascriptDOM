@@ -104,3 +104,15 @@ toggler.addEventListener('click', () => {
 });
 // ----------------------------------------------
 
+
+const hoverList = document.querySelector('.hoverList');
+hoverList.addEventListener('mouseover', (event) => {
+  if (event.target.tagName == 'LI') {
+    event.target.textContent = event.target.textContent.toUpperCase();
+  }
+});
+hoverList.addEventListener('mouseout', (event) => {
+  if (event.target.tagName == 'LI') {
+    event.target.textContent = event.target.textContent.toLowerCase();
+  }
+});
