@@ -81,5 +81,26 @@ alertBTN.addEventListener('click', () => {
 // Tooltip Description --------------------------
 const tooltip = document.getElementById('tooltip');
 tooltip.title = "the quality or condition of being specific";
-
 // ----------------------------------------------
+
+// Toggle Element -------- **BROKEN** -----------
+  //  this function does HIDE the List....
+  //  ...but does NOT REVEAL the list on re-click
+const toggler = document.getElementById('toggler');
+const foodList = document.querySelector('div.elementToToggle');
+const toggledElement = document.querySelector('p.toggledElement');
+
+toggler.addEventListener('click', () => {
+  //  User 'click' will 'HIDE' <element>
+  if (foodList.style.display == 'none') {
+    toggler.textContent = 'Hide Food List';
+    foodlist.style.display = 'block';
+  }
+  //  User 'click' will 'REVEAL' <element>
+  else {
+    toggler.textContent = 'Show Food List'
+    foodList.style.display = 'none';
+  }
+});
+// ----------------------------------------------
+
