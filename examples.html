@@ -7,12 +7,12 @@
   <body>
     <section>
       <!-- -->
-      <h1>JavaScript and the DOM</h1>
-      <p>
-        Planning is the most essential factor when working with &#60;html&#62; elements in the DOM. A clearly defined objective will help determine a specific approach for writing JavaScript functions that coordinate DOM events with user actions. The most common user actions that will trigger an event occur when a user clicks or mouses-over an element, or manually inputs data using the keyboard. <small>For all intents and purposes, <em>only</em> user events are discussed here: page loads, displaying messages or closing windows may be evaluated in the future.</small>
-      </p>
-      <!-- -->
       <article>
+        <h1>JavaScript and the DOM</h1>
+        <p>
+          Planning is the most essential factor when working with &#60;html&#62; elements in the DOM. A clearly defined objective will help determine a specific approach for writing JavaScript functions that coordinate DOM events with user actions. The most common user actions that will trigger an event occur when a user clicks or mouses-over an element, or manually inputs data using the keyboard. <small>For all intents and purposes, <em>only</em> user events are discussed here: page loads, displaying messages or closing windows may be evaluated in the future.</small>
+        </p>
+        <!-- -->
         <h2>Common Events</h2>
         <p>
           The <b>MouseEvent Interface</b> represents any event that comes about as the result of a user interacting with a web page using a pointing device, and emulated on touch devices. The list below includes important events pertaining to this category:
@@ -51,17 +51,16 @@
         <!-- -->
         <p>With commonly used events defined, we can explore how they can be utilized as programmed events.</p>
         <!-- -->
-      </article>
-      <article>
         <h2>Common Functions</h2>
         <p>
-          
+          The functions described below mostly amalgamates suitable properties that are used with the document interface to create events that will respond to user click, input and particular mouse movements.
         </p>
-        <!-- Display User Notifation -->
-        <div class="exampleCollection" id="xxx">
-          <h3>Display a User Notification</h3>
-          <!--<p>Function Explanation</p>
-          <div class="codeGroup">
+      </article>
+      <!-- Display User Notifation -->
+      <article class="exampleCollection" id="xxx">
+        <h3>Display a User Notification</h3>
+        <!--<p>Function Explanation</p>
+        <div class="codeGroup">
             <div>
               <h4><small><em style="color: grey;">index.html</em></small></h4>
               <p>[a] <code>Select Elements from HTML</code></p>
@@ -73,78 +72,84 @@
               <img src="img/">    
             </div>
           </div>
-          <p>Elaborate Function Code</p>-->
-          <div class="exampleArea">
-            <button id="alertBTN">Notification</button>
-          </div>
+        <p>Elaborate Function Code</p>-->
+        <div class="exampleArea">
+          <button id="alertBTN">Notification</button>
         </div>
-        <!-- Tooltip Description -->
-        <div class="exampleCollection" id="xxx">
-          <h3>Tooltip Definition</h3>
-          <p>
-            <b>Attributes</b>, like the <em>href="..."</em> attribute on a &#60;link&#62; or the <em>action="..."</em> attribute on a form, exist as properties of an element object. The function below invokes the <b><em>title="..."</em></b> attribute to enable a tooltip when a user <em>hovers</em> an element with that reference.
-          </p>
-          <div class="exampleArea">
-            <p>She impressed me with her <b><em><span id="tooltip">specificity</span></em></b> of instructions.</p>
-          </div>
-        </div>
-        <!-- Toggle Element -->
-        <div class="exampleCollection" id="xxx">
-          <h3>Toggle Element <u><b><em>BROKEN</em></b></u></h3>
-          <p>
-            This broken toggler will hide the list, but will not <em>REVEAL</em> the list on request.
-          </p>
-          <div class="exampleArea">
-            <button id="toggler">Toggle</button>
-            <div class="elementToToggle">
-              <ul class="toggledElement">
-                <li>Asparagus</li>
-                <li>Garlic</li>
-                <li>Hari Verts</li>
-                <li>Kale</li>
-                <li>Ipomoea Batatas</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Transform Text on :Hover (uppercase/lowercase) -->
-        <div class="exampleCollection" id="xxx">
-          <h3>Capitalizing Text on Hover</h3>
-          <div class="exampleArea">
-            <ul class="hoverList">
-              <li>Hover me to capitalize text</li>
-              <li>Move mouse away to return to lowercase</li>
+      </article>
+      <!-- Tooltip Description -->
+      <article class="exampleCollection" id="xxx">
+        <h3>Tooltip Definition</h3>
+        <p>
+          <b>Attributes</b>, like the <em>href="..."</em> attribute on a &#60;link&#62; or the <em>action="..."</em> attribute on a form, exist as properties of an element object. The function below invokes the <b><em>title="..."</em></b> attribute to enable a tooltip when a user <em>hovers</em> an element with that reference.
+        </p>
+        <div class="exampleArea">
+         <p>She impressed me with her <b><em><span id="tooltip">specificity</span></em></b> of instructions.</p>
+       </div>
+      </article>
+      <!-- Toggle Element -->
+      <article class="exampleCollection" id="xxx">
+        <h3>Toggle Element <u><b><em>BROKEN</em></b></u></h3>
+        <p>
+          This broken toggler will hide the list, but will not <em>REVEAL</em> the list on request.
+        </p>
+        <div class="exampleArea">
+          <button id="toggler">Toggle</button>
+          <div class="elementToToggle">
+            <ul class="toggledElement">
+              <li>Asparagus</li>
+              <li>Garlic</li>
+              <li>Hari Verts</li>
+              <li>Kale</li>
+              <li>Ipomoea Batatas</li>
             </ul>
           </div>
         </div>
-        <!-- Modify Text -->
-        <div class="exampleCollection" id="xxx">
-          <h3>Modify Text</h3>
-          <p>Remember that <em>innerHTML</em> and <em>textContent</em> are interchangeable when modifying text.</p>
-          <div class="exampleArea">
-            <div>
-              <p class="description">I am TEXT that can be modified!</p>
-              <input id="addItemInput" class="description" type="text" placeholder="Change Text Description">
-              <button class="description">Click to Change</button>
-            </div>
+      </article>
+      <!-- Transform Text on :Hover (uppercase/lowercase) -->
+      <article class="exampleCollection" id="xxx">
+        <h3>Capitalizing Text on Hover</h3>
+        <div class="exampleArea">
+          <ul class="hoverList">
+            <li>Hover me to capitalize text</li>
+            <li>Move mouse away to return to lowercase</li>
+          </ul>
+        </div>
+        <div class="codeGroup">
+          <div><img src="img/examples/addEventListener.png"></div>
+          <div>
+            <p>This code illustrates a forLoop() being used to iterate through all &#60;li&#62;: when user hovers over any of the content, it will appear as UPPERCASE; it will revert to lowercase otherwise.</p>
           </div>
         </div>
-        <!-- Creating DOM Elements -->
-        <div class="exampleCollection" id="xxx">
-          <h3>Creating DOM Elements</h3>
-          <p><em>Broken Function but...<b>Code DOES WORK!</b> Other code on this page causes the function issues.</em> <small>Conflict with another &#60;input&#62; element.</small></p>
-          <div class="exampleArea">
-            <ul id="addRemove">
-              <li>Old 1</li>
-              <li>Old 2</li>
-              <li>Old 3</li>
-              <li>Old 4</li>
-            </ul>
-            <input class="addItemInput" type="text" placeholder="Enter Text Here">
-            <button class="addItemButton">Add Item</button>
-            <button class="removeItemButton">Remove Item</button>
-          </div>
-          <!--<p>
+      </article>
+      <!-- Modify Text -->
+      <article class="exampleCollection" id="xxx">
+        <h3>Modify Text</h3>
+        <p>Remember that <em>innerHTML</em> and <em>textContent</em> are interchangeable when modifying text.</p>
+        <div class="exampleArea">
+         <div>
+           <p class="description">I am TEXT that can be modified!</p>
+           <input id="addItemInput" class="description" type="text" placeholder="Change Text Description">
+           <button class="description">Click to Change</button>
+         </div>
+       </div>
+      </article>
+      <!-- Creating DOM Elements -->
+      <article  class="exampleCollection" id="xxx">
+        <h3>Creating DOM Elements</h3>
+        <p><em>Broken Function but...<b>Code DOES WORK!</b> Other code on this page causes the function issues.</em> <small>Conflict with another &#60;input&#62; element.</small></p>
+        <div class="exampleArea">
+          <ul id="addRemove">
+            <li>Old 1</li>
+            <li>Old 2</li>
+            <li>Old 3</li>
+            <li>Old 4</li>
+          </ul>
+          <input class="addItemInput" type="text" placeholder="Enter Text Here">
+          <button class="addItemButton">Add Item</button>
+          <button class="removeItemButton">Remove Item</button>
+        </div>
+        <!--<p>
             The document <b>.createElement&#40;&#41;</b> method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized. It requires a 'tagName' to specify the type of element that you want to create: the 'tagName' value is applied to the element when initialized.  When called on an HTML document, createElement() converts tagName to lower case before creating the element.
           </p>
           <p>
@@ -156,307 +161,144 @@
           <p>
             The process of removing an element from the DOM is completed by using the <b>removeChild()</b> method, which removes a child node while returning the removed node. It is used similarly to the appendChild() method, but with less work.
           </p>-->
-        </div>
-        <!-- ...... -->
-        <div class="exampleCollection" id="xxx">
-          <h3>...</h3>
-          <div class="exampleArea">
-            <button id="xx">Code Example</button>
-          </div>
-        </div>
-        <!-- -->
-        <!--<div class="exampleCollection" id="xxx">
-          <h3>Function Title</h3>
-          <p>Function Explanation</p>
-          <div class="codeGroup">
-            <div>
-              <h4><small><em style="color: grey;">index.html</em></small></h4>
-              <p>[a] <code>Select Elements from HTML</code></p>
-              <img src="img/">   
-            </div>
-            <div>
-              <h4><small><em style="color: grey;">examples.js</em></small></h4>
-              <p>[b] <code>Add Event Listener with Functions</code></p>
-              <img src="img/">    
-            </div>
-          </div>
-          <p>Elaborate Function Code</p>
-          <div class="exampleArea">
-            <p id="...">Code Example</p>
-          </div>
-        </div>
-        <div class="exampleCollection" id="xxx">
-          <h3>Function Title</h3>
-          <p>Function Explanation</p>
-          <div class="codeGroup">
-            <div>
-              <h4><small><em style="color: grey;">index.html</em></small></h4>
-              <p>[a] <code>Select Elements from HTML</code></p>
-              <img src="img/">   
-            </div>
-            <div>
-              <h4><small><em style="color: grey;">examples.js</em></small></h4>
-              <p>[b] <code>Add Event Listener with Functions</code></p>
-              <img src="img/">    
-            </div>
-          </div>
-          <p>Elaborate Function Code</p>
-          <div class="exampleArea">
-            <p id="...">Code Example</p>
-          </div>
-        </div>
-        <div class="exampleCollection" id="xxx">
-          <h3>Function Title</h3>
-          <p>Function Explanation</p>
-          <div class="codeGroup">
-            <div>
-              <h4><small><em style="color: grey;">index.html</em></small></h4>
-              <p>[a] <code>Select Elements from HTML</code></p>
-              <img src="img/">   
-            </div>
-            <div>
-              <h4><small><em style="color: grey;">examples.js</em></small></h4>
-              <p>[b] <code>Add Event Listener with Functions</code></p>
-              <img src="img/">    
-            </div>
-          </div>
-          <p>Elaborate Function Code</p>
-          <div class="exampleArea">
-            <p id="...">Code Example</p>
-          </div>
-        </div>
-        <div class="exampleCollection" id="xxx">
-          <h3>Function Title</h3>
-          <p>Function Explanation</p>
-          <div class="codeGroup">
-            <div>
-              <h4><small><em style="color: grey;">index.html</em></small></h4>
-              <p>[a] <code>Select Elements from HTML</code></p>
-              <img src="img/">   
-            </div>
-            <div>
-              <h4><small><em style="color: grey;">examples.js</em></small></h4>
-              <p>[b] <code>Add Event Listener with Functions</code></p>
-              <img src="img/">    
-            </div>
-          </div>
-          <p>Elaborate Function Code</p>
-          <div class="exampleArea">
-            <p id="...">Code Example</p>
-          </div>
-        </div>
-        <div class="exampleCollection" id="xxx">
-          <h3>Function Title</h3>
-          <p>Function Explanation</p>
-          <div class="codeGroup">
-            <div>
-              <h4><small><em style="color: grey;">index.html</em></small></h4>
-              <p>[a] <code>Select Elements from HTML</code></p>
-              <img src="img/">   
-            </div>
-            <div>
-              <h4><small><em style="color: grey;">examples.js</em></small></h4>
-              <p>[b] <code>Add Event Listener with Functions</code></p>
-              <img src="img/">    
-            </div>
-          </div>
-          <p>Elaborate Function Code</p>
-          <div class="exampleArea">
-            <p id="...">Code Example</p>
-          </div>
-        </div>
-        <div class="exampleCollection" id="xxx">
-          <h3>Function Title</h3>
-          <p>Function Explanation</p>
-          <div class="codeGroup">
-            <div>
-              <h4><small><em style="color: grey;">index.html</em></small></h4>
-              <p>[a] <code>Select Elements from HTML</code></p>
-              <img src="img/">   
-            </div>
-            <div>
-              <h4><small><em style="color: grey;">examples.js</em></small></h4>
-              <p>[b] <code>Add Event Listener with Functions</code></p>
-              <img src="img/">    
-            </div>
-          </div>
-          <p>Elaborate Function Code</p>
-          <div class="exampleArea">
-            <p id="...">Code Example</p>
-          </div>
-        </div>-->
       </article>
-      <article></article>
+
+      <!-- EX 1 -->
+      <article  class="exampleCollection" id="ex1">
+        <h3>Example 1: Modify Content using the HTMLElement.style Property</h3>
+        <p>
+          This example demonstrates how to <em>modify content 'styles' of a targeted element that is bound to a 'click' event</em>. The result is that the text color, background-color, border, font-size, font-weight, text-alignment and line-height styles for the element will change when the user clicks the element.
+        </p>
+        <div class="codeGroup">
+          <div>
+            <h4><small><em style="color: grey;">index.html</em></small></h4>
+            <p>[a] <code>Select Elements from HTML</code></p>
+            <img src="img/examples/ex1html.png">   
+          </div>
+          <div>
+            <h4><small><em style="color: grey;">examples.js</em></small></h4>
+            <p>[b] <code>Add Event Listener with Functions</code></p>
+            <img src="img/examples/ex1function.png">    
+          </div>
+        </div>     
+        <p>
+          This function starts by creating a variable that can reference the targeted elements. The <em>document<b>.getElementById&#40;&#41;</b> Method</em> is one of several options that targets Elements for selection: this option targets the <em><b>id 'textStyles'</b></em> that is coded into the HTML &#60;p&#62; element.
+        </p>
+        <p>
+          Next, the <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textStyles' to listen for browser events. The first argument of this method is the 'type of event' that is expected: 'click' is the scheduled event that this listener is waiting for. The second argument of this method involves the functions that will be invoked by the listener whenever the user 'clicks' the element.
+        </p>
+        <p>
+          Inside of the listener, the variable name is referenced again along with the <em><b>HTMLElement.style</b> Property</em>, which is used to specify a value to modify the elements content.
+        </p>
+        <div class="exampleArea">
+          <p id="textStyles">Click this text to modify its content.</p>
+        </div>
+      </article>
+      <!-- EX 2 -->
+      <article  class="exampleCollection" id="ex2">
+        <h3>Example 2: Use a Button to Reset Modified Content</h3>
+        <p>This example demonstrates how to <em>reset modified content 'styles' of a targeted element that is bound to a 'click' event</em>. All that was required was to include a &#60;button&#62; element with an id that could be used to target the 'textStylesZ' element: this is done by adding an event listener for the &#60;button&#62;. The difference between the two listeners is that the &#60;button&#62; listener targets the variable created to reference the &#60;p&#62; element.</p>
+        <p>The result is that the styles applied to the &#60;p&#62; on user-click will return to its original state.</p>
+
+        <div class="codeGroup">
+          <div>
+            <h4><small><em style="color: grey;">index.html</em></small></h4>
+            <p>[a] <code>Select Elements from HTML</code></p>
+            <img src="img/examples/ex2html.png">   
+          </div>
+          <div>
+            <h4><small><em style="color: grey;">examples.js</em></small></h4>
+            <p>[b] <code>Add Event Listener with Functions</code></p>
+            <img src="img/examples/ex2function.png">    
+          </div>
+        </div>
+
+        <p>This function starts by creating a new variable that can reference the targeted elements using the <em>document<b>.getElementById&#40;&#41;</b> Method</em> to target the <em><b>id 'textStyleZ'</b></em> that is coded into the HTML &#60;p&#62; element and the <em><b>id 'resetButton'</b></em> that is coded into the HTML &#60;button&#62; element.</p>
+        <p>A new <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'resetButton' to listen for browser events on the &#60;button&#62;.</p>
+        <p>Inside of the listener, a 'click' event-type is passed as the first argument, but the second argument of this method allows events on the &#60;button&#62; element to occur on the &#60;p&#62; element.</p>
+
+        <div class="exampleArea">
+          <p id="textStyleZ">Click this text to modify its content.</p>
+          <button id="resetButton">Reset Modified Text</button>
+        </div>
+      </article>
+      <!-- EX 3 -->
+      <article  class="exampleCollection" id="ex3">
+        <h3>Example 3: Use an Input to Choose a Color</h3>
+        <p>The example demonstrates how to <em>change the color of an element by entering a color name or hex value into an input</em> and using a button to confirm the event. An &#60;input&#62; of type 'text' is added to the previous code to designate an area to enter a color value.</p>
+        <p>The result is that the color of the headline text will change to whatever color value the user enters in the 'input' once the user 'clicks' the button.</p>
+        <div class="codeGroup">
+          <div>
+            <h4><small><em style="color: grey;">index.html</em></small></h4>
+            <p>[a] <code>Select Elements from HTML</code></p>
+            <img src="img/examples/ex3html.png">   
+          </div>
+          <div>
+            <h4><small><em style="color: grey;">examples.js</em></small></h4>
+            <p>[b] <code>Add Event Listener with Functions</code></p>
+            <img src="img/examples/ex3function.png">    
+          </div>
+        </div>    
+        <p>This function starts by creating a new variable that can reference an &#60;input&#62; element using the <em>document<b>.getElementById&#40;&#41;</b> Method</em> to target the id 'textinputStyle' that is coded into the HTML &#60;p&#62; element and the id 'inputButton' that is coded into the HTML &#60;button&#62; element.</p>
+        <p>A new <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textInput' to listen for user input, then the browser waits for a 'click' event on the &#60;button&#62; to modify the text color.</p>
+        <!-- ************************************************ -->
+        <!-- ************************************************ -->
+        <div class="exampleArea">
+          <p id="textInputStyle">Type a Color Name to Transform Text</p>
+          <input id="textInput" type="text">
+          <button id="inputButton">Add Color to Text</button>
+        </div>
+        <!-- ************************************************ -->
+        <!-- ************************************************ -->
+      </article>
+      <!-- EX 4 -->
+      <article  class="exampleCollection" id="ex4">
+        <h3>Example 4: Use a for&#40;&#41; Loop to Target a Set of Elements to Style</h3>
+        <p>This example illustrates targeting sets of elements: the instruction function modifies the color for all &#60;li&#62;  to be purple. The exception to the rule is if a &#60;li&#62; has a class of 'not-purple': such elements are colored red. Moreover, the final function instructs the browser to add a lightgray background color to  every-other element: very useful for creating pin-stripped tables.</p>
+        <div class="codeGroup">
+          <div>
+            <h4><small><em style="color: grey;">index.html</em></small></h4>
+            <p>[a] <code>Select Elements from HTML</code></p>
+            <img src="img/examples/ex4html.png">   
+          </div>
+          <div>
+            <h4><small><em style="color: grey;">examples.js</em></small></h4>
+            <p>[b] <code>Invoke for&#40;&#41; Loop to Iterate</code></p>
+            <img src="img/examples/ex4function.png">    
+          </div>
+        </div>
+        <!-- ************************************************ -->
+        <!-- ************************************************ -->
+        <div class="exampleArea">
+          <ul class="table">
+            <li>grapes</li>
+            <li class="not-purple">oranges</li>
+            <li>amethyst</li>
+            <li class="not-purple">snow</li>
+            <li>lavender</li>
+            <li class="not-purple">water</li>
+            <li>plums</li>
+          </ul>
+        </div>
+        <!-- ************************************************ -->
+        <!-- ************************************************ --> 
+      </article>
+      <!-- EX 5 -->
+      <article  class="exampleCollection" id="ex5">
+        <h3>MISC/Leftover Examples </h3>
+        <p></p>
+      <!-- -->
+        <div class="codeGroup">
+          <div>
+            <p>DOM <b>Traversal</b> is a means of moving from one part of the DOM to another by selecting an element based on its relationship to another element. To do this, simply traverse to the parentNode using the <b>parentNode</b> Property. Take the elements parentNode and assign it to a variable parent, then use the parent to take an action: in this case, use the parent to remove an element (ie paragraph).</p>
+          </div>
+          <div><img src="img/examples/parentNode.png"></div>
+        </div>
+      </article>
+      <hr style="margin-top: 24px;">
+      <!-- -->
     </section>
-    <!-- EX 1-->
-    <div class="exampleCollection" id="ex1">
-      <h3>Example 1: Modify Content using the HTMLElement.style Property</h3>
-      <p>
-        This example demonstrates how to <em>modify content 'styles' of a targeted element that is bound to a 'click' event</em>. The result is that the text color, background-color, border, font-size, font-weight, text-alignment and line-height styles for the element will change when the user clicks the element.
-      </p>
-      <div class="codeGroup">
-        <div>
-          <h4><small><em style="color: grey;">index.html</em></small></h4>
-          <p>[a] <code>Select Elements from HTML</code></p>
-          <img src="img/examples/ex1html.png">   
-        </div>
-        <div>
-          <h4><small><em style="color: grey;">examples.js</em></small></h4>
-          <p>[b] <code>Add Event Listener with Functions</code></p>
-          <img src="img/examples/ex1function.png">    
-        </div>
-      </div>     
-      <p>
-        This function starts by creating a variable that can reference the targeted elements. The <em>document<b>.getElementById&#40;&#41;</b> Method</em> is one of several options that targets Elements for selection: this option targets the <em><b>id 'textStyles'</b></em> that is coded into the HTML &#60;p&#62; element.
-      </p>
-      <p>
-        Next, the <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textStyles' to listen for browser events. The first argument of this method is the 'type of event' that is expected: 'click' is the scheduled event that this listener is waiting for. The second argument of this method involves the functions that will be invoked by the listener whenever the user 'clicks' the element.
-      </p>
-      <p>
-        Inside of the listener, the variable name is referenced again along with the <em><b>HTMLElement.style</b> Property</em>, which is used to specify a value to modify the elements content.
-      </p>
-      <div class="exampleArea">
-        <p id="textStyles">Click this text to modify its content.</p>
-      </div>
-    </div>
-    <!-- -->
-    <hr style="margin-top: 24px;">
-    <hr>
-    <hr>
-    <hr>
-    <!-- EX 2 -->
-    <div class="exampleCollection" id="ex2">
-      <h3>Example 2: Use a Button to Reset Modified Content</h3>
-      <p>This example demonstrates how to <em>reset modified content 'styles' of a targeted element that is bound to a 'click' event</em>. All that was required was to include a &#60;button&#62; element with an id that could be used to target the 'textStylesZ' element: this is done by adding an event listener for the &#60;button&#62;. The difference between the two listeners is that the &#60;button&#62; listener targets the variable created to reference the &#60;p&#62; element.</p>
-      <p>The result is that the styles applied to the &#60;p&#62; on user-click will return to its original state.</p>
-      
-      <div class="codeGroup">
-        <div>
-          <h4><small><em style="color: grey;">index.html</em></small></h4>
-          <p>[a] <code>Select Elements from HTML</code></p>
-          <img src="img/examples/ex2html.png">   
-        </div>
-        <div>
-          <h4><small><em style="color: grey;">examples.js</em></small></h4>
-          <p>[b] <code>Add Event Listener with Functions</code></p>
-          <img src="img/examples/ex2function.png">    
-        </div>
-      </div>
-      
-      <p>This function starts by creating a new variable that can reference the targeted elements using the <em>document<b>.getElementById&#40;&#41;</b> Method</em> to target the <em><b>id 'textStyleZ'</b></em> that is coded into the HTML &#60;p&#62; element and the <em><b>id 'resetButton'</b></em> that is coded into the HTML &#60;button&#62; element.</p>
-      <p>A new <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'resetButton' to listen for browser events on the &#60;button&#62;.</p>
-      <p>Inside of the listener, a 'click' event-type is passed as the first argument, but the second argument of this method allows events on the &#60;button&#62; element to occur on the &#60;p&#62; element.</p>
-      
-      <div class="exampleArea">
-        <p id="textStyleZ">Click this text to modify its content.</p>
-        <button id="resetButton">Reset Modified Text</button>
-      </div>
-      
-    </div>
-    <!-- -->
-    <!-- -->
-    <hr style="margin-top: 24px;">
-    <hr>
-    <hr>
-    <hr>
-    <!-- EX 3 -->
-    <!-- -->
-    <div class="exampleCollection" id="ex3">
-      <h3>Example 3: Use an Input to Choose a Color</h3>
-      <p>The example demonstrates how to <em>change the color of an element by entering a color name or hex value into an input</em> and using a button to confirm the event. An &#60;input&#62; of type 'text' is added to the previous code to designate an area to enter a color value.</p>
-      <p>The result is that the color of the headline text will change to whatever color value the user enters in the 'input' once the user 'clicks' the button.</p>
-      <div class="codeGroup">
-        <div>
-          <h4><small><em style="color: grey;">index.html</em></small></h4>
-          <p>[a] <code>Select Elements from HTML</code></p>
-          <img src="img/examples/ex3html.png">   
-        </div>
-        <div>
-          <h4><small><em style="color: grey;">examples.js</em></small></h4>
-          <p>[b] <code>Add Event Listener with Functions</code></p>
-          <img src="img/examples/ex3function.png">    
-        </div>
-      </div>    
-      <p>This function starts by creating a new variable that can reference an &#60;input&#62; element using the <em>document<b>.getElementById&#40;&#41;</b> Method</em> to target the id 'textinputStyle' that is coded into the HTML &#60;p&#62; element and the id 'inputButton' that is coded into the HTML &#60;button&#62; element.</p>
-      <p>A new <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textInput' to listen for user input, then the browser waits for a 'click' event on the &#60;button&#62; to modify the text color.</p>
-      <!-- ************************************************ -->
-      <!-- ************************************************ -->
-      <div class="exampleArea">
-        <p id="textInputStyle">Type a Color Name to Transform Text</p>
-        <input id="textInput" type="text">
-        <button id="inputButton">Add Color to Text</button>
-      </div>
-      <!-- ************************************************ -->
-      <!-- ************************************************ -->
-    </div>
-    <!-- -->
-    <!-- -->
-    <hr style="margin-top: 24px;">
-    <hr>
-    <hr>
-    <hr>
-    <!-- EX 4 -->
-    <!-- -->
-    <div class="exampleCollection" id="ex4">
-      <h3>Example 4: Use a for&#40;&#41; Loop to Target a Set of Elements to Style</h3>
-      <p>This example illustrates targeting sets of elements: the instruction function modifies the color for all &#60;li&#62;  to be purple. The exception to the rule is if a &#60;li&#62; has a class of 'not-purple': such elements are colored red. Moreover, the final function instructs the browser to add a lightgray background color to  every-other element: very useful for creating pin-stripped tables.</p>
-      <div class="codeGroup">
-        <div>
-          <h4><small><em style="color: grey;">index.html</em></small></h4>
-          <p>[a] <code>Select Elements from HTML</code></p>
-          <img src="img/examples/ex4html.png">   
-        </div>
-        <div>
-          <h4><small><em style="color: grey;">examples.js</em></small></h4>
-          <p>[b] <code>Invoke for&#40;&#41; Loop to Iterate</code></p>
-          <img src="img/examples/ex4function.png">    
-        </div>
-      </div>
-      <!-- ************************************************ -->
-      <!-- ************************************************ -->
-      <div class="exampleArea">
-        <ul class="table">
-          <li>grapes</li>
-          <li class="not-purple">oranges</li>
-          <li>amethyst</li>
-          <li class="not-purple">snow</li>
-          <li>lavender</li>
-          <li class="not-purple">water</li>
-          <li>plums</li>
-        </ul>
-      </div>
-      <!-- ************************************************ -->
-      <!-- ************************************************ -->    
-    </div>
-    <!-- -->
-    <!-- -->
-    <hr style="margin-top: 24px;">
-    <hr>
-    <hr>
-    <hr>
-    <!-- MISC -->
-    <div class="exampleCollection" id="ex5">
-      <h3>MISC/Leftover Examples </h3>
-      <div class="codeGroup">
-        <div><img src="img/examples/addEventListener.png"></div>
-        <div>
-          <p>This code illustrates a forLoop() being used to iterate through all &#60;li&#62;: when user hovers over any of the content, it will appear as UPPERCASE; it will revert to lowercase otherwise.</p>
-        </div>
-      </div>
-    <!-- -->
-      <div class="codeGroup">
-        <div>
-          <p>DOM <b>Traversal</b> is a means of moving from one part of the DOM to another by selecting an element based on its relationship to another element. To do this, simply traverse to the parentNode using the <b>parentNode</b> Property. Take the elements parentNode and assign it to a variable parent, then use the parent to take an action: in this case, use the parent to remove an element (ie paragraph).</p>
-        </div>
-        <div><img src="img/examples/parentNode.png"></div>
-      </div>
-    <!-- -->
-      <div class="codeGroup"></div>
-    <!-- -->
-      <div class="codeGroup"></div>
-    <!-- -->
-      
-    </div>
+    
     
     <!-- Link to app.js File -->
     <script src="js/examples.js"></script>
