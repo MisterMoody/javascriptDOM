@@ -58,9 +58,8 @@
       </div>
       <!-- Display a Notifation (Alert Message) -->
       <article class="exampleCollection" id="xxx">
-        <h3>Display a Notification (Alert Message)</h3>
-        <!--<p>Function Explanation</p>
-        <p>Elaborate Function Code</p>-->
+        <h3>Display a Notification</h3>
+        <p>This function <em>displays an <b>alert message</b></em> when a user <code>'clicks'</code> the button, <em>notifying the user of important information</em>.</p>
         <div class="exampleArea">
           <button id="alertBTN">Notification</button>
         </div>
@@ -83,7 +82,7 @@
       <article class="exampleCollection" id="xxx">
         <h3>Tooltip Definition</h3>
         <p>
-          <b>Attributes</b>, like the <em>href="..."</em> attribute on a &#60;link&#62; or the <em>action="..."</em> attribute on a form, exist as properties of an element object. The function below invokes the <b><em>title="..."</em></b> attribute to enable a tooltip when a user <em>hovers</em> an element with that reference.
+          This function <em>reveals a <b>tooltip</b></em> when a user <code>'hovers'</code> over an element.
         </p>
         <div class="exampleArea">
          <p>She impressed me with her <b><em><span id="tooltip">specificity</span></em></b> of instructions.</p>
@@ -102,12 +101,15 @@
           </div>
         </div>  
         <!-- ************************************************ -->
+        <!--<p>
+          <b>Attributes</b>, like the <em>href="..."</em> attribute on a &#60;link&#62; or the <em>action="..."</em> attribute on a form, exist as properties of an element object. The function below invokes the <b><em>title="..."</em></b> attribute to enable a tooltip when a user <em>hovers</em> an element with that reference.
+        </p>-->
       </article>
       <!-- Toggle Element -->
       <article class="exampleCollection" id="xxx">
         <h3>Toggle Element</h3>
         <p>
-          This broken toggler will hide the list, but will not <em>REVEAL</em> the list on request.
+          This function <em><b>toggles</b> the content <b>in and out of view</b></em> when a user <code>'clicks'</code> the button.
         </p>
         <div class="exampleArea">
           <button id="toggleList" style="width: 100%;">Hide All Items in Shaded Area</button>
@@ -140,7 +142,7 @@
       <article class="exampleCollection" id="xxx">
         <h3>Hover Manipulation</h3>
         <p>
-          
+          This function <em>transforms <b>text content</b></em>: the text is capitalized when user <code>'hovers'</code> an element then returns to lower case when user moves mouse off of element.
         </p>
         <div class="exampleArea">
           <div class="hoverList">
@@ -166,7 +168,7 @@
       <article class="exampleCollection" id="xxx">
         <h3>Input Manipulation</h3>
         <p>
-          Remember that <em>innerHTML</em> and <em>textContent</em> are interchangeable when modifying text.
+          This function <em>transforms <b>text content</b></em> based on user input. A user can manipulate the text by adding data to an input: the function is executed when the user <code>'clicks'</code> the button.
         </p>
         <div class="exampleArea">
           <p class="description">I am TEXT that can be modified!</p>
@@ -187,12 +189,20 @@
           </div>
         </div>  
         <!-- ************************************************ -->
+        <!-- 
+        <p>
+          Remember that <em>innerHTML</em> and <em>textContent</em> are interchangeable when modifying text.
+        </p> 
+-->
       </article>
       <!-- Creating DOM Elements -->
       <article  class="exampleCollection" id="xxx">
         <h3>Creating DOM Elements</h3>
         <p>
-          <em>The function does not work on this page: conflict with with &#60;ul&#62;, &#60;input&#62; or &#60;button&#62; element. <b>The Code as illustrated WORKS!</b> </em>
+          This function can <em><b>add</b> and/or <b>remove</b></em> an item from a list of elements. A user can add data to an input, then <code>'click'</code> the <code>Add Item</code> button to execute that part of the function. When the user <code>'clicks'</code> the <code>Remove Item</code> button, the <em>last list item</em> will be removed from the list of elements.
+        </p>
+        <p>
+          <small><em>The function does not work on this page: conflict with with &#60;ul&#62;, &#60;input&#62; or &#60;button&#62; element. <b>The Code as illustrated WORKS!</b></em></small>
         </p>
         <div class="exampleArea">
           <ul id="addRemove">
@@ -233,11 +243,11 @@
           </p>-->
       </article>
 
-      <!-- EX 1 -->
+      <!-- EX 1 Styling Text Content -->
       <article  class="exampleCollection" id="ex1">
-        <h3>Example 1: Modify Content using the HTMLElement.style Property</h3>
+        <h3>Example 1: Styling Text Content</h3>
         <p>
-          This example demonstrates how to <em>modify content 'styles' of a targeted element that is bound to a 'click' event</em>. The result is that the text color, background-color, border, font-size, font-weight, text-alignment and line-height styles for the element will change when the user clicks the element.
+          This function <em>transforms <b>text styles</b></em> when a user <code>'clicks'</code> the text element.
         </p>
         <div class="exampleArea">
           <p id="textStyles">Click this text to modify its content.</p>
@@ -256,6 +266,9 @@
           </div>
         </div>  
         <!-- ************************************************ -->
+        <!--<p>
+          This example demonstrates how to <em>modify content 'styles' of a targeted element that is bound to a 'click' event</em>. The result is that the text color, background-color, border, font-size, font-weight, text-alignment and line-height styles for the element will change when the user clicks the element.
+        </p>
         <p>
           This function starts by creating a variable that can reference the targeted elements. The <em>document<b>.getElementById&#40;&#41;</b> Method</em> is one of several options that targets Elements for selection: this option targets the <em><b>id 'textStyles'</b></em> that is coded into the HTML &#60;p&#62; element.
         </p>
@@ -264,17 +277,12 @@
         </p>
         <p>
           Inside of the listener, the variable name is referenced again along with the <em><b>HTMLElement.style</b> Property</em>, which is used to specify a value to modify the elements content.
-        </p>
+        </p>-->
       </article>
-      <!-- EX 2 -->
+      <!-- EX 2 Modify and Reset Text Content -->
       <article  class="exampleCollection" id="ex2">
-        <h3>Example 2: Use a Button to Reset Modified Content</h3>
-        <p>
-          This example demonstrates how to <em>reset modified content 'styles' of a targeted element that is bound to a 'click' event</em>. All that was required was to include a &#60;button&#62; element with an id that could be used to target the 'textStylesZ' element: this is done by adding an event listener for the &#60;button&#62;. The difference between the two listeners is that the &#60;button&#62; listener targets the variable created to reference the &#60;p&#62; element.
-        </p>
-        <p>
-          The result is that the styles applied to the &#60;p&#62; on user-click will return to its original state.
-        </p>
+        <h3>Example 2: Modify and Reset Text Content</h3>
+        <p>This function can <em><b>modify</b> and <b>reset text styles</b></em> when a user <code>'clicks'</code> the text and then <code>'clicks'</code> the <code>Reset Modified Text</code> button.</p>
         <div class="exampleArea">
           <p id="textStyleZ">Click this text to modify its content.</p>
           <button id="resetButton">Reset Modified Text</button>
@@ -293,6 +301,12 @@
           </div>
         </div>
         <!-- ************************************************ -->
+        <!--<p>
+          This example demonstrates how to <em>reset modified content 'styles' of a targeted element that is bound to a 'click' event</em>. All that was required was to include a &#60;button&#62; element with an id that could be used to target the 'textStylesZ' element: this is done by adding an event listener for the &#60;button&#62;. The difference between the two listeners is that the &#60;button&#62; listener targets the variable created to reference the &#60;p&#62; element.
+        </p>
+        <p>
+          The result is that the styles applied to the &#60;p&#62; on user-click will return to its original state.
+        </p>
         <p>
           This function starts by creating a new variable that can reference the targeted elements using the <em>document<b>.getElementById&#40;&#41;</b> Method</em> to target the <em><b>id 'textStyleZ'</b></em> that is coded into the HTML &#60;p&#62; element and the <em><b>id 'resetButton'</b></em> that is coded into the HTML &#60;button&#62; element.
         </p>
@@ -301,16 +315,13 @@
         </p>
         <p>
           Inside of the listener, a 'click' event-type is passed as the first argument, but the second argument of this method allows events on the &#60;button&#62; element to occur on the &#60;p&#62; element.
-        </p>
+        </p>-->
       </article>
-      <!-- EX 3 -->
+      <!-- EX 3 Input Manipulation II -->
       <article  class="exampleCollection" id="ex3">
-        <h3>Example 3: Use an Input to Choose a Color</h3>
+        <h3>Example 3: Input Manipulation II</h3>
         <p>
-          The example demonstrates how to <em>change the color of an element by entering a color name or hex value into an input</em> and using a button to confirm the event. An &#60;input&#62; of type 'text' is added to the previous code to designate an area to enter a color value.
-        </p>
-        <p>
-          The result is that the color of the headline text will change to whatever color value the user enters in the 'input' once the user 'clicks' the button.
+          This function <em>transforms <b>text styles</b></em> based on user input. A user can <em>modify text styles by adding a color value to an input</em>: the function is executed when the user <code>'clicks'</code> the button.
         </p>
         <div class="exampleArea">
           <p id="textInputStyle">Type a Color Name to Transform Text</p>
@@ -329,18 +340,27 @@
             <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/ex3function.png">    
           </div>
-        </div>    
+        </div>  
+        <!--<p>
+          The example demonstrates how to <em>change the color of an element by entering a color name or hex value into an input</em> and using a button to confirm the event. An &#60;input&#62; of type 'text' is added to the previous code to designate an area to enter a color value.
+        </p>
+        <p>
+          The result is that the color of the headline text will change to whatever color value the user enters in the 'input' once the user 'clicks' the button.
+        </p>  
         <p>
           This function starts by creating a new variable that can reference an &#60;input&#62; element using the <em>document<b>.getElementById&#40;&#41;</b> Method</em> to target the id 'textinputStyle' that is coded into the HTML &#60;p&#62; element and the id 'inputButton' that is coded into the HTML &#60;button&#62; element.
         </p>
         <p>
           A new <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textInput' to listen for user input, then the browser waits for a 'click' event on the &#60;button&#62; to modify the text color.
-        </p>
+        </p>-->
         <!-- ************************************************ -->
       </article>
-      <!-- EX 4 -->
+      <!-- EX 4 Style a Set of Text Elements -->
       <article  class="exampleCollection" id="ex4">
-        <h3>Example 4: Use a for&#40;&#41; Loop to Target a Set of Elements to Style</h3>
+        <h3>Example 4: Style a Set of Elements</h3>
+        <p>
+          This function is <em>NOT</em> an event: the <code>&#60;code&#62;</code> used here <em><b>targets</b> a specified set of elements to style.</em>
+        </p>
         <p>
           This example illustrates targeting sets of elements: the instruction function modifies the color for all &#60;li&#62;  to be purple. The exception to the rule is if a &#60;li&#62; has a class of 'not-purple': such elements are colored red. Moreover, the final function instructs the browser to add a lightgray background color to  every-other element: very useful for creating pin-stripped tables.
         </p>
@@ -368,23 +388,23 @@
             <img src="img/examples/ex4function.png">    
           </div>
         </div>
-        <!--<p>This code illustrates a forLoop() being used to iterate through all &#60;li&#62;: when user hovers over any of the content, it will appear as UPPERCASE; it will revert to lowercase otherwise.</p>-->
+        <!--<p>This code illustrates a forLoop() being used to iterate through all &#60;li&#62;: when user hovers over any of the content, it will appear as UPPERCASE; it will revert to lowercase otherwise.</p>
+        <p>
+          This example illustrates targeting sets of elements: the instruction function modifies the color for all &#60;li&#62;  to be purple. The exception to the rule is if a &#60;li&#62; has a class of 'not-purple': such elements are colored red. Moreover, the final function instructs the browser to add a lightgray background color to  every-other element: very useful for creating pin-stripped tables.
+        </p>-->
         <!-- ************************************************ -->
       </article>
-      <!-- EX 5 -->
+      <!-- EX 5 
       <article  class="exampleCollection" id="ex5">
         <h3>MISC/Leftover Examples </h3>
         <p></p>
-      <!-- -->
         <div class="codeGroup">
           <div>
             <p>DOM <b>Traversal</b> is a means of moving from one part of the DOM to another by selecting an element based on its relationship to another element. To do this, simply traverse to the parentNode using the <b>parentNode</b> Property. Take the elements parentNode and assign it to a variable parent, then use the parent to take an action: in this case, use the parent to remove an element (ie paragraph).</p>
           </div>
           <div><img src="img/examples/parentNode.png"></div>
         </div>
-      </article>
-      <hr style="margin-top: 24px;">
-      <!-- -->
+      </article>-->
     </section>
     
     
