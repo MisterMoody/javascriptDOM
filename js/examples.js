@@ -1,3 +1,87 @@
+// Alert Button Notification -----------------------------------
+const alertBTN = document.getElementById('alertBTN');
+alertBTN.addEventListener('click', () => {
+  alert('This is a user notification. Add content here to display a useful message notifiying the user of important information.')
+});
+// -------------------------------------------------------------
+
+
+// Tooltip Description -----------------------------------------
+const tooltip = document.getElementById('tooltip');
+tooltip.title = "the quality or condition of being specific";
+// -------------------------------------------------------------
+
+
+// Toggle Element (on Click) -----------------------------------
+const toggleList = document.getElementById('toggleList');
+const listDiv = document.querySelector('.list');
+
+toggleList.addEventListener('click', () => {
+  //  User 'click' will 'HIDE' <element>
+  if (listDiv.style.display == 'none'){
+  toggleList.textContent = 'Hide All Items in Shaded Area';
+  listDiv.style.display = 'block';
+  } 
+  //  User 'click' will 'REVEAL' <element>
+  else {
+  toggleList.textContent = 'Show All Items in Shaded Area';
+  listDiv.style.display = 'none';
+  }
+});
+// -------------------------------------------------------------
+
+
+// Hover Manipulation ------------------------------------------
+const hoverList = document.querySelector('.hoverList');
+hoverList.addEventListener('mouseover', (event) => {
+  if (event.target.tagName == 'P') {
+    event.target.textContent = event.target.textContent.toUpperCase();
+  }
+});
+hoverList.addEventListener('mouseout', (event) => {
+  if (event.target.tagName == 'P') {
+    event.target.textContent = event.target.textContent.toLowerCase();
+  }
+});
+// -------------------------------------------------------------
+
+
+// Input Manipulation ------------------------------------------
+const p = document.querySelector('p.description');
+const modifyInput = document.querySelector('input.description');
+const modifyBTN = document.querySelector('button.description');
+//  Listen for User-Interaction
+//  Calls .addEventListener(); Method on Button
+modifyBTN.addEventListener('click', () => {
+  //  'click' will use "value of" <input> to 'Set <p>
+  p.textContent = modifyInput.value;
+});
+// -------------------------------------------------------------
+
+
+// CODE WORKS (Issues Rendereing due to <tag> Conflicts elsewhere IN THIS SCRIPT!
+///  Add + Remove Elements with Buttons ----------
+const addItemInput = document.querySelector('input.addItemInput');
+const addItemButton = document.querySelector('button.addItemButton');
+const removeItemButton = document.querySelector('button.removeItemButton');
+
+addItemButton.addEventListener('click', () => {
+  let ul = document.getElementsByTagName('ul')[0];
+  let li = document.createElement('li');
+  li.textContent = addItemInput.value;
+  ul.appendChild(li);
+  addItemInput.value = '';
+});
+removeItemButton.addEventListener('click', () => {
+  let ul = document.getElementsByTagName('ul')[0];
+  let li = document.querySelector('li:last-child');
+  ul.removeChild(li);
+});
+// ----------------------------------------------
+
+
+
+
 /*  EXAMPLE 1: MODIFY CONTENT using HTMLElement.style Property  */
 //  SELECT (Reference) an Element
 const textStyles = document.getElementById('textStyles');
@@ -69,85 +153,6 @@ const evens = document.querySelectorAll('li:nth-child(even)');
 for (let i = 0; i < evens.length; i += 1) {
   evens[i].style.backgroundColor = 'lightgray';
 }
-////////////////////////////////////////////////////////////////////////
-
-// Alert Button Notification --------------------
-const alertBTN = document.getElementById('alertBTN');
-alertBTN.addEventListener('click', () => {
-  alert('This is a user notification. Add content here to display a useful message notifiying the user of important information.')
-});
-// ----------------------------------------------
-
-// Tooltip Description --------------------------
-const tooltip = document.getElementById('tooltip');
-tooltip.title = "the quality or condition of being specific";
-// ----------------------------------------------
-
-// Toggle Element (on HOVER) ---- **BROKEN** ----
-  //  this function does HIDE the List....
-  //  ...but does NOT REVEAL the list on re-click
-const toggler = document.getElementById('toggler');
-const foodList = document.querySelector('div.elementToToggle');
-const toggledElement = document.querySelector('p.toggledElement');
-
-toggler.addEventListener('click', () => {
-  //  User 'click' will 'HIDE' <element>
-  if (foodList.style.display == 'none') {
-    toggler.textContent = 'Hide Food List';
-    foodlist.style.display = 'block';
-  }
-  //  User 'click' will 'REVEAL' <element>
-  else {
-    toggler.textContent = 'Show Food List'
-    foodList.style.display = 'none';
-  }
-});
-// ----------------------------------------------
-
-// Toggle Element (on CLICK) -------------------
-const hoverList = document.querySelector('.hoverList');
-hoverList.addEventListener('mouseover', (event) => {
-  if (event.target.tagName == 'LI') {
-    event.target.textContent = event.target.textContent.toUpperCase();
-  }
-});
-hoverList.addEventListener('mouseout', (event) => {
-  if (event.target.tagName == 'LI') {
-    event.target.textContent = event.target.textContent.toLowerCase();
-  }
-});
-// ----------------------------------------------
+////////////////////////////////////////////////////////////////
 
 
-// Modify Text ----------------------------------
-const p = document.querySelector('p.description');
-const modifyInput = document.querySelector('input.description');
-const modifyBTN = document.querySelector('button.description');
-//  Listen for User-Interaction
-//  Calls .addEventListener(); Method on Button
-modifyBTN.addEventListener('click', () => {
-  //  'click' will use "value of" <input> to 'Set <p>
-  p.textContent = modifyInput.value;
-});
-// ----------------------------------------------
-
-
-// BROKEN ON this-page-only = CODE WORKS!
-///  Add + Remove Elements with Buttons ----------
-const addItemInput = document.querySelector('input.addItemInput');
-const addItemButton = document.querySelector('button.addItemButton');
-const removeItemButton = document.querySelector('button.removeItemButton');
-
-addItemButton.addEventListener('click', () => {
-  let ul = document.getElementsByTagName('ul')[0];
-  let li = document.createElement('li');
-  li.textContent = addItemInput.value;
-  ul.appendChild(li);
-  addItemInput.value = '';
-});
-removeItemButton.addEventListener('click', () => {
-  let ul = document.getElementsByTagName('ul')[0];
-  let li = document.querySelector('li:last-child');
-  ul.removeChild(li);
-});
-// ----------------------------------------------
