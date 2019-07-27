@@ -88,12 +88,9 @@ const textStyles = document.getElementById('textStyles');
 //  Event Listener to 'Listen for' Mouse-Clicks
   //  Functions to 'Modify Content' on 'Mouse-Click'
 textStyles.addEventListener('click', () => {
-  textStyles.style.color = 'red';               // Set Text-Color   
-  textStyles.style.backgroundColor = 'black';   // Set Bkgrd-Color    
-  textStyles.style.border = '2px dashed gold';  // Set Border 
-  textStyles.style.fontSize = '2em';            // Set Font-Size
-  textStyles.style.fontWeight = '100';          // Set Font-Weight 
-  textStyles.style.lineHeight = '2';            // Set Line-Height
+  textStyles.style.color = 'black';               // Set Text-Color   
+  textStyles.style.backgroundColor = 'gold';   // Set Bkgrd-Color    
+  textStyles.style.border = '2px dashed red';  // Set Border 
   textStyles.style.textAlign = 'center';        // Set Text-Alignment
 });
 ////////////////////////////////////////////////////////////////////////

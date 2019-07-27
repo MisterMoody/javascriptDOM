@@ -247,7 +247,7 @@
       <article  class="exampleCollection" id="ex1">
         <h3>Example 1: Styling Text Content</h3>
         <p>
-          This function <em>transforms <b>text styles</b></em> when a user <code>'clicks'</code> the text element.
+          This function <em>transforms <b>text styles</b></em> when a user <code>'clicks'</code> the text element. The <em>text color, background color, border</em> and <em>text-alignment</em> CSS properties will be modified from its current state.
         </p>
         <div class="exampleArea">
           <p id="textStyles">Click this text to modify its content.</p>
@@ -256,28 +256,20 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/ex1html.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/ex1function.png">    
           </div>
         </div>  
         <!-- ************************************************ -->
-        <!--<p>
-          This example demonstrates how to <em>modify content 'styles' of a targeted element that is bound to a 'click' event</em>. The result is that the text color, background-color, border, font-size, font-weight, text-alignment and line-height styles for the element will change when the user clicks the element.
+        <p>
+          This function has one selector that targets the <code>id="textStyles"</code> of the <code>&#60;p&#62;</code> element <em>AND</em> is stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
         </p>
         <p>
-          This function starts by creating a variable that can reference the targeted elements. The <em>document<b>.getElementById&#40;&#41;</b> Method</em> is one of several options that targets Elements for selection: this option targets the <em><b>id 'textStyles'</b></em> that is coded into the HTML &#60;p&#62; element.
+          The <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is then defined to use the <code>'textStyles'</code> variable reference and listen for browser events. The <em>HTMLElement.style Property</em> is appended to the reference again and is followed by a <em>CSS</em> property, set equal to a specific value.  
         </p>
-        <p>
-          Next, the <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textStyles' to listen for browser events. The first argument of this method is the 'type of event' that is expected: 'click' is the scheduled event that this listener is waiting for. The second argument of this method involves the functions that will be invoked by the listener whenever the user 'clicks' the element.
-        </p>
-        <p>
-          Inside of the listener, the variable name is referenced again along with the <em><b>HTMLElement.style</b> Property</em>, which is used to specify a value to modify the elements content.
-        </p>-->
       </article>
       <!-- EX 2 Modify and Reset Text Content -->
       <article  class="exampleCollection" id="ex2">
@@ -291,12 +283,10 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/ex2html.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/ex2function.png">    
           </div>
         </div>
