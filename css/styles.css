@@ -84,6 +84,7 @@ body {
 
 h3 + div.codeGroup { margin-top: -32px;}
 h3 + p, h4 + p { margin-top: -20px;}
+h4 + img {margin-top: -20px;}
 h5 {margin: 0 auto;}
 h5 + p { margin-top: -2px;}
 /*h4 + p { margin-top: -5px;}*/
