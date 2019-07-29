@@ -247,7 +247,7 @@
       <article  class="exampleCollection" id="ex1">
         <h3>Example 1: Styling Text Content</h3>
         <p>
-          This function <em>transforms <b>text styles</b></em> when a user <code>'clicks'</code> the text element. The <em>text color, background color, border</em> and <em>text-alignment</em> CSS properties will be modified from its current state.
+          This function is designed to <em>transform <b>text styles</b></em> when a user <code>'clicks'</code> the text element. The <em>text color, background color, border</em> and <em>text-alignment</em> CSS properties will be modified from its current state.
         </p>
         <div class="exampleArea">
           <p id="textStyles">Click this text to modify its content.</p>
@@ -268,13 +268,15 @@
           This function has one selector that targets the <code>id="textStyles"</code> of the <code>&#60;p&#62;</code> element <em>AND</em> is stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
         </p>
         <p>
-          The <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is then defined to use the <code>'textStyles'</code> variable reference and listen for browser events. The <em>HTMLElement.style Property</em> is appended to the reference again and is followed by a <em>CSS</em> property, set equal to a specific value.  
+          The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined to use the <code>'textStyles'</code> variable reference and listen for browser events. The <em>HTMLElement<b>.style</b> Property</em> is appended to the reference again and is followed by a <em>CSS</em> property that is set equal to a specific value.  
         </p>
       </article>
       <!-- EX 2 Modify and Reset Text Content -->
       <article  class="exampleCollection" id="ex2">
         <h3>Example 2: Modify and Reset Text Content</h3>
-        <p>This function can <em><b>modify</b> and <b>reset text styles</b></em> when a user <code>'clicks'</code> the text and then <code>'clicks'</code> the <code>Reset Modified Text</code> button.</p>
+        <p>
+          This function is designed to <em><b>modify</b> and <b>reset text styles</b></em> when a user <code>'clicks'</code> the text and then <code>'clicks'</code> the <code>Reset Modified Text</code> button, respectively. The <em>text color</em> and <em>background-color</em> CSS properties will be modified from then reset to its current state.
+        </p>
         <div class="exampleArea">
           <p id="textStyleZ">Click this text to modify its content.</p>
           <button id="resetButton">Reset Modified Text</button>
@@ -291,21 +293,12 @@
           </div>
         </div>
         <!-- ************************************************ -->
-        <!--<p>
-          This example demonstrates how to <em>reset modified content 'styles' of a targeted element that is bound to a 'click' event</em>. All that was required was to include a &#60;button&#62; element with an id that could be used to target the 'textStylesZ' element: this is done by adding an event listener for the &#60;button&#62;. The difference between the two listeners is that the &#60;button&#62; listener targets the variable created to reference the &#60;p&#62; element.
+        <p>
+          This function has two selectors: one selector targets the <code>id="textStyleZ"</code> of the <code>&#60;p&#62;</code> element the the other targets the <code>id="resetButton</code> of the <code>&#60;button&#62;</code> element. Both are stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
         </p>
         <p>
-          The result is that the styles applied to the &#60;p&#62; on user-click will return to its original state.
+          An <em><b>addEventListener(</b>'event', () => {function}<b>);</b> Method</em> is set up for both variable references to listen for browser events. The <em><b>.style</b> Property</em> is appended to both references, followed by a <em>CSS</em> property that is set equal to a specific value. The values assigned to the <code>textStyleZ</code> function <em>modifies the text content</em> while those of the <code>resetButton</code> function <em>resets text content styles</em> applied to the element referenced (ie. &#60;p&#62;) in the <code>textStyleZ</code> function. 
         </p>
-        <p>
-          This function starts by creating a new variable that can reference the targeted elements using the <em>document<b>.getElementById&#40;&#41;</b> Method</em> to target the <em><b>id 'textStyleZ'</b></em> that is coded into the HTML &#60;p&#62; element and the <em><b>id 'resetButton'</b></em> that is coded into the HTML &#60;button&#62; element.
-        </p>
-        <p>
-          A new <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'resetButton' to listen for browser events on the &#60;button&#62;.
-        </p>
-        <p>
-          Inside of the listener, a 'click' event-type is passed as the first argument, but the second argument of this method allows events on the &#60;button&#62; element to occur on the &#60;p&#62; element.
-        </p>-->
       </article>
       <!-- EX 3 Input Manipulation II -->
       <article  class="exampleCollection" id="ex3">
@@ -378,10 +371,12 @@
             <img src="img/examples/ex4function.png">    
           </div>
         </div>
-        <!--<p>This code illustrates a forLoop() being used to iterate through all &#60;li&#62;: when user hovers over any of the content, it will appear as UPPERCASE; it will revert to lowercase otherwise.</p>
+        <p>
+          This code illustrates a forLoop() being used to iterate through all &#60;li&#62;: when user hovers over any of the content, it will appear as UPPERCASE; it will revert to lowercase otherwise.
+        </p>
         <p>
           This example illustrates targeting sets of elements: the instruction function modifies the color for all &#60;li&#62;  to be purple. The exception to the rule is if a &#60;li&#62; has a class of 'not-purple': such elements are colored red. Moreover, the final function instructs the browser to add a lightgray background color to  every-other element: very useful for creating pin-stripped tables.
-        </p>-->
+        </p>
         <!-- ************************************************ -->
       </article>
       <!-- EX 5 
