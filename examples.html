@@ -326,7 +326,7 @@
           This function has three selectors: the first selector targets the <code>id="textInputStyle"</code> of the <code>&#60;p&#62;</code> element; the second selector targets the <code>id="textInput"</code> of the <code>&#60;input&#62;</code> element; and the third selector targets that <code>id="inputButton"</code> of the <code>&#60;button&#62;</code> element. All three selectors are stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
         </p>
         <p>
-          An <em><b>addEventListener(</b>'event', () => {function}<b>);</b> Method</em> is set up for execution whenever a user <code>'clicks'</code> the button. The <em><b>.style</b> Property</em> is appended to <code>'textInputStyle'</code> to accept a color value to be applied to the <code>&#60;p&#62;</code> element. The <code>value</code> attribute is appended to <code>textInput</code> to accept user input as the data to use to modify the color of the <code>&#60;p&#62;</code> <em>as long as the color value is valid</em>.
+          An <em><b>addEventListener(</b>'event', () => {function}<b>);</b> Method</em> is set up for execution whenever a user <code>'clicks'</code> the button. The <em><b>.style</b> Property</em> is appended to <code>'textInputStyle'</code> to accept a color value to be applied to the <code>&#60;p&#62;</code> element. The <code><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code> attribute is appended to <code>textInput</code> to accept user input as the data to use to modify the color of the <code>&#60;p&#62;</code> <em>as long as the color value is valid</em>. This is a universal application to accept user input as a <em>value</em> that can be used within a program.
         </p>
         <!-- ************************************************ -->
       </article>
@@ -334,10 +334,7 @@
       <article  class="exampleCollection" id="ex4">
         <h3>Example 4: Style a Set of Elements</h3>
         <p>
-          This function is <em>NOT</em> an event: the <code>&#60;code&#62;</code> used here <em><b>targets</b> a specified set of elements to style.</em>
-        </p>
-        <p>
-          This example illustrates targeting sets of elements: the instruction function modifies the color for all &#60;li&#62;  to be purple. The exception to the rule is if a &#60;li&#62; has a class of 'not-purple': such elements are colored red. Moreover, the final function instructs the browser to add a lightgray background color to  every-other element: very useful for creating pin-stripped tables.
+          This function is designed to apply styles to a list of items, however, it is <em>NOT</em> an event: this example simply illustrates how to use JavaScript in the DOM to apply CSS. List items that are purple-colored will display as such; otherwise that list item will display as red. Every other list item will be stripped.
         </p>
         <div class="exampleArea">
           <ul class="table">
@@ -362,10 +359,10 @@
           </div>
         </div>
         <p>
-          This code illustrates a forLoop() being used to iterate through all &#60;li&#62;: when user hovers over any of the content, it will appear as UPPERCASE; it will revert to lowercase otherwise.
+          This function has three selectors, all of which targets the <code>&#60;li&#62;</code> using a different selector method. The first selector targets all list items and is stored in a variable using the <em><b>.getElementsByTagName('')</b></em>. The second selector uses <em><b>.getElementsByClassName('')</b></em> to target <code>&#60;li&#62;</code> with <code>class="not-purple"</code>. The third selector uses <em><b>.querySelectorAll('')</b></em> to target all <em>all even list-items</em>.
         </p>
         <p>
-          This example illustrates targeting sets of elements: the instruction function modifies the color for all &#60;li&#62;  to be purple. The exception to the rule is if a &#60;li&#62; has a class of 'not-purple': such elements are colored red. Moreover, the final function instructs the browser to add a lightgray background color to  every-other element: very useful for creating pin-stripped tables.
+          Because this function <em>is not an event</em>, there is no need for an event listener. Instead, <em>to iterate through a set of elements</em> a <em><b>for()</b> Loop</em> is paired with each selector to perform a particular function. The first pairing uses the <em><b>.style</b> property</em> to make all <code>&#60;li&#62;</code> the color <em>purple</em>. The second pairing negates the aforementioned styling on <code>&#60;li&#62;</code> with <code>class="not-purple"</code>, making those <em>red</em>. The third pairing uses the <em><b>.style</b> property</em> to make the <em>background-color for all even </em> <code>&#60;li&#62;</code> a <em>light gray</em> color.
         </p>
         <!-- ************************************************ -->
       </article>
