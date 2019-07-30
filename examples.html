@@ -184,7 +184,7 @@
       <article class="exampleCollection" id="xxx">
         <h3>Input Manipulation</h3>
         <p>
-          This function <em>transforms <b>text content</b></em> based on user input. A user can manipulate the text by adding data to an input: the function is executed when the user <code>'clicks'</code> the button.
+          This function is designed to <em>transform <b>text content</b></em> based on user input. A user can manipulate the text by adding data to an input: the function is executed when the user <code>'clicks'</code> the button.
         </p>
         <div class="exampleArea">
           <p class="description">I am TEXT that can be modified!</p>
@@ -204,7 +204,7 @@
         </div>  
         <!-- ************************************************ -->
         <p>
-          This function has three selectors: the first selector targets the <code>class="description"</code> on the <code>&#60;p&#62;</code> element; the second selector targets the  <code>class="description"</code> on the <code>&#60;input&#62;</code> element; and the third selector targets the <code>class="description"</code> on the <code>&#60;button&#62;</code> element. All of the selectors are stored in a variable using  <em><b>.querySelector('')</b></em> for reference.
+          This function has three selectors: the first selector targets the <code>class="description"</code> on the <code>&#60;p&#62;</code> element; the second selector targets the  <code>class="description"</code> on the <code>&#60;input&#62;</code> element; and the third selector targets the <code>class="description"</code> on the <code>&#60;button&#62;</code> element. All of the selectors are stored in a variable using  <em><b>.querySelector('')</b></em> method for reference.
         </p>
         <p>
           The <em><b>addEventListener(</b>'event', () => {function}<b>);</b> method</em> is defined to use the <code>modifyInput</code>
@@ -215,7 +215,7 @@
       <article  class="exampleCollection" id="xxx">
         <h3>Creating DOM Elements</h3>
         <p>
-          This function can <em><b>add</b> and/or <b>remove</b></em> an item from a list of elements. A user can add data to an input, then <code>'click'</code> the <code>Add Item</code> button to execute that part of the function. When the user <code>'clicks'</code> the <code>Remove Item</code> button, the <em>last list item</em> will be removed from the list of elements.
+          This function is designed to <em><b>add</b> and/or <b>remove</b></em> an item from a list of elements. A user can add data to an input, then <code>'click'</code> the <code>Add Item</code> button to execute that part of the function. When the user <code>'clicks'</code> the <code>Remove Item</code> button, the <em>last list item</em> will be removed from the list of elements.
         </p>
         <p>
           <small><em>The function does not work on this page: conflict with with &#60;ul&#62;, &#60;input&#62; or &#60;button&#62; element. <b>The Code as illustrated WORKS!</b></em></small>
@@ -243,18 +243,18 @@
           </div>
         </div>  
         <!-- ************************************************ -->
-        <!--<p>
-            The document <b>.createElement&#40;&#41;</b> method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized. It requires a 'tagName' to specify the type of element that you want to create: the 'tagName' value is applied to the element when initialized.  When called on an HTML document, createElement() converts tagName to lower case before creating the element.
-          </p>
-          <p>
-            Application of the createElement&#40;&#41; method alone does not make the new element appear on a page: the Node <b>appendChild()</b> method is used to facilitate the process of inserting content into the DOM. Its sole argument is the childNode
-          </p>
-          <p>
-            The Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position. However, there is no requirement to remove the node from its parent node before appending it to some other node.
-          </p>
-          <p>
-            The process of removing an element from the DOM is completed by using the <b>removeChild()</b> method, which removes a child node while returning the removed node. It is used similarly to the appendChild() method, but with less work.
-          </p>-->
+        <p>
+          This function has three selectors: the first selector targets the <code>id="addItemInput"</code> of the <code>&#60;input&#62;</code> element; the second selector targets the <code>id="addItemButton"</code> of the first <code>&#60;button&#62;</code> element; and the third selector targets the <code>id="removeItemButton"</code> of the second <code>&#60;button&#62;</code> element. All of the selectors are stored in a variable using the <em><b>.querySelector('')</b> method</em> for reference.
+        </p>
+        <p>
+          Event listeners are assigned to the <code>addItemButton</code> and <code>removeItemButton</code> references to create functions that will <em>add and remove elements</em>. Both functions require two <em>additional selection of elements</em> to complete the objective. The first of these methods targets the <code>&#60;ul&#62;</code> element and uses the <em><b>.getElementsByTagName('')</b></em> method for variable reference: this selection is applied to both functions.  Thus far, our listeners are set up the same way, but this is where the fuctions perform differenct actions.
+        </p>
+        <p>
+          As we know, the first function is designed to <em>add a new element</em> to the DOM. The second selection method in this function targets the <code>&#60;li&#62;</code> element and is stored in a variable using the <em><b>.createElement('')</b> method</em> for reference. The <em><b>.textContent</b> property</em> is appended to the <code>&#60;li&#62;</code> reference and is set equal to the <code>value</code> attribute appended to the <code>'addItemInput'</code> reference, which accepts user input. A <em>new element can be injected into the DOM</em> by appending the <em><b>appendChild(</b>li<b>)</b> property</em> to the <code>&#60;ul&#62;</code> reference. The <code>value</code> attribute is appended to the <code>addItemInput</code> reference with its value set to <em>empty</em>, which will allow <em>allow user input to fill the text content of the new</em><code>&#60;li&#62;</code> <em>element</em>.
+        </p>
+        <p>
+          The second function is designed to <em>remove an element</em> from the DOM. The second selection method in this function targets <code>&#60;li&#62;</code> elements and is stored in a variable using the <em><b>.querySelector('')</b> method</em> for reference. The method only targets <code>'li:last-child'</code> elements. The <em><b>removeChild(</b>li<b>)</b> property</em> is  thenappended to the <code>&#60;ul&#62;</code> reference, and when a user triggers this function, the <em>last list-item in the list will be removed</em>.
+        </p>
       </article>
       <!-- =========== -->
       <!-- =========== -->
