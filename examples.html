@@ -108,7 +108,7 @@
       <article class="exampleCollection" id="xxx">
         <h3>Toggle Element</h3>
         <p>
-          This function <em><b>toggles</b> the content <b>in and out of view</b></em> when a user <code>'clicks'</code> the button.
+          This function is designed to <em><b>toggle</b> content <b>in and out of view</b></em> when a user <code>'clicks'</code> the button.
         </p>
         <div class="exampleArea">
           <button id="toggleList" style="width: 100%;">Hide All Items in Shaded Area</button>
@@ -151,7 +151,7 @@
       <article class="exampleCollection" id="xxx">
         <h3>Hover Manipulation</h3>
         <p>
-          This function <em>transforms <b>text content</b></em>: the text is capitalized when user <code>'hovers'</code> an element then returns to lower case when user moves mouse off of element.
+          This function is designed to <em>transform <b>text content</b></em>: the text is capitalized when user <code>'hovers'</code> an element then returns to lower case when user moves mouse off of element.
         </p>
         <div class="exampleArea">
           <div class="hoverList">
@@ -170,6 +170,15 @@
           </div>
         </div>
         <!-- ************************************************ -->
+        <p>
+          This function has one selector that targets the <code>id="hoverList"</code> on the <code>&#60;div&#62;</code> element and is stored in a variable using  <em><b>.querySelector('')</b></em> for reference.
+        </p>
+        <p>
+          The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined, twice, to use the <code>'hoverList'</code> variable reference and listen for a <code>'mouseover'</code> or <code>'mouseout'</code> event. An <code>if()</code> statement is utilized in both methods to <em>provide a condition</em> for the event that will be triggered by the function. The function essentially declares that <em>text content</em> in the <code>&#60;p&#62;</code> element <em>will be capitalized</em> whenever a user <code>hovers</code> that element while the second function declares that <code>&#60;p&#62;</code> <em>text content will revert to lowercase form</em> when user <code>moves the mouse away</code> from the element. 
+        </p>
+        <p>
+          The condition is set as a parameter in both conditions using <em><b>event.target.tagName</b></em> set equal to the <code>&#60;p&#62;</code> element. The <em><b>.textContent</b> property</em> is appended to the <em>event.target</em>, with arguments set equal <code>'toUpperCase()</code> or <code>toLowerCase()</code>.
+        </p>
       </article>
       <!-- Input Manipulation (text content) -->
       <article class="exampleCollection" id="xxx">
@@ -194,11 +203,13 @@
           </div>
         </div>  
         <!-- ************************************************ -->
-        <!-- 
         <p>
-          Remember that <em>innerHTML</em> and <em>textContent</em> are interchangeable when modifying text.
-        </p> 
--->
+          This function has three selectors: the first selector targets the <code>class="description"</code> on the <code>&#60;p&#62;</code> element; the second selector targets the  <code>class="description"</code> on the <code>&#60;input&#62;</code> element; and the third selector targets the <code>class="description"</code> on the <code>&#60;button&#62;</code> element. All of the selectors are stored in a variable using  <em><b>.querySelector('')</b></em> for reference.
+        </p>
+        <p>
+          The <em><b>addEventListener(</b>'event', () => {function}<b>);</b> method</em> is defined to use the <code>modifyInput</code>
+          to listen for <code>'click'</code> events. The <em><b>.textContent</b> property</em> is appended to <code>'p.description'</code> to <em>accepct the specified value</em>. In this case, the <code>value</code> attribute is appended to <code>modifyInput</code> to accept user input as the data to use to modify the text of the <code>&#60;p&#62;</code> element. This is a universal application to accept user input as a <em>value</em> that can be used within a program.
+        </p>
       </article>
       <!-- Creating DOM Elements -->
       <article  class="exampleCollection" id="xxx">
