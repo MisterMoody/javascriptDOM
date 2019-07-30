@@ -67,12 +67,10 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/notificationHTML.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/notificationFunc.png">    
           </div>
         </div>
@@ -82,7 +80,7 @@
       <article class="exampleCollection" id="xxx">
         <h3>Tooltip Definition</h3>
         <p>
-          This function <em>reveals a <b>tooltip</b></em> when a user <code>'hovers'</code> over an element.
+          This function is designed to <em>reveal a <b>tooltip</b></em> when a user <code>'hovers'</code> over an element.
         </p>
         <div class="exampleArea">
          <p>She impressed me with her <b><em><span id="tooltip">specificity</span></em></b> of instructions.</p>
@@ -91,19 +89,20 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/tooltipHTML.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/tooltipFunc.png">    
           </div>
-        </div>  
+        </div>
         <!-- ************************************************ -->
-        <!--<p>
-          <b>Attributes</b>, like the <em>href="..."</em> attribute on a &#60;link&#62; or the <em>action="..."</em> attribute on a form, exist as properties of an element object. The function below invokes the <b><em>title="..."</em></b> attribute to enable a tooltip when a user <em>hovers</em> an element with that reference.
-        </p>-->
+        <p>
+          This function has one selector that targets the <code>id="tooltip"</code> of the <code>&#60;span&#62;</code> element and is stored in a variable using the <em><b>.getElementById('')</b></em> for reference.
+        </p>
+        <p>
+          The <b><em>title</em></b> attribute is appended directly to the <code>tootip</code> reference set equal to a string of text that will be displayed when a user <em>hovers</em> that element.
+        </p>
       </article>
       <!-- Toggle Element -->
       <article class="exampleCollection" id="xxx">
@@ -127,16 +126,26 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/modalToggleHTML.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/modalToggleFunc.png">    
           </div>
         </div>  
         <!-- ************************************************ -->
+        <p>
+          This function has two selectors: one selector targets the <code>id="toggleList"</code> on the <code>&#60;button&#62;</code> element and is stored in a variable using  <em><b>.getElementById('')</b></em> for reference. The other selector targets the <code>id="list"</code> on the <code>&#60;div&#62;</code> element and is stored in a variable using  <em><b>.querySelector('')</b></em> for reference.
+        </p>
+        <p>
+          The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined to use the <code>'toggleList'</code> variable reference and listen for browser <code>'click'</code> events. An <code>if(){}else{}</code> is utilized to <em>provide a condition</em> for the event that will be triggered by the function. The function essentially declares that <em>the list will be toggled out of view on user-click</em> and will be reveal once the <code>&#60;button&#62;</code> is <code>re-clicked</code>. 
+        </p>
+        <p>
+          The condition is set as a parameter using the <em><b>.style</b> property</em> and appending it to the <code>listDiv</code> reference. The CSS property that is used to <em>toggle an element</em> is <code>display</code>, set to <code>'block'</code> or <code>'none'</code> to, respectively, hide or show an element. Thus, the condition is set up to <em>hide an element 'if'...'else', show the element</em>.
+        </p>
+        <p>
+          The <em><b>.textContent</b> property</em> is appended to <code>toggleList</code> for both parts of the condition to modify the text on the <code>&#60;button&#62;</code> element in a way that notifies the user to use it <em>in order to 'hide' or 'reveal'</em> the list.
+        </p>
       </article>
       <!-- :Hover Manipulation (uppercase/lowercase) -->
       <article class="exampleCollection" id="xxx">
@@ -153,12 +162,10 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/hoverManipulationHTML.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/hoverManipulationFunc.png">  
           </div>
         </div>
@@ -179,12 +186,10 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/inputManipulationHTML.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/inputManipulationFunc.png">    
           </div>
         </div>  
@@ -219,12 +224,10 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/addRemoveElementHTML.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/addRemoveElementFunc.png">    
           </div>
         </div>  
@@ -242,7 +245,10 @@
             The process of removing an element from the DOM is completed by using the <b>removeChild()</b> method, which removes a child node while returning the removed node. It is used similarly to the appendChild() method, but with less work.
           </p>-->
       </article>
-
+      <!-- =========== -->
+      <!-- =========== -->
+      <!-- =========== -->
+      <!-- =========== -->
       <!-- EX 1 Styling Text Content -->
       <article  class="exampleCollection" id="ex1">
         <h3>Example 1: Styling Text Content</h3>
@@ -366,17 +372,6 @@
         </p>
         <!-- ************************************************ -->
       </article>
-      <!-- EX 5 
-      <article  class="exampleCollection" id="ex5">
-        <h3>MISC/Leftover Examples </h3>
-        <p></p>
-        <div class="codeGroup">
-          <div>
-            <p>DOM <b>Traversal</b> is a means of moving from one part of the DOM to another by selecting an element based on its relationship to another element. To do this, simply traverse to the parentNode using the <b>parentNode</b> Property. Take the elements parentNode and assign it to a variable parent, then use the parent to take an action: in this case, use the parent to remove an element (ie paragraph).</p>
-          </div>
-          <div><img src="img/examples/parentNode.png"></div>
-        </div>
-      </article>-->
     </section>
     
     
