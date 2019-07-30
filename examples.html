@@ -304,7 +304,7 @@
       <article  class="exampleCollection" id="ex3">
         <h3>Example 3: Input Manipulation II</h3>
         <p>
-          This function <em>transforms <b>text styles</b></em> based on user input. A user can <em>modify text styles by adding a color value to an input</em>: the function is executed when the user <code>'clicks'</code> the button.
+          This function is designed to <em>transform <b>text styles</b></em> based on user input of a specific color value. The function is executed once the user <code>'clicks'</code> the button.
         </p>
         <div class="exampleArea">
           <p id="textInputStyle">Type a Color Name to Transform Text</p>
@@ -315,27 +315,19 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/ex3html.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Add Event Listener with Functions</code></p>
             <img src="img/examples/ex3function.png">    
           </div>
         </div>  
-        <!--<p>
-          The example demonstrates how to <em>change the color of an element by entering a color name or hex value into an input</em> and using a button to confirm the event. An &#60;input&#62; of type 'text' is added to the previous code to designate an area to enter a color value.
+        <p>
+          This function has three selectors: the first selector targets the <code>id="textInputStyle"</code> of the <code>&#60;p&#62;</code> element; the second selector targets the <code>id="textInput"</code> of the <code>&#60;input&#62;</code> element; and the third selector targets that <code>id="inputButton"</code> of the <code>&#60;button&#62;</code> element. All three selectors are stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
         </p>
         <p>
-          The result is that the color of the headline text will change to whatever color value the user enters in the 'input' once the user 'clicks' the button.
-        </p>  
-        <p>
-          This function starts by creating a new variable that can reference an &#60;input&#62; element using the <em>document<b>.getElementById&#40;&#41;</b> Method</em> to target the id 'textinputStyle' that is coded into the HTML &#60;p&#62; element and the id 'inputButton' that is coded into the HTML &#60;button&#62; element.
+          An <em><b>addEventListener(</b>'event', () => {function}<b>);</b> Method</em> is set up for execution whenever a user <code>'clicks'</code> the button. The <em><b>.style</b> Property</em> is appended to <code>'textInputStyle'</code> to accept a color value to be applied to the <code>&#60;p&#62;</code> element. The <code>value</code> attribute is appended to <code>textInput</code> to accept user input as the data to use to modify the color of the <code>&#60;p&#62;</code> <em>as long as the color value is valid</em>.
         </p>
-        <p>
-          A new <em><b>addEventListener&#40;</b>'event', &#40;&#41; &#61;&#62; &#123; function&#125;<b>&#41;</b> Method</em> is defined to use the variable reference 'textInput' to listen for user input, then the browser waits for a 'click' event on the &#60;button&#62; to modify the text color.
-        </p>-->
         <!-- ************************************************ -->
       </article>
       <!-- EX 4 Style a Set of Text Elements -->
@@ -362,12 +354,10 @@
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <p>[a] <code>Select Elements from HTML</code></p>
             <img src="img/examples/ex4html.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <p>[b] <code>Invoke for&#40;&#41; Loop to Iterate</code></p>
             <img src="img/examples/ex4function.png">    
           </div>
         </div>
