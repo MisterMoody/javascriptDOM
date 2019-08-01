@@ -1,18 +1,18 @@
-// EX#1 Alert Button Notification -----------------------------------
+//  [EX#1]   Display a [NOTIFICATION]  ------------------------------------
 const alertBTN = document.getElementById('alertBTN');
 alertBTN.addEventListener('click', () => {
-  alert('This is a user notification. Add content here to display a useful message notifiying the user of important information.')
+  alert('This notification is used to give vital information to the user.')
 });
-// -------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////
 
 
-// EX#2 Tooltip Description -----------------------------------------
+//  [EX#2]   Display a [TOOLTIP]   ----------------------------------------
 const tooltip = document.getElementById('tooltip');
 tooltip.title = "the quality or condition of being specific";
-// -------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////
 
 
-// EX#3 Hover Manipulation ------------------------------------------
+//  [EX#3]   [MANIPULATE 'Text'] (on Hover) -------------------------------
 const hoverList = document.querySelector('.hoverList');
 hoverList.addEventListener('mouseover', (event) => {
   if (event.target.tagName == 'P') {
@@ -24,10 +24,10 @@ hoverList.addEventListener('mouseout', (event) => {
     event.target.textContent = event.target.textContent.toLowerCase();
   }
 });
-// -------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////
 
 
-// EX#4 Toggle Element (on Click) -----------------------------------
+//  [EX#4]  [TOGGLE Elements] (on Click) ----------------------------------
 const toggleList = document.getElementById('toggleList');
 const listDiv = document.querySelector('.list');
 
@@ -43,11 +43,10 @@ toggleList.addEventListener('click', () => {
   listDiv.style.display = 'none';
   }
 });
-// -------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////
 
 
-
-/*  EX#5 STYLING <elements> */
+//  [EX#5]  [STYLING <elements>] (NON-EVENT)    ---------------------------
 //  SELECT (Reference) an Element
 const myList = document.getElementsByClassName('purple')
 //  Function to 'Iterate over all <li>'
@@ -69,11 +68,10 @@ const evens = document.querySelectorAll('.table > li:nth-child(even)');
 for (let i = 0; i < evens.length; i += 1) {
   evens[i].style.backgroundColor = 'lightgray';
 }
-////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 
 
-
-/*  EX#6 MODIFY CONTENT using HTMLElement.style Property  */
+//  [EX#6]  [STYLE <elements>] (on Click) */
 //  SELECT (Reference) an Element
 const textStyles = document.getElementById('textStyles');
 //  Event Listener to 'Listen for' Mouse-Clicks
@@ -85,7 +83,7 @@ textStyles.addEventListener('click', () => {
   textStyles.style.textAlign = 'center';        // Set Text-Alignment
 });
       /*      ++++++++       */
-/*  EX#6 RESET Modified Content */
+//  [EX#6]  [STYLE <elements>] (on Click)   -------------------------------
 //  SELECT (Reference) an Element
 const textStyleZ = document.getElementById('textStyleZ');
 const resetButton = document.getElementById('resetButton');
@@ -100,10 +98,10 @@ resetButton.addEventListener('click', () => {
   textStyleZ.style.color = 'black';             // Reset Text-Color
   textStyleZ.style.backgroundColor = '#eff6ff';   // Reset Bkgrd-Color    
 });
-////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 
 
-/*  EX#7 Use 'Input' to Modify Content */
+//  [EX#7]  [MANIPULATE 'text-Styles'] with INPUT on CLICK  ---------------
 //  SELECT (Reference) an Element
 const textInputStyle = document.getElementById('textInputStyle');
 const inputButton = document.getElementById('inputButton');
@@ -114,10 +112,10 @@ inputButton.addEventListener('click', () => {
   // Use Input to Set Text-Color on 'textInputStyle'
   textInputStyle.style.color = textInput.value;  
 });
-////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 
 
-// EX#8 Input Manipulation ------------------------------------------
+//  [EX#8]  [MANIPULATE 'text-Content'] with INPUT on CLICK   -------------
 const p = document.querySelector('p.description');
 const modifyInput = document.querySelector('input.description');
 const modifyBTN = document.querySelector('button.description');
@@ -127,17 +125,17 @@ modifyBTN.addEventListener('click', () => {
   //  'click' will use "value of" <input> to 'Set <p>
   p.textContent = modifyInput.value;
 });
-// -------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////
 
 
-//  EX#9 Add + Remove Elements with Buttons ----------
-// CODE WORKS (Issues Rendereing due to <tag> Conflicts elsewhere IN THIS SCRIPT!
+//  [EX#9]  [CREATE <elements>] with INPUT on CLICK -----------------------
+//  CODE WORKS (conflicts with page-intro <li> -or- Function #5 <li>)
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const removeItemButton = document.querySelector('button.removeItemButton');
 
 addItemButton.addEventListener('click', () => {
-  let ul = document.getElementsByTagName('ul')[0];
+  let ul = document.getElementById('ul')[0];
   let li = document.createElement('li');
   li.textContent = addItemInput.value;
   ul.appendChild(li);
@@ -148,4 +146,4 @@ removeItemButton.addEventListener('click', () => {
   let li = document.querySelector('li:last-child');
   ul.removeChild(li);
 });
-// ----------------------------------------------
+///////////////////////////////////////////////////////////////////////////
