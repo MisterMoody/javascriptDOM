@@ -56,7 +56,8 @@
           The functions described below mostly amalgamates suitable properties that are used with the document interface to create events that will respond to user click, input and particular mouse movements.
         </p>
       </div>
-      <!-- Display a Notifation (Alert Message) -->
+      <!-- =========== -->
+      <!-- EX 1 Display a Notifation (Alert Message) -->
       <article class="exampleCollection" id="xxx">
         <h3>Display a Notification</h3>
         <p>This function <em>displays an <b>alert message</b></em> when a user <code>'clicks'</code> the button, <em>notifying the user of important information</em>.</p>
@@ -76,7 +77,8 @@
         </div>
         <!-- ************************************************ -->
       </article>
-      <!-- Tooltip Description -->
+      <!-- =========== -->
+      <!-- EX 2 Tooltip Description -->
       <article class="exampleCollection" id="xxx">
         <h3>Tooltip Definition</h3>
         <p>
@@ -104,7 +106,42 @@
           The <b><em>title</em></b> attribute is appended directly to the <code>tootip</code> reference set equal to a string of text that will be displayed when a user <em>hovers</em> that element.
         </p>
       </article>
-      <!-- Toggle Element -->
+      <!-- =========== -->
+      <!-- EX 3 :Hover Manipulation (uppercase/lowercase) -->
+      <article class="exampleCollection" id="xxx">
+        <h3>Hover Manipulation</h3>
+        <p>
+          This function is designed to <em>transform <b>text content</b></em>: the text is capitalized when user <code>'hovers'</code> an element then returns to lower case when user moves mouse off of element.
+        </p>
+        <div class="exampleArea">
+          <div class="hoverList">
+            <p>Hover me to capitalize text. Move away to restore lowercase.</p>
+          </div>
+        </div>
+        <!-- ************************************************ -->
+        <div class="codeGroup">
+          <div>
+            <h4><small><em style="color: grey;">index.html</em></small></h4>
+            <img src="img/examples/hoverManipulationHTML.png">   
+          </div>
+          <div>
+            <h4><small><em style="color: grey;">examples.js</em></small></h4>
+            <img src="img/examples/hoverManipulationFunc.png">  
+          </div>
+        </div>
+        <!-- ************************************************ -->
+        <p>
+          This function has one selector that targets the <code>id="hoverList"</code> on the <code>&#60;div&#62;</code> element and is stored in a variable using  <em><b>.querySelector('')</b></em> for reference.
+        </p>
+        <p>
+          The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined, twice, to use the <code>'hoverList'</code> variable reference and listen for a <code>'mouseover'</code> or <code>'mouseout'</code> event. An <code>if()</code> statement is utilized in both methods to <em>provide a condition</em> for the event that will be triggered by the function. The function essentially declares that <em>text content</em> in the <code>&#60;p&#62;</code> element <em>will be capitalized</em> whenever a user <code>hovers</code> that element while the second function declares that <code>&#60;p&#62;</code> <em>text content will revert to lowercase form</em> when user <code>moves the mouse away</code> from the element. 
+        </p>
+        <p>
+          The condition is set as a parameter in both conditions using <em><b>event.target.tagName</b></em> set equal to the <code>&#60;p&#62;</code> element. The <em><b>.textContent</b> property</em> is appended to the <em>event.target</em>, with arguments set equal <code>'toUpperCase()</code> or <code>toLowerCase()</code>.
+        </p>
+      </article>
+      <!-- =========== -->
+      <!-- EX 4 Toggle Element -->
       <article class="exampleCollection" id="xxx">
         <h3>Toggle Element</h3>
         <p>
@@ -147,40 +184,135 @@
           The <em><b>.textContent</b> property</em> is appended to <code>toggleList</code> for both parts of the condition to modify the text on the <code>&#60;button&#62;</code> element in a way that notifies the user to use it <em>in order to 'hide' or 'reveal'</em> the list.
         </p>
       </article>
-      <!-- :Hover Manipulation (uppercase/lowercase) -->
-      <article class="exampleCollection" id="xxx">
-        <h3>Hover Manipulation</h3>
+      <!-- =========== -->
+      <!-- EX 5 Style a Set of Text Elements -->
+      <article  class="exampleCollection" id="ex4">
+        <h3>Example 4: Style a Set of Elements</h3>
         <p>
-          This function is designed to <em>transform <b>text content</b></em>: the text is capitalized when user <code>'hovers'</code> an element then returns to lower case when user moves mouse off of element.
+          This function is designed to apply styles to a list of items, however, it is <em>NOT</em> an event: this example simply illustrates how to use JavaScript in the DOM to apply CSS. List items that are purple-colored will display as such; otherwise that list item will display as red. Every other list item will be stripped.
         </p>
         <div class="exampleArea">
-          <div class="hoverList">
-            <p>Hover me to capitalize text. Move away to restore lowercase.</p>
-          </div>
+          <ul class="table">
+            <li class="purple">grapes</li>
+            <li class="not-purple">oranges</li>
+            <li class="not-purple">snow</li>
+            <li class="purple">lavender</li>
+            <li class="purple">amethyst</li>
+            <li class="not-purple">water</li>
+            <li class="purple">plums</li>
+          </ul>
         </div>
         <!-- ************************************************ -->
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <img src="img/examples/hoverManipulationHTML.png">   
+            <img src="img/examples/ex4html.png">   
           </div>
           <div>
             <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <img src="img/examples/hoverManipulationFunc.png">  
+            <img src="img/examples/ex4function.png">    
+          </div>
+        </div>
+        <p>
+          This function has three selectors, all of which targets the <code>&#60;li&#62;</code> using a different selector method. The first selector targets all list items and is stored in a variable using the <em><b>.getElementsByTagName('')</b></em>. The second selector uses <em><b>.getElementsByClassName('')</b></em> to target <code>&#60;li&#62;</code> with <code>class="not-purple"</code>. The third selector uses <em><b>.querySelectorAll('')</b></em> to target all <em>all even list-items</em>.
+        </p>
+        <p>
+          Because this function <em>is not an event</em>, there is no need for an event listener. Instead, <em>to iterate through a set of elements</em> a <em><b>for()</b> Loop</em> is paired with each selector to perform a particular function. The first pairing uses the <em><b>.style</b> property</em> to make all <code>&#60;li&#62;</code> the color <em>purple</em>. The second pairing negates the aforementioned styling on <code>&#60;li&#62;</code> with <code>class="not-purple"</code>, making those <em>red</em>. The third pairing uses the <em><b>.style</b> property</em> to make the <em>background-color for all even </em> <code>&#60;li&#62;</code> a <em>light gray</em> color.
+        </p>
+        <!-- ************************************************ -->
+      </article>
+      <!-- =========== -->
+      <!-- EX 6 Styling Text Content -->
+      <article  class="exampleCollection" id="ex1">
+        <h3>Example 1: Styling Text Content</h3>
+        <p>
+          This function is designed to <em>transform <b>text styles</b></em> when a user <code>'clicks'</code> the text element. The <em>text color, background color, border</em> and <em>text-alignment</em> CSS properties will be modified from its current state.
+        </p>
+        <div class="exampleArea">
+          <p id="textStyles">Click this text to modify its content.</p>
+        </div>
+        <!-- ************************************************ -->
+        <div class="codeGroup">
+          <div>
+            <h4><small><em style="color: grey;">index.html</em></small></h4>
+            <img src="img/examples/ex1html.png">   
+          </div>
+          <div>
+            <h4><small><em style="color: grey;">examples.js</em></small></h4>
+            <img src="img/examples/ex1function.png">    
+          </div>
+        </div>  
+        <!-- ************************************************ -->
+        <p>
+          This function has one selector that targets the <code>id="textStyles"</code> of the <code>&#60;p&#62;</code> element <em>AND</em> is stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
+        </p>
+        <p>
+          The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined to use the <code>'textStyles'</code> variable reference and listen for browser events. The <em>HTMLElement<b>.style</b> Property</em> is appended to the reference again and is followed by a <em>CSS</em> property that is set equal to a specific value.  
+        </p>
+      </article>
+      <!-- =========== -->
+      <!-- EX 6 Modify and Reset Text Content -->
+      <article  class="exampleCollection" id="ex2">
+        <h3>Example 2: Modify and Reset Text Content</h3>
+        <p>
+          This function is designed to <em><b>modify</b> and <b>reset text styles</b></em> when a user <code>'clicks'</code> the text and then <code>'clicks'</code> the <code>Reset Modified Text</code> button, respectively. The <em>text color</em> and <em>background-color</em> CSS properties will be modified from then reset to its current state.
+        </p>
+        <div class="exampleArea">
+          <p id="textStyleZ">Click this text to modify its content.</p>
+          <button id="resetButton">Reset Modified Text</button>
+        </div>
+        <!-- ************************************************ -->
+        <div class="codeGroup">
+          <div>
+            <h4><small><em style="color: grey;">index.html</em></small></h4>
+            <img src="img/examples/ex2html.png">   
+          </div>
+          <div>
+            <h4><small><em style="color: grey;">examples.js</em></small></h4>
+            <img src="img/examples/ex2function.png">    
           </div>
         </div>
         <!-- ************************************************ -->
         <p>
-          This function has one selector that targets the <code>id="hoverList"</code> on the <code>&#60;div&#62;</code> element and is stored in a variable using  <em><b>.querySelector('')</b></em> for reference.
+          This function has two selectors: one selector targets the <code>id="textStyleZ"</code> of the <code>&#60;p&#62;</code> element the the other targets the <code>id="resetButton</code> of the <code>&#60;button&#62;</code> element. Both are stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
         </p>
         <p>
-          The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined, twice, to use the <code>'hoverList'</code> variable reference and listen for a <code>'mouseover'</code> or <code>'mouseout'</code> event. An <code>if()</code> statement is utilized in both methods to <em>provide a condition</em> for the event that will be triggered by the function. The function essentially declares that <em>text content</em> in the <code>&#60;p&#62;</code> element <em>will be capitalized</em> whenever a user <code>hovers</code> that element while the second function declares that <code>&#60;p&#62;</code> <em>text content will revert to lowercase form</em> when user <code>moves the mouse away</code> from the element. 
-        </p>
-        <p>
-          The condition is set as a parameter in both conditions using <em><b>event.target.tagName</b></em> set equal to the <code>&#60;p&#62;</code> element. The <em><b>.textContent</b> property</em> is appended to the <em>event.target</em>, with arguments set equal <code>'toUpperCase()</code> or <code>toLowerCase()</code>.
+          An <em><b>addEventListener(</b>'event', () => {function}<b>);</b> Method</em> is set up for both variable references to listen for browser events. The <em><b>.style</b> Property</em> is appended to both references, followed by a <em>CSS</em> property that is set equal to a specific value. The values assigned to the <code>textStyleZ</code> function <em>modifies the text content</em> while those of the <code>resetButton</code> function <em>resets text content styles</em> applied to the element referenced (ie. &#60;p&#62;) in the <code>textStyleZ</code> function. 
         </p>
       </article>
-      <!-- Input Manipulation (text content) -->
+      <!-- =========== -->
+      <!-- EX 7 Input Manipulation II -->
+      <article  class="exampleCollection" id="ex3">
+        <h3>Example 3: Input Manipulation II</h3>
+        <p>
+          This function is designed to <em>transform <b>text styles</b></em> based on user input of a specific color value. The function is executed once the user <code>'clicks'</code> the button.
+        </p>
+        <div class="exampleArea">
+          <p id="textInputStyle">Type a Color Name to Transform Text</p>
+          <input id="textInput" type="text">
+          <button id="inputButton">Add Color to Text</button>
+        </div>
+        <!-- ************************************************ -->
+        <div class="codeGroup">
+          <div>
+            <h4><small><em style="color: grey;">index.html</em></small></h4>
+            <img src="img/examples/ex3html.png">   
+          </div>
+          <div>
+            <h4><small><em style="color: grey;">examples.js</em></small></h4>
+            <img src="img/examples/ex3function.png">    
+          </div>
+        </div>  
+        <p>
+          This function has three selectors: the first selector targets the <code>id="textInputStyle"</code> of the <code>&#60;p&#62;</code> element; the second selector targets the <code>id="textInput"</code> of the <code>&#60;input&#62;</code> element; and the third selector targets that <code>id="inputButton"</code> of the <code>&#60;button&#62;</code> element. All three selectors are stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
+        </p>
+        <p>
+          An <em><b>addEventListener(</b>'event', () => {function}<b>);</b> Method</em> is set up for execution whenever a user <code>'clicks'</code> the button. The <em><b>.style</b> Property</em> is appended to <code>'textInputStyle'</code> to accept a color value to be applied to the <code>&#60;p&#62;</code> element. The <code><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code> attribute is appended to <code>textInput</code> to accept user input as the data to use to modify the color of the <code>&#60;p&#62;</code> <em>as long as the color value is valid</em>. This is a universal application to accept user input as a <em>value</em> that can be used within a program.
+        </p>
+        <!-- ************************************************ -->
+      </article>
+      <!-- =========== -->
+      <!-- EX 8 Input Manipulation (text content) -->
       <article class="exampleCollection" id="xxx">
         <h3>Input Manipulation</h3>
         <p>
@@ -211,14 +343,15 @@
           to listen for <code>'click'</code> events. The <em><b>.textContent</b> property</em> is appended to <code>'p.description'</code> to <em>accepct the specified value</em>. In this case, the <code>value</code> attribute is appended to <code>modifyInput</code> to accept user input as the data to use to modify the text of the <code>&#60;p&#62;</code> element. This is a universal application to accept user input as a <em>value</em> that can be used within a program.
         </p>
       </article>
-      <!-- Creating DOM Elements -->
+      <!-- =========== -->
+      <!-- EX 9 Creating DOM Elements -->
       <article  class="exampleCollection" id="xxx">
         <h3>Creating DOM Elements</h3>
         <p>
           This function is designed to <em><b>add</b> and/or <b>remove</b></em> an item from a list of elements. A user can add data to an input, then <code>'click'</code> the <code>Add Item</code> button to execute that part of the function. When the user <code>'clicks'</code> the <code>Remove Item</code> button, the <em>last list item</em> will be removed from the list of elements.
         </p>
         <p>
-          <small><em>The function does not work on this page: conflict with with &#60;ul&#62;, &#60;input&#62; or &#60;button&#62; element. <b>The Code as illustrated WORKS!</b></em></small>
+          <small><em>The function does not work on this page: conflict with Function #5 &#60;li&#62; elements. <b>The Code as illustrated WORKS!</b></em></small>
         </p>
         <div class="exampleArea">
           <ul id="addRemove">
@@ -257,132 +390,6 @@
         </p>
       </article>
       <!-- =========== -->
-      <!-- =========== -->
-      <!-- =========== -->
-      <!-- =========== -->
-      <!-- EX 1 Styling Text Content -->
-      <article  class="exampleCollection" id="ex1">
-        <h3>Example 1: Styling Text Content</h3>
-        <p>
-          This function is designed to <em>transform <b>text styles</b></em> when a user <code>'clicks'</code> the text element. The <em>text color, background color, border</em> and <em>text-alignment</em> CSS properties will be modified from its current state.
-        </p>
-        <div class="exampleArea">
-          <p id="textStyles">Click this text to modify its content.</p>
-        </div>
-        <!-- ************************************************ -->
-        <div class="codeGroup">
-          <div>
-            <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <img src="img/examples/ex1html.png">   
-          </div>
-          <div>
-            <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <img src="img/examples/ex1function.png">    
-          </div>
-        </div>  
-        <!-- ************************************************ -->
-        <p>
-          This function has one selector that targets the <code>id="textStyles"</code> of the <code>&#60;p&#62;</code> element <em>AND</em> is stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
-        </p>
-        <p>
-          The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined to use the <code>'textStyles'</code> variable reference and listen for browser events. The <em>HTMLElement<b>.style</b> Property</em> is appended to the reference again and is followed by a <em>CSS</em> property that is set equal to a specific value.  
-        </p>
-      </article>
-      <!-- EX 2 Modify and Reset Text Content -->
-      <article  class="exampleCollection" id="ex2">
-        <h3>Example 2: Modify and Reset Text Content</h3>
-        <p>
-          This function is designed to <em><b>modify</b> and <b>reset text styles</b></em> when a user <code>'clicks'</code> the text and then <code>'clicks'</code> the <code>Reset Modified Text</code> button, respectively. The <em>text color</em> and <em>background-color</em> CSS properties will be modified from then reset to its current state.
-        </p>
-        <div class="exampleArea">
-          <p id="textStyleZ">Click this text to modify its content.</p>
-          <button id="resetButton">Reset Modified Text</button>
-        </div>
-        <!-- ************************************************ -->
-        <div class="codeGroup">
-          <div>
-            <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <img src="img/examples/ex2html.png">   
-          </div>
-          <div>
-            <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <img src="img/examples/ex2function.png">    
-          </div>
-        </div>
-        <!-- ************************************************ -->
-        <p>
-          This function has two selectors: one selector targets the <code>id="textStyleZ"</code> of the <code>&#60;p&#62;</code> element the the other targets the <code>id="resetButton</code> of the <code>&#60;button&#62;</code> element. Both are stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
-        </p>
-        <p>
-          An <em><b>addEventListener(</b>'event', () => {function}<b>);</b> Method</em> is set up for both variable references to listen for browser events. The <em><b>.style</b> Property</em> is appended to both references, followed by a <em>CSS</em> property that is set equal to a specific value. The values assigned to the <code>textStyleZ</code> function <em>modifies the text content</em> while those of the <code>resetButton</code> function <em>resets text content styles</em> applied to the element referenced (ie. &#60;p&#62;) in the <code>textStyleZ</code> function. 
-        </p>
-      </article>
-      <!-- EX 3 Input Manipulation II -->
-      <article  class="exampleCollection" id="ex3">
-        <h3>Example 3: Input Manipulation II</h3>
-        <p>
-          This function is designed to <em>transform <b>text styles</b></em> based on user input of a specific color value. The function is executed once the user <code>'clicks'</code> the button.
-        </p>
-        <div class="exampleArea">
-          <p id="textInputStyle">Type a Color Name to Transform Text</p>
-          <input id="textInput" type="text">
-          <button id="inputButton">Add Color to Text</button>
-        </div>
-        <!-- ************************************************ -->
-        <div class="codeGroup">
-          <div>
-            <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <img src="img/examples/ex3html.png">   
-          </div>
-          <div>
-            <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <img src="img/examples/ex3function.png">    
-          </div>
-        </div>  
-        <p>
-          This function has three selectors: the first selector targets the <code>id="textInputStyle"</code> of the <code>&#60;p&#62;</code> element; the second selector targets the <code>id="textInput"</code> of the <code>&#60;input&#62;</code> element; and the third selector targets that <code>id="inputButton"</code> of the <code>&#60;button&#62;</code> element. All three selectors are stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
-        </p>
-        <p>
-          An <em><b>addEventListener(</b>'event', () => {function}<b>);</b> Method</em> is set up for execution whenever a user <code>'clicks'</code> the button. The <em><b>.style</b> Property</em> is appended to <code>'textInputStyle'</code> to accept a color value to be applied to the <code>&#60;p&#62;</code> element. The <code><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code> attribute is appended to <code>textInput</code> to accept user input as the data to use to modify the color of the <code>&#60;p&#62;</code> <em>as long as the color value is valid</em>. This is a universal application to accept user input as a <em>value</em> that can be used within a program.
-        </p>
-        <!-- ************************************************ -->
-      </article>
-      <!-- EX 4 Style a Set of Text Elements -->
-      <article  class="exampleCollection" id="ex4">
-        <h3>Example 4: Style a Set of Elements</h3>
-        <p>
-          This function is designed to apply styles to a list of items, however, it is <em>NOT</em> an event: this example simply illustrates how to use JavaScript in the DOM to apply CSS. List items that are purple-colored will display as such; otherwise that list item will display as red. Every other list item will be stripped.
-        </p>
-        <div class="exampleArea">
-          <ul class="table">
-            <li>grapes</li>
-            <li class="not-purple">oranges</li>
-            <li>amethyst</li>
-            <li class="not-purple">snow</li>
-            <li>lavender</li>
-            <li class="not-purple">water</li>
-            <li>plums</li>
-          </ul>
-        </div>
-        <!-- ************************************************ -->
-        <div class="codeGroup">
-          <div>
-            <h4><small><em style="color: grey;">index.html</em></small></h4>
-            <img src="img/examples/ex4html.png">   
-          </div>
-          <div>
-            <h4><small><em style="color: grey;">examples.js</em></small></h4>
-            <img src="img/examples/ex4function.png">    
-          </div>
-        </div>
-        <p>
-          This function has three selectors, all of which targets the <code>&#60;li&#62;</code> using a different selector method. The first selector targets all list items and is stored in a variable using the <em><b>.getElementsByTagName('')</b></em>. The second selector uses <em><b>.getElementsByClassName('')</b></em> to target <code>&#60;li&#62;</code> with <code>class="not-purple"</code>. The third selector uses <em><b>.querySelectorAll('')</b></em> to target all <em>all even list-items</em>.
-        </p>
-        <p>
-          Because this function <em>is not an event</em>, there is no need for an event listener. Instead, <em>to iterate through a set of elements</em> a <em><b>for()</b> Loop</em> is paired with each selector to perform a particular function. The first pairing uses the <em><b>.style</b> property</em> to make all <code>&#60;li&#62;</code> the color <em>purple</em>. The second pairing negates the aforementioned styling on <code>&#60;li&#62;</code> with <code>class="not-purple"</code>, making those <em>red</em>. The third pairing uses the <em><b>.style</b> property</em> to make the <em>background-color for all even </em> <code>&#60;li&#62;</code> a <em>light gray</em> color.
-        </p>
-        <!-- ************************************************ -->
-      </article>
     </section>
     
     
