@@ -8,9 +8,10 @@ article:nth-child(odd) {  background-color: mediumspringgreen;}
 section {background-color: lemonchiffon;}
 ul.table {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-columns: repeat(auto-fit, minmax(88px, 95px));
   grid-auto-rows: auto;
   grid-gap: 8px 0;
+  text-align: center;
 }
 ul.notes {
   display: grid;
@@ -41,7 +42,7 @@ ul.notes {
 @media only screen and (min-width: 1111px) {
   ul.table {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-columns: repeat(auto-fit, 125px));
     grid-auto-rows: auto;
     grid-gap: 16px 0;
   }
