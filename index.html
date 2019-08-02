@@ -49,7 +49,7 @@
         <p>
           Selection is a way to identify an element so that the browser can find and make it available for us to do something with using JavaScript. It is at this juncture that you are determining which node of the DOM will be targeted for manipulation. Elements can be selected by id, class name or tag: individually or as a collection. 
         </p>
-        <ul class="table">
+        <ul class="exampleGroup">
           <li>&#60;div&#62;...&#60;/div&#62;</li>
           <li>&#60;p&#62;...&#60;/p&#62;</li>
           <li>&#60;h1 id&#61;&#34;idName&#34;&#62;...&#60;/h1&#62;</li>
@@ -106,13 +106,28 @@
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;listener&#125; &#41;</b>;
         </p>
         <p>
-          This method registers an event handler and accepts two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. When an Event Handler is called, it receives an object as its first parameter: the object contains useful information pertaining to the function to handle the event inside of the handler.
+          This method registers an event handler and accepts two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. 
         </p>
         <p>
-          The event listener can be specified as either a <em>Callback Function</em> or an <em>Object</em> that implements EventListener and is served as a callback. In this case, the callback accepts a single parameter: an object based on <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event</a></em> describing the event which has occurred, and it returns nothing. Adding an Event Listener to an element is useful for handling events that take place on its ancestors: this is called <em><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture" target="_blank">Event Bubbling</a></em>. The <em><a href="https://teamtreehouse.com/library/the-event-object-2" target="_blank">.target</a></em> property, which is often used with a handler to <em>reference an object that dispatched the event</em>, can be used in order to implement event delegation.
+          When an Event Handler is called, it receives an object as its first parameter: the object contains useful information pertaining to the function to handle the event inside of the handler. The event listener can be specified as either a <em>Callback Function</em> or an <em>Object</em> that implements EventListener and is served as a callback. In this case, the callback accepts a single parameter: an object based on <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event</a></em> describing the event which has occurred, and it returns nothing. Adding an Event Listener to an element is useful for handling events that take place on its ancestors: this is called <em><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture" target="_blank">Event Bubbling</a></em>. The <em><a href="https://teamtreehouse.com/library/the-event-object-2" target="_blank">.target</a></em> property, which is often used with a handler to <em>reference an object that dispatched the event</em>, can be used in order to implement event delegation.
         </p>
         <p>
-          The most common event types include mouse and keyboard events, but there are more than 100 <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event types</a> defined in official specifications that can be utilized to create an event.  User events are elaborated upon with examples and can be found <a target="_blank" href="examples.html">here</a>.
+          Planning is the most essential factor when working with &#60;html&#62; elements in the DOM. A clearly defined objective will help determine a specific approach for writing JavaScript functions that coordinate DOM events with user actions. The most common user actions that will trigger an event occur when a user clicks or mouses-over an element, or manually inputs data using the keyboard. There are more than 100 <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event types</a> defined in official specifications that can be utilized to create an event.  User events are elaborated upon with examples and can be found <a target="_blank" href="examples.html">here</a>. The <b>MouseEvent Interface</b> represents any event that comes about as the result of a user interacting with a web page using a pointing device.  The list below includes events that this project utilizes:
+        </p>
+        <ul class="notes">
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseover">mouseover</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseout">mouseout</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/click">click</a></li>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/input">input</a></li>
+        </ul>
+        <p>
+          A <b>'click'</b> event is fired when a user presses then releases the primary mouse button inside of an element. This event takes place after both the <em>mousedown</em> and <em>mouseup</em> events have fired.
+        </p>
+        <p>
+          A <b>'mouseover'</b> event is fired when a user places the mouse pointer over an element, without clicking it. In contrast, a <b>'mouseout'</b> event is fired when a user moves the mouse and its cursor outside of an element.
+        </p>
+        <p>
+          An <b>'input'</b> event is fired when the value of <em>&#60;input&#62;</em>, <em>&#60;select&#62;</em> and <em>&#60;textarea&#62;</em> elements have been modified.
         </p>
         <!--<table>
           <tr>
