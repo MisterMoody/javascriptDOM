@@ -59,18 +59,21 @@
       <!-- =========== -->
       <!-- EX 1 Display a NOTIFICATION -->
       <article class="exampleCollection" id="ex1">
-        <h3>[Ex.1]<br> <em>Display</em> a <b>NOTIFICATION</b></h3>
-        <div class="codeGroup">
-          <div>
-            <p>This function <em>displays an <b>alert message</b></em> when a user <code>'clicks'</code> the button, <em>notifying the user of important information</em>.</p>
+        <h3>[Ex.1]<br> <em>Display</em> a <b>MODAL WINDOW</b></h3>
+        <p>
+          One of the simplest ways to start using JavaScript in the DOM involves displaying a modal window, which can be used in a variety of ways depending on the expected user (re)action. This function is designed to <em>display an <b>alert message</b>, <b>prompt</b> or <b>confirmation</b></em> when a user <code>'clicks'</code> the button, <em>notifying the user of important information and/or to perform an action</em>.
+        </p>
+        <div class="exampleGroup">
+          <div class="exampleArea">
+            <button id="alertBTN" style="width: 100%;">Notification</button>
           </div>
-          <div style="margin-top: 24px;">
-            <div class="exampleArea">
-              <button id="alertBTN" style="width: 100%;">Notification</button>
-            </div>
+          <div class="exampleArea">
+           <button id="confirmBTN" style="width: 100%;">Confirmation</button>
+          </div>
+          <div class="exampleArea">
+            <button id="promptBTN" style="width: 100%;">Prompt</button>
           </div>
         </div>
-        <!-- ************************************************ -->
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -81,9 +84,9 @@
             <img src="img/examples/notificationFunc.png">    
           </div>
         </div>
-        <!-- ************************************************ -->
-        <p>This function has one selector that targets the <code>id="alertBTN"</code> on the &#60;button&#62; element.</p>
-        <p>The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined to use the <code>'alertBTN'</code> variable reference and listen for a <code>'click'</code> event. The <em>Window<b>.alert</b> method</em> is assigned to reveal information when triggered by a user.</p>
+        <p>
+          This function has one selector that targets the <code>id="alertBTN"</code> on the &#60;button&#62; element. The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined to use the <code>'alertBTN'</code> variable reference and listen for a <code>'click'</code> event. The <em>Window<b>.alert</b> method</em> is assigned to reveal information when triggered by a user. <em><small>Replace <code>'alertBTN'</code> with <code>'confirmBTN'</code> and <code>'promptBTN'</code> in the &#60;script&#62; to trigger those functions.</small></em>
+        </p>
       </article>
       <!-- =========== -->
       <!-- EX 2 Display a TOOLTIP -->

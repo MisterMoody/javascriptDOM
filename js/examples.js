@@ -1,7 +1,15 @@
 //  [EX#1]   Display a [NOTIFICATION]  ------------------------------------
 const alertBTN = document.getElementById('alertBTN');
 alertBTN.addEventListener('click', () => {
-  alert('This notification is used to give vital information to the user.')
+  alert('This NOTIFICATION will give a user vital information.')
+});
+const promptBTN = document.getElementById('promptBTN');
+promptBTN.addEventListener('click', () => {
+  prompt('This PROMPT will inquire a user to input information.')
+});
+const confirmBTN = document.getElementById('confirmBTN');
+confirmBTN.addEventListener('click', () => {
+  confirm('This CONFIRMATION will ascertain users desire to proceed.')
 });
 ///////////////////////////////////////////////////////////////////////////
 
