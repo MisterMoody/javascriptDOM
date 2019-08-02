@@ -128,7 +128,6 @@
             </div>
           </div>
         </div>
-        <!-- ************************************************ -->
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -139,7 +138,6 @@
             <img src="img/examples/hoverManipulationFunc.png">  
           </div>
         </div>
-        <!-- ************************************************ -->
         <p>
           This function has one selector that targets the <code>id="hoverList"</code> on the <code>&#60;div&#62;</code> element and is stored in a variable using  <em><b>.querySelector('')</b></em> for reference.
         </p>
@@ -169,7 +167,6 @@
             </ul>
           </div>
         </div>
-        <!-- ************************************************ -->
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -180,7 +177,6 @@
             <img src="img/examples/modalToggleFunc.png">    
           </div>
         </div>  
-        <!-- ************************************************ -->
         <p>
           This function has two selectors: one selector targets the <code>id="toggleList"</code> on the <code>&#60;button&#62;</code> element and is stored in a variable using  <em><b>.getElementById('')</b></em> for reference. The other selector targets the <code>id="list"</code> on the <code>&#60;div&#62;</code> element and is stored in a variable using  <em><b>.querySelector('')</b></em> for reference.
         </p>
@@ -212,7 +208,6 @@
             <li class="purple">plums</li>
           </ul>
         </div>
-        <!-- ************************************************ -->
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -229,19 +224,19 @@
         <p>
           Because this function <em>is not an event</em>, there is no need for an event listener. Instead, <em>to iterate through a set of elements</em> a <em><b>for()</b> Loop</em> is paired with each selector to perform a particular function. The first pairing uses the <em><b>.style</b> property</em> to make all <code>&#60;li&#62;</code> the color <em>purple</em>. The second pairing negates the aforementioned styling on <code>&#60;li&#62;</code> with <code>class="not-purple"</code>, making those <em>red</em>. The third pairing uses the <em><b>.style</b> property</em> to make the <em>background-color for all even </em> <code>&#60;li&#62;</code> a <em>light gray</em> color.
         </p>
-        <!-- ************************************************ -->
       </article>
       <!-- =========== -->
       <!-- EX 6 STYLE Elements on CLICK -->
       <article  class="exampleCollection" id="ex6">
         <h3>[Ex.6]<br> STYLE Elements on CLICK I</h3>
-        <p>
-          This function is designed to <em>transform <b>text styles</b></em> when a user <code>'clicks'</code> the text element. The <em>text color, background color, border</em> and <em>text-alignment</em> CSS properties will be modified from its current state.
-        </p>
-        <div class="exampleArea">
-          <p id="textStyles">Click this text to modify its content.</p>
+        <div class="codeGroup">
+          <p>
+            This function is designed to <em>transform <b>text styles</b></em> when a user <code>'clicks'</code> the text element. The <em>text color, background color, border</em> and <em>text-alignment</em> CSS properties will be modified from its current state.
+          </p>
+          <div class="exampleArea">
+            <p id="textStyles">Click this text to modify its content.</p>
+          </div>
         </div>
-        <!-- ************************************************ -->
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -252,26 +247,22 @@
             <img src="img/examples/ex1function.png">    
           </div>
         </div>  
-        <!-- ************************************************ -->
         <p>
           This function has one selector that targets the <code>id="textStyles"</code> of the <code>&#60;p&#62;</code> element <em>AND</em> is stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
         </p>
         <p>
           The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined to use the <code>'textStyles'</code> variable reference and listen for browser events. The <em>HTMLElement<b>.style</b> Property</em> is appended to the reference again and is followed by a <em>CSS</em> property that is set equal to a specific value.  
         </p>
-      </article>
-      <!-- =========== -->
-      <!-- EX 6 STYLE Elements on CLICK -->
-      <article  class="exampleCollection">
-        <h3>STYLE Elements on CLICK II</h3>
-        <p>
-          This function is designed to <em><b>modify</b> and <b>reset text styles</b></em> when a user <code>'clicks'</code> the text and then <code>'clicks'</code> the <code>Reset Modified Text</code> button, respectively. The <em>text color</em> and <em>background-color</em> CSS properties will be modified from then reset to its current state.
-        </p>
-        <div class="exampleArea">
-          <p id="textStyleZ">Click this text to modify its content.</p>
-          <button id="resetButton">Reset Modified Text</button>
+        <!-- -->
+        <div class="codeGroup">
+          <p>
+            This function is designed to <em><b>modify</b> and <b>reset text styles</b></em> when a user <code>'clicks'</code> the text and then <code>'clicks'</code> the <code>Reset Modified Text</code> button, respectively. The <em>text color</em> and <em>background-color</em> CSS properties will be modified from then reset to its current state.
+          </p>
+          <div class="exampleArea">
+            <p id="textStyleZ">Click this text to modify its content.</p>
+            <button id="resetButton">Reset Modified Text</button>
+          </div>
         </div>
-        <!-- ************************************************ -->
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -282,7 +273,6 @@
             <img src="img/examples/ex2function.png">    
           </div>
         </div>
-        <!-- ************************************************ -->
         <p>
           This function has two selectors: one selector targets the <code>id="textStyleZ"</code> of the <code>&#60;p&#62;</code> element the the other targets the <code>id="resetButton</code> of the <code>&#60;button&#62;</code> element. Both are stored in a variable using the <em>document<b>.getElementById('')</b> Method</em> for reference.
         </p>
@@ -294,15 +284,16 @@
       <!-- EX 7 Manipulate 'text-Styles' with INPUT on CLICK -->
       <article  class="exampleCollection" id="ex7">
         <h3>[Ex.7]<br> <em>Manipulate</em> <code>text-<b>Styles</b></code> with <b>INPUT</b> on <b>CLICK</b></h3>
-        <p>
-          This function is designed to <em>transform <b>text styles</b></em> based on user input of a specific color value. The function is executed once the user <code>'clicks'</code> the button.
-        </p>
-        <div class="exampleArea">
-          <p id="textInputStyle">Type a Color Name to Transform Text</p>
-          <input id="textInput" type="text">
-          <button id="inputButton">Add Color to Text</button>
+        <div class="codeGroup">
+          <p>
+            This function is designed to <em>transform <b>text styles</b></em> based on user input of a specific color value. The function is executed once the user <code>'clicks'</code> the button.
+          </p>
+          <div class="exampleArea">
+            <p id="textInputStyle">Type a Color Name to Transform Text</p>
+            <input id="textInput" type="text">
+            <button id="inputButton">Add Color to Text</button>
+          </div>
         </div>
-        <!-- ************************************************ -->
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -319,21 +310,21 @@
         <p>
           An <em><b>addEventListener(</b>'event', () => {function}<b>);</b> Method</em> is set up for execution whenever a user <code>'clicks'</code> the button. The <em><b>.style</b> Property</em> is appended to <code>'textInputStyle'</code> to accept a color value to be applied to the <code>&#60;p&#62;</code> element. The <code><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code> attribute is appended to <code>textInput</code> to accept user input as the data to use to modify the color of the <code>&#60;p&#62;</code> <em>as long as the color value is valid</em>. This is a universal application to accept user input as a <em>value</em> that can be used within a program.
         </p>
-        <!-- ************************************************ -->
       </article>
       <!-- =========== -->
       <!-- EX 8 Manipulate 'text-Content' with INPUT on CLICK -->
       <article class="exampleCollection" id="ex8">
         <h3>[Ex.8]<br> <em>Manipulate</em> <code>text-<b>Content</b></code> with <b>INPUT</b> on <b>CLICK</b></h3>
-        <p>
-          This function is designed to <em>transform <b>text content</b></em> based on user input. A user can manipulate the text by adding data to an input: the function is executed when the user <code>'clicks'</code> the button.
-        </p>
-        <div class="exampleArea">
-          <p class="description">I am TEXT that can be modified!</p>
-          <input id="addItemInput" class="description" type="text" placeholder="Change Text Description">
-          <button class="description">Click to Change</button>
-       </div>
-        <!-- ************************************************ -->
+        <div class="codeGroup">
+          <p>
+            This function is designed to <em>transform <b>text content</b></em> based on user input. A user can manipulate the text by adding data to an input: the function is executed when the user <code>'clicks'</code> the button.
+          </p>
+          <div class="exampleArea">
+            <p class="description">I am TEXT that can be modified!</p>
+            <input id="addItemInput" class="description" type="text" placeholder="Change Text Description">
+            <button class="description">Click to Change</button>
+          </div>
+        </div>
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -344,7 +335,6 @@
             <img src="img/examples/inputManipulationFunc.png">    
           </div>
         </div>  
-        <!-- ************************************************ -->
         <p>
           This function has three selectors: the first selector targets the <code>class="description"</code> on the <code>&#60;p&#62;</code> element; the second selector targets the  <code>class="description"</code> on the <code>&#60;input&#62;</code> element; and the third selector targets the <code>class="description"</code> on the <code>&#60;button&#62;</code> element. All of the selectors are stored in a variable using  <em><b>.querySelector('')</b></em> method for reference.
         </p>
@@ -357,24 +347,22 @@
       <!-- EX 9 CREATE Elements with INPUT on CLICK -->
       <article  class="exampleCollection" id="ex9">
         <h3>[Ex.9]<br> <b>CREATE</b> <em>DOM Elements</em> with <b>INPUT</b> on <b>CLICK</b></h3>
-        <p>
-          This function is designed to <em><b>add</b> and/or <b>remove</b></em> an item from a list of elements. A user can add data to an input, then <code>'click'</code> the <code>Add Item</code> button to execute that part of the function. When the user <code>'clicks'</code> the <code>Remove Item</code> button, the <em>last list item</em> will be removed from the list of elements.
-        </p>
-        <p>
-          <small><em>The function does not work on this page: conflict with introductory &#60;li&#62; -or- Function #5 &#60;li&#62; elements. <b>The <code>code</code> WORKS in an independent setting!</b></em></small>
-        </p>
-        <div class="exampleArea">
-          <ul id="addRemove">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-          </ul>
-          <input class="addItemInput" type="text" placeholder="Enter Text Here">
-          <button class="addItemButton">Add Item</button>
-          <button class="removeItemButton">Remove Item</button>
+        <div class="codeGroup">
+          <p>
+            This function is designed to <em><b>add</b> and/or <b>remove</b></em> an item from a list of elements. A user can add data to an input, then <code>'click'</code> the <code>Add Item</code> button to execute that part of the function. When the user <code>'clicks'</code> the <code>Remove Item</code> button, the <em>last list item</em> will be removed from the list of elements. <small><em>The function does not work on this page: conflict with introductory &#60;li&#62; -or- Function #5 &#60;li&#62; elements. <b>The <code>code</code> WORKS in an independent setting!</b></em></small>
+          </p>
+          <div class="exampleArea">
+            <ul id="addRemove">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+            <input class="addItemInput" type="text" placeholder="Enter Text Here">
+            <button class="addItemButton">Add Item</button>
+            <button class="removeItemButton">Remove Item</button>
+          </div>
         </div>
-        <!-- ************************************************ -->
         <div class="codeGroup">
           <div>
             <h4><small><em style="color: grey;">index.html</em></small></h4>
@@ -385,7 +373,6 @@
             <img src="img/examples/addRemoveElementFunc.png">    
           </div>
         </div>  
-        <!-- ************************************************ -->
         <p>
           This function has three selectors: the first selector targets the <code>id="addItemInput"</code> of the <code>&#60;input&#62;</code> element; the second selector targets the <code>id="addItemButton"</code> of the first <code>&#60;button&#62;</code> element; and the third selector targets the <code>id="removeItemButton"</code> of the second <code>&#60;button&#62;</code> element. All of the selectors are stored in a variable using the <em><b>.querySelector('')</b> method</em> for reference.
         </p>
