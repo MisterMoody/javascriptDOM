@@ -48,7 +48,7 @@ ul.notes {
   }
   .codeGroup {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px 16px;
   }
 }
