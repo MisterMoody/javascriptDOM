@@ -51,6 +51,11 @@ ul.notes {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px 16px;
   }
+  .exampleGroup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-gap: 8px 16px;
+  }
 }
 /**/
 table {
