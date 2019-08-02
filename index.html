@@ -54,7 +54,6 @@
           <li>&#60;p&#62;...&#60;/p&#62;</li>
           <li>&#60;h1 id&#61;&#34;idName&#34;&#62;...&#60;/h1&#62;</li>
           <li>&#60;form class&#61;&#34;className&#34;&#62;...&#60;/form&#62;</li>
-          <li>&#60;ul&#62;.. &#60;li&#62;...&#60;/li&#62; ..&#60;/ul&#62;</li>
         </ul>
         <p>
           The table above exemplifies how elements could be targeted for selection.
@@ -160,9 +159,17 @@
       <article>
         <h3>[3] Add Function to Listener</h3>
         <p>[d] Create Function for Element to Perform</p>
-        <p>
-          The event handler does just that: handle events. Any code comprised within the handler is the <em>function</em> that will be triggered when called upon. 
+        <div class="textGroup">
+          <p>
+            The event handler does just that: handle events. Any code comprised within the handler is the <em>function</em> that will be triggered when called upon. 
+          </p>
+          <p>
+          Setting up a function requires use of properties that are triggered inside of the handler.
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;
+          <b>&nbsp;<!--selector.property &#61; &#39;value&#39;;-->listener&nbsp;</b>
+          &#125; &#41;;
         </p>
+        </div>
         <!--<details>
           <summary>Brief Review of Functions</summary>          
           <div class="codeGroup">
@@ -207,12 +214,6 @@
           To conclude, the sum of each declaration or expression will produce the exact same result. To be clear: a function can be passed as an argument/parameter, returned as values, contain methods and properties, and be stored in variables.
         </details>-->
         <p>
-          Setting up a function requires use of properties that are triggered inside of the handler.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;
-          <b>&nbsp;<!--selector.property &#61; &#39;value&#39;;-->listener&nbsp;</b>
-          &#125; &#41;;
-        </p>
-        <p>
           Functions are used as parameters because you can apply DOM methods to set a function that triggers an action in response to an event affording a greater level of control over when and how that function gets executed. Just keep in mind that the function is only as good as the event that binds it!
         </p>
         <!--<p>
@@ -232,28 +233,31 @@
         <p>
           The <b><em>Window Interface</em></b> represents a window containing a DOM Document that points to the <em>document interface</em> that is loadded into that window. 
         </p>
-        <p>
-          The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">Window.alert()</a></em> method is used to display a message in a modal window: it has a button to close the modal in acknowledgement of the transmitted message.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-          window<b>.alert(</b>message<b>)</b>;
-        </p>
-        <p>
-          The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm">Window.confirm()</a></em> method is used to display a modal dialog with an optional message and two buttons: OK and Cancel, to accept or reject the inquiry.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-          window<b>.confirm(</b>message<b>)</b>;
-        </p>
+        <div class="textGroup">
+          <p>
+            The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">Window.alert()</a></em> method is used to display a message in a modal window: it has a button to close the modal in acknowledgement of the transmitted message.
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            window<b>.alert(</b>message<b>)</b>;
+          </p>
+          <p>
+            The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm">Window.confirm()</a></em> method is used to display a modal dialog with an optional message and two buttons: OK and Cancel, to accept or reject the inquiry.
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            window<b>.confirm(</b>message<b>)</b>;
+          </p>
+        </div>
         <p>
           The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt()</a></em> method is used to display a dialog that prompts a user to input a response before continuing.
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
           window<b>.prompt(</b>message<b>)</b>;
         </p>
-        <p>
-          The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/console">Window.console()</a></em> property is used for debugging purposes <em>only</em>: it returns a reference to the <em>console</em> object, which provides methods for logging information into the browser's console. This property is in fact from the <em>Console interface</em>, thus, it can be referenced without an interface heading. The syntax illustrates how this property can be used to output a single object or multiple objects.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-          <b>console.log(</b>varName<b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-          <b>console.log(</b>"This is lorem ipsum", varName, "."<b>)</b>; 
-        </p>
-        <p>
+        <div class="textGroup">
+          <p>
+            The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/console">Window.console()</a></em> property is used for debugging purposes <em>only</em>: it returns a reference to the <em>console</em> object, which provides methods for logging information into the browser's console. This property is in fact from the <em>Console interface</em>, thus, it can be referenced without an interface heading. The syntax illustrates how this property can be used to output a single object or multiple objects.
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <b>console.log(</b>varName<b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <b>console.log(</b>"This is lorem ipsum", varName, "."<b>)</b>; 
+          </p>
+          <p>
           The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo()</a></em> method will scroll to a particular set of coordinates in a document. An argument can be applied to specify is horizontal and vertical axis positioning or a set of parameters detailing the scroll event can be set. 
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
           window<b>.scrollTo(</b>x-coord, y-coord<b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -261,6 +265,7 @@
           window<b>.scrollTo(</b>options<b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
           window<b>.scrollTo(</b>top: 100, left: 100, behavior: 'smooth'<b>)</b>;
         </p>
+        </div>
         <!-- -->
         <h4>Document Interface</h4>
         <p>
@@ -295,17 +300,22 @@
         <p>
           This property is often confused with the <em>HTMLElement Interface</em> <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">.innerText</a></em> property as well as the <em>Element Interface</em> <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">.innerHTML</a></em> property. Where <em>.innerText</em> is aware of its rendered appearance, <em>.textContent</em> returns content for all elements, thus, it could produce visually disturbing results. In contrast with the <em>.innerHTML</em> property, which sets HTML markup of an element, <em>.textContent</em> has better performance for setting markup because its value is not parsed as HTML, essentially preventing XSS attacks.
         </p>
+        <div class="textGroup">
+          <p>
+            The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank">Node.appendChild()</a></em> method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position. Its syntax accepts a single argument: the node to append to the given parent node, and this is most often an HTML tag.
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            var <em>p</em> = document<b>.createElement(</b><em>"p"</em><b>);</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.body<b>.appendChild(</b><em>p</em><b>)</b>;
+          </p>
+          <p>
+            The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_blank">Node.removeChild()</a></em> method removes a child node from the DOM and returns the removed node, which still exists in memory, but is no longer part of the DOM. The removed node can be referenced for later usage using the first syntax, but an error will be thrown for the second.
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            var oldChild = node<b>.removeChild(</b><em>child</em><b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            node<b>.removeChild(</b><em>child</em><b>)</b>;
+          </p>
+        </div>
         <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank">Node.appendChild()</a></em> method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position. Its syntax accepts a single argument: the node to append to the given parent node, and this is most often an HTML tag. Use of this method will require the <em>Document.createElement()</em> method to enable the addition of a new node. The syntax below illustrates how to amalgamate these methods, resulting in the creation of a new &#60;p&#62; element that is appended to the end of the document &#60;body&#62;. <small><em>ES6 introduced the <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">ParentNode.append()</a></em> method to replace this method as it supports multiple arguments and appending strings.</em></small>
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-          var <em>p</em> = document<b>.createElement(</b><em>"p"</em><b>);</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          document.body<b>.appendChild(</b><em>p</em><b>)</b>;
-        </p>
-        <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_blank">Node.removeChild()</a></em> method removes a child node from the DOM and returns the removed node, which still exists in memory, but is no longer part of the DOM. The removed node can be referenced for later usage using the first syntax, but an error will be thrown for the second.
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-          var oldChild = node<b>.removeChild(</b><em>child</em><b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          node<b>.removeChild(</b><em>child</em><b>)</b>;
+          Using <code>appendChild()</code> requires the <em>Document.createElement()</em> method to enable the addition of a new node. The syntax below illustrates how to amalgamate these methods, resulting in the creation of a new &#60;p&#62; element that is appended to the end of the document &#60;body&#62;. <small><em>ES6 introduced the <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">ParentNode.append()</a></em> method to replace this method as it supports multiple arguments and appending strings.</em></small>
         </p>
         <table>
           <tr>
@@ -340,18 +350,20 @@
           &nbsp;target<b>.style</b>.property &#61; &#39;value&#39;;&nbsp;
           &#125; &#41;;
         </p>
-        <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">HTMLElement.title</a></em> property represents the title of an element displayed as a <em>tooltip</em> when a user places a mouse over a node. <em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">HTML attributes</a></em> exist as properties on element objects and can be modified in this same fashion. 
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#40;'type', &#40;&#41; &#61;&#62; &#123;
-          &nbsp;target<b>.title</b> &#61; &#39;value&#39;;&nbsp;
-          &#125; &#41;;
-        </p>
-        <p>
+        <div class="textGroup">
+          <p>
+            The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">HTMLElement.title</a></em> property represents the title of an element displayed as a <em>tooltip</em> when a user places a mouse over a node. <em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">HTML attributes</a></em> exist as properties on element objects and can be modified in this same fashion. 
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#40;'type', &#40;&#41; &#61;&#62; &#123;
+            &nbsp;target<b>.title</b> &#61; &#39;value&#39;;&nbsp;
+            &#125; &#41;;
+          </p>
+          <p>
           The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">HTMLElement.innerText</a></em> property of the HTMLElement interface represents the "rendered" text content of a node and its descendants
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#40;'type', &#40;&#41; &#61;&#62; &#123;
           &nbsp;target<b>.innerText</b> &#61; &#39;text string&#39;;&nbsp;
           &#125; &#41;;
         </p>
+        </div>
         <table>
           <tr>
             <th><em>HTMLElement</em> Properties</th>
@@ -391,15 +403,17 @@
       <article>
         <h3>DOM Script</h3>
         <p>Got all that? Now lets look at some functional scripts:</p>
-        <p><a href="examples.html#ex1" target="_blank">[Ex.1]</a>&nbsp;&nbsp; Display a NOTIFICATION (on Click)</p>
-        <p><a href="examples.html#ex2" target="_blank">[Ex.2]</a>&nbsp;&nbsp; Display a TOOLTIP (on Hover)</p>
-        <p><a href="examples.html#ex3" target="_blank">[Ex.3]</a>&nbsp;&nbsp; MANIPULATE 'text' (on Hover)</p>
-        <p><a href="examples.html#ex4" target="_blank">[Ex.4]</a>&nbsp;&nbsp; TOGGLE Elements (on Click)</p>
-        <p><a href="examples.html#ex5" target="_blank">[Ex.5]</a>&nbsp;&nbsp; STYLE 'text-Styles' (non-event)</p>
-        <p><a href="examples.html#ex6" target="_blank">[Ex.6]</a>&nbsp;&nbsp; STYLE 'text-Styles' (on Click)</p>
-        <p><a href="examples.html#ex7" target="_blank">[Ex.7]</a>&nbsp;&nbsp; MANIPULATE 'text-Styles' (with Input on Click)</p>
-        <p><a href="examples.html#ex8" target="_blank">[Ex.8]</a>&nbsp;&nbsp; MANIPULATE 'text-Styles' (with Input on Click)</p>
-        <p><a href="examples.html#ex9" target="_blank">[Ex.9]</a>&nbsp;&nbsp; CREATE Elements (with Input on Click)</p>
+        <div class="textGroup">
+          <div><a href="examples.html#ex1" target="_blank">[Ex.1]</a>&nbsp;&nbsp; Display a NOTIFICATION (on Click)</div>
+          <div><a href="examples.html#ex2" target="_blank">[Ex.2]</a>&nbsp;&nbsp; Display a TOOLTIP (on Hover)</div>
+          <div><a href="examples.html#ex3" target="_blank">[Ex.3]</a>&nbsp;&nbsp; MANIPULATE 'text' (on Hover)</div>
+          <div><a href="examples.html#ex4" target="_blank">[Ex.4]</a>&nbsp;&nbsp; TOGGLE Elements (on Click)</div>
+          <div><a href="examples.html#ex5" target="_blank">[Ex.5]</a>&nbsp;&nbsp; STYLE 'text-Styles' (non-event)</div>
+          <div><a href="examples.html#ex6" target="_blank">[Ex.6]</a>&nbsp;&nbsp; STYLE 'text-Styles' (on Click)</div>
+          <div><a href="examples.html#ex7" target="_blank">[Ex.7]</a>&nbsp;&nbsp; MANIPULATE 'text-Styles' (with Input on Click)</div>
+          <div><a href="examples.html#ex8" target="_blank">[Ex.8]</a>&nbsp;&nbsp; MANIPULATE 'text-Styles' (with Input on Click)</div>
+          <div><a href="examples.html#ex9" target="_blank">[Ex.9]</a>&nbsp;&nbsp; CREATE Elements (with Input on Click)</div>
+        </div>
       </article>
     </section>
     <!-- -->
