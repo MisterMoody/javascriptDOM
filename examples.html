@@ -60,9 +60,15 @@
       <!-- EX 1 Display a NOTIFICATION -->
       <article class="exampleCollection" id="ex1">
         <h3>[Ex.1]<br> <em>Display</em> a <b>NOTIFICATION</b></h3>
-        <p>This function <em>displays an <b>alert message</b></em> when a user <code>'clicks'</code> the button, <em>notifying the user of important information</em>.</p>
-        <div class="exampleArea">
-          <button id="alertBTN">Notification</button>
+        <div class="codeGroup">
+          <div>
+            <p>This function <em>displays an <b>alert message</b></em> when a user <code>'clicks'</code> the button, <em>notifying the user of important information</em>.</p>
+          </div>
+          <div style="margin-top: 24px;">
+            <div class="exampleArea">
+              <button id="alertBTN" style="width: 100%;">Notification</button>
+            </div>
+          </div>
         </div>
         <!-- ************************************************ -->
         <div class="codeGroup">
@@ -76,6 +82,8 @@
           </div>
         </div>
         <!-- ************************************************ -->
+        <p>This function has one selector that targets the <code>id="alertBTN"</code> on the &#60;button&#62; element.</p>
+        <p>The <em><b>addEventListener(</b>'event', () => { function}<b>);</b> Method</em> is then defined to use the <code>'alertBTN'</code> variable reference and listen for a <code>'click'</code> event. The <em>Window<b>.alert</b> method</em> is assigned to reveal information when triggered by a user.</p>
       </article>
       <!-- =========== -->
       <!-- EX 2 Display a TOOLTIP -->
