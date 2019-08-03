@@ -18,7 +18,7 @@
       <!-- *********************** -->
       <h2>What is the DOM?</h2>
       <p>
-        The <b>Document Object Model &#40;DOM&#41;</b> is a programming interface for and is an object-based data representation of all HTML loaded into the browser. Acting as an API, the DOM allows programs to read and manipulate the content, structure and style of an HTML document using JavaScript to implement such changes in the browser.
+        The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">Document Object Model</a> &#40;DOM&#41;</b> is a programming interface for and is an object-based data representation of all HTML loaded into the browser. Acting as an API, the DOM allows programs to read and manipulate the content, structure and style of an HTML document using JavaScript to implement such changes in the browser.
       </p>
       <p>
         Web browsers use the DOM to make web pages amenable to manipulation via what is called an <b>Interface</b>: an <em>object</em> structured as a data type to enforce specific properties when implemented. There are a plethora of interfaces that developers can use, but the most commonly used objects include the <em>Window</em>,<em>Document</em>, <em>Element</em> and <em>Node</em> interfaces. Whereas the <em>window interface</em> represents the browser, the <em>document interface</em> is the root of the document. The <em>element and node interfaces</em> provide many of the methods and properties that are used on HTML elements, regularly referred to as <em>nodes</em>.
@@ -65,22 +65,22 @@
         </p>
         <h4>Selection Methods</h4>
         <p>
-          <b>getElementById&#40;</b> '<em>id</em>' <b>&#41;</b>; is used to select an element by its <em>#id</em>: this is the most commonly used method for manipulating or getting data from an individual element on your document. 
+           <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank"><b>getElementById&#40;</b> '<em>id</em> ' <b>&#41;</b>;</a> is used to select an element by its <em>#id</em>: this is the most commonly used method for manipulating or getting data from an individual element on your document. 
         </p>
         <p>
-          <b>getElementsByClassName&#40;</b> '<em>className</em>' <b>&#41;</b>; is used to return a collection of all elements in the document with the specified <em>.className</em> as a <em>NodeList object</em>. 
+           <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" target="_blank"><b>getElementsByClassName&#40;</b> '<em>className</em> ' <b>&#41;</b>;</a> is used to return a collection of all elements in the document with the specified <em>.className</em> as a <em>NodeList object</em>. 
         </p>
         <p>
           A collection is like an array: gain access via its indices or loop over it in its entirety to access all items. The objective of targeting a collection is completed with the use of a for&#40;&#41; loop due to the need to iterate over all items. The NodeList object represents a collection of nodes that can be accessed by index numbers, starting at 0. You can use the length property of the NodeList object to determine the number of elements, then you can loop through all elements and extract the info you want.
         </p>
         <p>
-          <b>getElementsByTagName&#40;</b> '<em>h1</em>' <b>&#41;</b>; works exactly as the previously described method: simply replace the <em>.className</em> with a <em>&#60;tag&#62;</em>. Both methods will <em>return live DOM elements</em> whereas any changes are reflected in the NodeList object. Sometimes it is best <em>not</em> to return live DOM elements and this can be done using a query method.
+           <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName" target="_blank"><b>getElementsByTagName&#40;</b> '<em>h1</em> ' <b>&#41;</b>;</a> works exactly as the previously described method: simply replace the <em>className</em> with a <em>&#60;tag&#62;</em>. Both methods will <em>return live DOM elements</em> whereas any changes are reflected in the NodeList object. Sometimes it is best <em>not</em> to return live DOM elements and this can be done using a query method.
         </p>
         <p>
-          <b>querySelector&#40; '<em>#id</em>' &#41;</b>; is used to return the first element that matches a specified selector, as a static NodeList object.
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank"><b>querySelector&#40; '<em>#id</em> ' &#41;</b>;</a> is used to return the first element that matches a specified selector, as a static NodeList object.
         </p>
         <p>
-          <b>querySelectorAll&#40; '<em>.class</em>' &#41;</b>; is used exactly as the previously described method with the exception that it will return all elements of the same type.  
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_blank"><b>querySelectorAll&#40; '<em>.class</em> ' &#41;</b>;</a>  is used exactly as the previously described method with the exception that it will return all elements of the same type.  
         </p>
         <p>
           Query methods might appear to have magical powers as much can be done for precise specification of targeting elements.
@@ -98,7 +98,7 @@
         <!-- https://teamtreehouse.com/library/what-is-an-event -->
         <p>[c] Append Selector to an <em>EventTarget Interface</em> method</p>
         <p>
-          Anytime a user interacts with a webpage, they generate some type of event. An <em>event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) or an automated notification. The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget Interface</a></em> method <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener()</a></em> sets up a function that will be called whenever that event is delivered to the document object. This method works by adding a function or an object that implements <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">EventListener</a></em> to the list of event listeners for the specified event type on the <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" target="_blank">EventTarget</a></em> on which it's called. 
+          Anytime a user interacts with a webpage, they generate some type of event. An <em>event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) or an automated notification. The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget Interface</a></em> method <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener()</a></em> sets up a function that will be called whenever that event is delivered to the document object. This method works by adding a function or an object that implements <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">EventListener</a></em> to the list of event listeners for the specified event type on the EventTarget on which it's called. 
         </p>
         <p>
           The <b>.addEventListener()</b> method is appended to the <em>selector</em> to instantiate a function that will, again, be delivered to the document object when called .
@@ -108,7 +108,7 @@
           This method registers an event handler and accepts two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. 
         </p>
         <p>
-          When an Event Handler is called, it receives an object as its first parameter: the object contains useful information pertaining to the function to handle the event inside of the handler. The event listener can be specified as either a <em>Callback Function</em> or an <em>Object</em> that implements EventListener and is served as a callback. In this case, the callback accepts a single parameter: an object based on <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event</a></em> describing the event which has occurred, and it returns nothing. Adding an Event Listener to an element is useful for handling events that take place on its ancestors: this is called <em><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture" target="_blank">Event Bubbling</a></em>. The <em><a href="https://teamtreehouse.com/library/the-event-object-2" target="_blank">.target</a></em> property, which is often used with a handler to <em>reference an object that dispatched the event</em>, can be used in order to implement event delegation.
+          When an Event Handler is called, it receives an object as its first parameter: the object contains useful information pertaining to the function to handle the event inside of the handler. The event listener can be specified as either a <em>Callback Function</em> or an <em>Object</em> that implements EventListener and is served as a callback. In this case, the callback accepts a single parameter: an object based on <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event</a></em> describing the event which has occurred, and it returns nothing. Adding an Event Listener to an element is useful for handling events that take place on its ancestors: this is called <em><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture" target="_blank">Event Bubbling</a></em>. The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/target" target="_blank">.target</a></em> property, which is often used with a handler to <em>reference an object that dispatched the event</em>, can be used in order to implement event delegation.
         </p>
         <p>
           Planning is the most essential factor when working with &#60;html&#62; elements in the DOM. A clearly defined objective will help determine a specific approach for writing JavaScript functions that coordinate DOM events with user actions. The most common user actions that will trigger an event occur when a user clicks or mouses-over an element, or manually inputs data using the keyboard. There are more than 100 <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event types</a> defined in official specifications that can be utilized to create an event.  User events are elaborated upon with examples and can be found <a target="_blank" href="examples.html">here</a>. The <b>MouseEvent Interface</b> represents any event that comes about as the result of a user interacting with a web page using a pointing device.  The list below includes events that this project utilizes:
@@ -272,7 +272,7 @@
           DOM events allow JavaScript to register different event handlers on elements in an HTML document. The <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document Interface</a></em> represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <em>DOM tree</em>: elements such as &#60;body&#62; and &#60;table&#62;that provides functionality globally to the document. This interface describes the common <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Properties">properties</a></em> and <em><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods">methods</a></em> for any kind of document and inherits from the Node and EventTarget interfaces.
         </p>
         <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">Document.createElement()</a></em> method creates the HTML element specified by tagName, which is a string that specifies the type of element to be created. The node of the created element is initialized with the value of tagName, returning the new element.
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">Document.createElement()</a></em> method creates the HTML element specified by tagName, which is a string that specifies the type of element to be created. The node of the created element is initialized with the value of tagName, returning the new element.
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
           var element = document<b>.createElement(</b>tagName<b>)</b>;
         </p>
@@ -293,7 +293,7 @@
           The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node</a></em> is an interface that the Document and Element Interfaces inherits Node object types, properties and methods from: it inherits properties and methods from its parent, EventTarget, for itself.
         </p>
         <p>
-          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">Node.textContent</a></em> property represents the text content of a node and its descendants. 
+          The <em><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent" target="_blank">Node.textContent</a></em> property represents the text content of a node and its descendants. 
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#40;'type', &#40;&#41; &#61;&#62; &#123;
           &nbsp;target<b>.textContent</b> &#61; &#39;text string&#39;;&nbsp;&#125; &#41;;
         </p>
@@ -414,42 +414,15 @@
           <div><a href="examples.html#ex8" target="_blank">[Ex.8]</a>&nbsp;&nbsp; MANIPULATE 'text-Styles' (with Input on Click)</div>
           <div><a href="examples.html#ex9" target="_blank">[Ex.9]</a>&nbsp;&nbsp; CREATE Elements (with Input on Click)</div>
         </div>
+        <p>Explore the DOM on your own~</p>
+        <ul class="notes">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">Mozilla</a></li>
+          <li><a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">W3Schools</a></li>
+          <li><a href="https://eloquentjavascript.net/15_event.html" target="_blank">Eloquent JS</a></li>
+          <li><a href="https://javascript.info/dom-nodes" target="_blank">JavaScript.info</a></li>
+        </ul>
       </article>
     </section>
     <!-- -->
-    <!-- -->
-    <hr>
-    <!--<article>
-      <h2>Resources</h2>
-      <ul class="table">
-        <li><a href="https://eloquentjavascript.net/15_event.html" target="_blank">Eloquent JS Tutorial</a></li>
-        <li><a href="https://www.w3schools.com/js/js_htmldom_events.asp" target="_blank">DOM Event Examples</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM Event References</a></li>
-        <li><a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">DOM Event References</a></li>
-      </ul>
-      <ul class="table">
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">The DOM</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName" target="_blank">getElementsByTagName&#40;&#41;</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" target="_blank">getElementsByClassName&#40;&#41;</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank">getElementByID&#40;&#41;</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank">querySelector&#40;&#41;</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_blank">querySelectorAll&#40;&#41;</a></li>
-        <li></li>
-      </ul>
-      <ul class="table">
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">DOM Event Types</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener&#40;&#41;</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference" target="_blank">CSS Properties</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">HTML Attributes</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">createElement&#40;&#41;</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank">appendChild&#40;&#41;</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_blank">removeChild&#40;&#41;</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent" target="_blank">textContent</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">innerHTML</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_blank">style</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/target" target="_blank">target</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout" target="_blank">setTimeout</a></li>
-      </ul>
-    </article>-->
   </body>
 </html>
