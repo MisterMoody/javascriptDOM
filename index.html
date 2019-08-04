@@ -13,20 +13,26 @@
     <hr>
     <!-- *********************** -->
     <section>
-      <h2>What is the DOM?</h2>
-      <p>
-        The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">Document Object Model</a> &#40;DOM&#41;</b> is a programming interface for and is an object-based data representation of all HTML loaded into the browser. Acting as an API, the DOM allows programs to read and manipulate the content, structure and style of an HTML document using JavaScript to implement such changes in the browser.
-      </p>
-      <p>
-        Web browsers use the DOM to make web pages amenable to manipulation via what is called an <b>Interface</b>: an <em>object</em> structured as a data type to enforce specific properties when implemented. There are a plethora of interfaces that developers can use, but the most commonly used objects include the <em>Window</em>,<em>Document</em>, <em>Element</em> and <em>Node</em> interfaces. Whereas the <em>window interface</em> represents the browser, the <em>document interface</em> is the root of the document. The <em>element and node interfaces</em> provide many of the methods and properties that are used on HTML elements, regularly referred to as <em>nodes</em>.
-      </p>
-      <h2>How does the DOM Work?</h2>
-      <p>
-        The <em>document interface</em> serves as an entry point to content embedded in a web page, granting developers access to specific nodes on the DOM Tree. HTML elements -their attributes, classes and ids, are utilized as <em>Selectors</em> and this is the first step to make when preparing to work in the DOM. Selectors are stored in a variable where they are appended to the document object, but they are then passed to an <em>EventTarget Interface</em> method to perform a specified function whenever an event occurs in the browser.
-      </p>
-      <p>
-        The basic gist of working in the DOM involves programming selected elements to listen for events and invoke manipulation of such elements in the form of a function when an event actually occurs. An example of this is when a user places a mouse over an image or text, which produces a tooltip with greater details about that content.
-      </p>
+      <div class="textGroup">
+        <div>
+          <h2>What is the DOM?</h2>
+          <p>
+            The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">Document Object Model</a> &#40;DOM&#41;</b> is a programming interface for and is an object-based data representation of all HTML loaded into the browser. Acting as an API, the DOM allows programs to read and manipulate the content, structure and style of an HTML document using JavaScript to implement such changes in the browser.
+          </p>
+          <p>
+            Web browsers use the DOM to make web pages amenable to manipulation via what is called an <b>Interface</b>: an <em>object</em> structured as a data type to enforce specific properties when implemented. There are a plethora of interfaces that developers can use, but the most commonly used objects include the <em>Window</em>,<em>Document</em>, <em>Element</em> and <em>Node</em> interfaces. Whereas the <em>window interface</em> represents the browser, the <em>document interface</em> is the root of the document. The <em>element and node interfaces</em> provide many of the methods and properties that are used on HTML elements, regularly referred to as <em>nodes</em>.
+          </p>
+        </div>
+        <div>
+          <h2>How does the DOM Work?</h2>
+          <p>
+            The <em>document interface</em> serves as an entry point to content embedded in a web page, granting developers access to specific nodes on the DOM Tree. HTML elements -their attributes, classes and ids, are utilized as <em>Selectors</em> and this is the first step to make when preparing to work in the DOM. Selectors are stored in a variable where they are appended to the document object, but they are then passed to an <em>EventTarget Interface</em> method to perform a specified function whenever an event occurs in the browser.
+          </p>
+          <p>
+            The basic gist of working in the DOM involves programming selected elements to listen for events and invoke manipulation of such elements in the form of a function when an event actually occurs. An example of this is when a user places a mouse over an image or text, which produces a tooltip with greater details about that content.
+          </p>
+        </div>
+      </div>
       <p>
         That said, this tutorial aims to outline the process of working in the DOM using a step-by-step instructional guide that can be broken down into three phases. By the end of this tut, we should have a functional DOM &#60;script&#62;.
       </p>
@@ -88,7 +94,7 @@
       <hr style="margin-top: 16px;">
       <!-- [2] Pass Element to .addEventListener() -->
       <article>
-        <h3>[2] Pass Selector to an Event Listener</h3>
+        <h2>[2] Pass Selector to an Event Listener</h2>
         <p>
           Anytime a user interacts with a webpage, they generate some type of event. An <em>event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) or an automated notification. The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget Interface</a></b> method <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener()</a></b> sets up a function that will be called whenever that event is delivered to the document object. This method works by adding a function or an object that implements <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">EventListener</a></b> to the list of event listeners for the specified event type on the EventTarget on which it's called. It is appended to the <em>selector</em> to instantiate a function that will, again, be delivered to the document object when called. It registers an event handler and accepts two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. 
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;listener&#125; &#41;</b>;
@@ -120,7 +126,7 @@
       <hr>
       <!-- [3] Add Function to Listener -->
       <article>
-        <h3>[3] Add Function to Listener</h3>
+        <h2>[3] Add Function to Listener</h2>
         <p>
           The event handler does just that: handle events. Any code comprised within the handler is the <em>function</em> that will be triggered when called upon. Setting up a function requires use of properties that are triggered inside of the handler.
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;
@@ -173,7 +179,7 @@
           </div>
           To conclude, the sum of each declaration or expression will produce the exact same result. To be clear: a function can be passed as an argument/parameter, returned as values, contain methods and properties, and be stored in variables.
         </details>
-        <h4>Window Interface</h4>
+        <h3>Window Interface</h3>
         <p>
           The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window Interface</a></b> represents a window containing a DOM Document that points to the <em>document interface</em> that is loadded into that window. 
         </p>
@@ -211,7 +217,7 @@
         </p>
         </div>
         <!-- -->
-        <h4>Document Interface</h4>
+        <h3>Document Interface</h3>
         <p>
           DOM events allow JavaScript to register different event handlers on elements in an HTML document. The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document Interface</a></b> represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <em>DOM tree</em>: elements such as &#60;body&#62; and &#60;table&#62;that provides functionality globally to the document. This interface describes the common <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Properties">properties</a></b> and <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods">methods</a></b> for any kind of document and inherits from the Node and EventTarget interfaces.
         </p>
@@ -222,7 +228,7 @@
           var element = document<b>.createElement(</b>tagName<b>)</b>;
         </p>
         <!-- -->
-        <h4>Element Interface</h4>
+        <h3>Element Interface</h3>
         <p>
           <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element</a></b> is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. Most functionality is specified further down the class hierarchy.
         </p>
@@ -233,7 +239,7 @@
           &#125; &#41;;
         </p>
         <!-- -->
-        <h4>Node Interface</h4>
+        <h3>Node Interface</h3>
         <p>
           The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_blank">Node</a></b> is an interface that the Document and Element Interfaces inherits Node object types, properties and methods from: it inherits properties and methods from its parent, EventTarget, for itself.
         </p>
@@ -282,7 +288,7 @@
           </p>
         </div>
         <!-- -->
-        <h4>HTMLElement Interface</h4>
+        <h3>HTMLElement Interface</h3>
         <p>
            The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement" target="_blank">HTMLElement Interface</a></b> represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it. Properties of this interface practiced here include <em>style</em>, <em>title</em> and <em>innerText</em>.
         </p>
@@ -344,7 +350,7 @@
       <hr style="margin-top: 16px;">
       <!-- [*] Function Examples -->
       <article>
-        <h3>DOM Script</h3>
+        <h3>DOM Functions</h3>
         <p>Got all that? Now lets look at some functional scripts:</p>
         <div class="textGroup">
           <div><a href="examples.html#ex1" target="_blank">[Ex.1]</a>&nbsp;&nbsp; Display a NOTIFICATION (on Click)</div>
