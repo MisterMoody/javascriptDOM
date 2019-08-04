@@ -46,21 +46,10 @@
     <section>
       <!-- [1] Select Element + Store Element in a Variable -->
       <article>
-        <h2>[1] Selecting <em>&#60;html&#62;</em> Elements</h2>
-        <h3>Select an Element</h3>
+        <h2>[1] <em>&#60;html&#62;</em> Element Selection</h2>
         <p>
-          Selection is a way to identify an element so that the browser can find and make it available for us to do something with using JavaScript. It is at this juncture that you are determining which node of the DOM will be targeted for manipulation. Elements can be selected by id, class name or tag: individually or as a collection. 
+          Selection is a way to identify an element so that the browser can find and make it available for us to do something with using JavaScript. It is at this juncture that you are determining which node of the DOM will be targeted for manipulation. Elements can be selected individually or as a collection, by <b><em>Tag</em></b>: &#60;h1&#62;, &#60;p&#62;, &#60;div&#62;, etc.; by <b><em>Id</em></b>: &#60;id&#61;&#34;idName&#34;&#62;; or by <b><em>Class</em></b>: &#60;class&#61;&#34;className&#34;&#62;.
         </p>
-        <ul class="exampleGroup">
-          <li>&#60;div&#62;...&#60;/div&#62;</li>
-          <li>&#60;p&#62;...&#60;/p&#62;</li>
-          <li>&#60;h1 id&#61;&#34;idName&#34;&#62;...&#60;/h1&#62;</li>
-          <li>&#60;form class&#61;&#34;className&#34;&#62;...&#60;/form&#62;</li>
-        </ul>
-        <p>
-          The table above exemplifies how elements could be targeted for selection.
-        </p>
-        <h3>Choose a Selection Method</h3>
         <p>
           After targeting an element for selection, you must create a variable to store it, choose a selection method from the <em>element interface</em> then append it to the <em>document interface</em>, which in this case, is used as a <em>constructor</em> to create a new document object that can be referenced by a callback function that will be called later on. There are five selection methods that can be used to access &#60;html&#62; elements. When storing an element in a variable, the variable name should reflect the element and its function. 
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const varName = <em>document</em>.<b>method('element')</b>;
@@ -74,20 +63,19 @@
         </p>
         </div>
         <p>
-          A collection is like an array: gain access via its indices or loop over it in its entirety to access all items. The objective of targeting a collection is completed with the use of a for&#40;&#41; loop due to the need to iterate over all items. The NodeList object represents a collection of nodes that can be accessed by index numbers, starting at 0. You can use the length property of the NodeList object to determine the number of elements, then you can loop through all elements and extract the info you want.
-        </p>
-        <p>
            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName" target="_blank"><b>getElementsByTagName&#40;</b> '<em>h1</em> ' <b>&#41;</b>;</a> works exactly as the previously described method: simply replace the <em>className</em> with a <em>&#60;tag&#62;</em>. Both methods will <em>return live DOM elements</em> whereas any changes are reflected in the NodeList object. Sometimes it is best <em>not</em> to return live DOM elements and this can be done using a query method.
         </p>
         <p>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank"><b>querySelector&#40; '<em>#id</em> ' &#41;</b>;</a> is used to return the first element that matches a specified selector, as a static NodeList object.
+          A collection is like an array: gain access via its indices or loop over it in its entirety to access all items. The objective of targeting a collection is completed with the use of a for&#40;&#41; loop due to the need to iterate over all items. The NodeList object represents a collection of nodes that can be accessed by index numbers, starting at 0. You can use the length property of the NodeList object to determine the number of elements, then you can loop through all elements and extract the info you want.
         </p>
-        <p>
+        <div class="textGroup">
+          <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank"><b>querySelector&#40; '<em>#id</em> ' &#41;</b>;</a> is used to return the first element that matches a specified selector, as a static NodeList object.
+          </p>
+          <p>
           <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_blank"><b>querySelectorAll&#40; '<em>.class</em> ' &#41;</b>;</a>  is used exactly as the previously described method with the exception that it will return all elements of the same type.  
         </p>
-        <p>
-          Query methods might appear to have magical powers as much can be done for precise specification of targeting elements.
-        </p>
+        </div>
         <div class="textGroup">
           <div>document.querySelectorAll&#40; <b>'&nbsp;<em>#id</em>&nbsp;'</b> &#41;;</div>
           <div>document.querySelectorAll&#40; <b>'&nbsp;<em>.class</em>&nbsp;'</b> &#41;;</div>
@@ -102,10 +90,7 @@
       <article>
         <h3>[2] Pass Selector to an Event Listener</h3>
         <p>
-          Anytime a user interacts with a webpage, they generate some type of event. An <em>event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) or an automated notification. The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget Interface</a></b> method <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener()</a></b> sets up a function that will be called whenever that event is delivered to the document object. This method works by adding a function or an object that implements <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">EventListener</a></b> to the list of event listeners for the specified event type on the EventTarget on which it's called. 
-        </p>
-        <p>
-          The <b>.addEventListener()</b> method is appended to the <em>selector</em> to instantiate a function that will, again, be delivered to the document object when called. It registers an event handler and accepts two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. 
+          Anytime a user interacts with a webpage, they generate some type of event. An <em>event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) or an automated notification. The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget Interface</a></b> method <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener()</a></b> sets up a function that will be called whenever that event is delivered to the document object. This method works by adding a function or an object that implements <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">EventListener</a></b> to the list of event listeners for the specified event type on the EventTarget on which it's called. It is appended to the <em>selector</em> to instantiate a function that will, again, be delivered to the document object when called. It registers an event handler and accepts two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. 
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;listener&#125; &#41;</b>;
         </p>
         <p>
@@ -114,26 +99,23 @@
         <p>
           Planning is the most essential factor when working with &#60;html&#62; elements in the DOM. A clearly defined objective will help determine a specific approach for writing JavaScript functions that coordinate DOM events with user actions. The most common user actions that will trigger an event occur when a user clicks or mouses-over an element, or manually inputs data using the keyboard. There are more than 100 <b><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">event types</a></b> defined in official specifications that can be utilized to create an event.  User events are elaborated upon with examples and can be found <b><a target="_blank" href="examples.html">here</a></b>. 
         </p>
-        <div class="textGroup">
-          <p>
+        <p>
             The <b>MouseEvent Interface</b> represents any event that comes about as the result of a user interacting with a web page using a pointing device.  The list below includes events that this project utilizes:
           </p>
-          <ul class="notes">
-            <li><b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseover">mouseover</a></b></li>
-            <li><b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseout">mouseout</a></b></li>
-            <li><b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/click">click</a></b></li>
-            <li><b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/input">input</a></b></li>
-          </ul>
+        <div class="textGroup">
+          <p>
+            A <b>'<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseover">mouseover</a>'</b> event is fired when a user places the mouse pointer over an element, without clicking it. 
+          </p>
+          <p>
+            In contrast, a <b>'<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseout">mouseout</a>'</b> event is fired when a user moves the mouse and its cursor outside of an element.
+          </p>
+          <p>
+            A <b>'<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/click">click</a>'</b> event is fired when a user presses then releases the primary mouse button inside of an element. This event takes place after both the <em>mousedown</em> and <em>mouseup</em> events have fired.
+          </p>
+          <p>
+            An <b>'<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/input">input</a>'</b> event is fired when the value of <em>&#60;input&#62;</em>, <em>&#60;select&#62;</em> and <em>&#60;textarea&#62;</em> elements have been modified.
+          </p>
         </div>
-        <p>
-          A <b>'click'</b> event is fired when a user presses then releases the primary mouse button inside of an element. This event takes place after both the <em>mousedown</em> and <em>mouseup</em> events have fired.
-        </p>
-        <p>
-          A <b>'mouseover'</b> event is fired when a user places the mouse pointer over an element, without clicking it. In contrast, a <b>'mouseout'</b> event is fired when a user moves the mouse and its cursor outside of an element.
-        </p>
-        <p>
-          An <b>'input'</b> event is fired when the value of <em>&#60;input&#62;</em>, <em>&#60;select&#62;</em> and <em>&#60;textarea&#62;</em> elements have been modified.
-        </p>
       </article>
       <hr>
       <!-- [3] Add Function to Listener -->
@@ -202,16 +184,16 @@
             window<b>.alert(</b>message<b>)</b>;
           </p>
           <p>
-            The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm">Window.confirm()</a></b> method is used to display a modal dialog with an optional message and two buttons: OK and Cancel, to accept or reject the inquiry.
-            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            window<b>.confirm(</b>message<b>)</b>;
-          </p>
-          <p>
             The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt()</a></b> method is used to display a dialog that prompts a user to input a response before continuing.
             <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             window<b>.prompt(</b>message<b>)</b>;
           </p>
         </div>
+        <p>
+          The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm">Window.confirm()</a></b> method is used to display a dialog box, a message and two buttons: OK and Cancel, to accept or reject the inquiry.
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            window<b>.confirm(</b>message<b>)</b>;
+        </p>
         <div class="textGroup">
           <p>
             The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/console">Window.console()</a></b> property is used for debugging purposes <em>only</em>: it returns a reference to the <em>console</em> object, which provides methods for logging information into the browser's console. This property is in fact from the <em>Console interface</em>, thus, it can be referenced without an interface heading. The syntax illustrates how this property can be used to output a single object or multiple objects.
@@ -234,7 +216,8 @@
           DOM events allow JavaScript to register different event handlers on elements in an HTML document. The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document Interface</a></b> represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <em>DOM tree</em>: elements such as &#60;body&#62; and &#60;table&#62;that provides functionality globally to the document. This interface describes the common <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Properties">properties</a></b> and <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods">methods</a></b> for any kind of document and inherits from the Node and EventTarget interfaces.
         </p>
         <p>
-          The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">Document.createElement()</a></b> method creates the HTML element specified by tagName, which is a string that specifies the type of element to be created. The node of the created element is initialized with the value of tagName, returning the new element.
+          The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">Document.createElement()</a></b> method creates the HTML element specified by tagName, which is a string that specifies the type of element to be created. The node of the created element is initialized with the value of tagName, returning the new element. 
+          <br><small>This method is used in unison with <code>appendChild()</code>: an advanced method was introduced in ES6:  <em> the <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">ParentNode.append()</a></b> method to replaced <code>appendChild()</code> as it supports multiple arguments and appending strings.</em></small>
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
           var element = document<b>.createElement(</b>tagName<b>)</b>;
         </p>
@@ -259,26 +242,6 @@
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#40;'type', &#40;&#41; &#61;&#62; &#123;
           &nbsp;target<b>.textContent</b> &#61; &#39;text string&#39;;&nbsp;&#125; &#41;;
         </p>
-        <p>
-          This property is often confused with the <em>HTMLElement Interface</em> <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">.innerText</a></b> property as well as the <em>Element Interface</em> <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">.innerHTML</a></b> property. Where <em>.innerText</em> is aware of its rendered appearance, <em>.textContent</em> returns content for all elements, thus, it could produce visually disturbing results. In contrast with the <em>.innerHTML</em> property, which sets HTML markup of an element, <em>.textContent</em> has better performance for setting markup because its value is not parsed as HTML, essentially preventing XSS attacks.
-        </p>
-        <div class="textGroup">
-          <p>
-            The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank">Node.appendChild()</a></b> method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position. Its syntax accepts a single argument: the node to append to the given parent node, and this is most often an HTML tag.
-            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            var <em>p</em> = document<b>.createElement(</b><em>"p"</em><b>);</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            document.body<b>.appendChild(</b><em>p</em><b>)</b>;
-          </p>
-          <p>
-            The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_blank">Node.removeChild()</a></b> method removes a child node from the DOM and returns the removed node, which still exists in memory, but is no longer part of the DOM. The removed node can be referenced for later usage using the first syntax, but an error will be thrown for the second.
-            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            var oldChild = node<b>.removeChild(</b><em>child</em><b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            node<b>.removeChild(</b><em>child</em><b>)</b>;
-          </p>
-        </div>
-        <p>
-          Using <code>appendChild()</code> requires the <em>Document.createElement()</em> method to enable the addition of a new node. The syntax below illustrates how to amalgamate these methods, resulting in the creation of a new &#60;p&#62; element that is appended to the end of the document &#60;body&#62;. <small><em>ES6 introduced the <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">ParentNode.append()</a></b> method to replace this method as it supports multiple arguments and appending strings.</em></small>
-        </p>
         <table>
           <tr>
             <th><em>Node</em> Properties</th>
@@ -301,7 +264,24 @@
             <td>User Assigned Value</td>
           </tr>
         </table>
-        <!-- --><br>
+        <p>
+          This property is often confused with the <em>HTMLElement Interface</em> <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">.innerText</a></b> property as well as the <em>Element Interface</em> <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">.innerHTML</a></b> property. Where <em>.innerText</em> is aware of its rendered appearance, <em>.textContent</em> returns content for all elements, thus, it could produce visually disturbing results. In contrast with the <em>.innerHTML</em> property, which sets HTML markup of an element, <em>.textContent</em> has better performance for setting markup because its value is not parsed as HTML, essentially preventing XSS attacks.
+        </p>
+        <div class="textGroup">
+          <p>
+            The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank">Node.appendChild()</a></b> method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position. Its syntax accepts a single argument: the node to append to the given parent node, and this is most often an HTML tag.
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            var <em>p</em> = document<b>.createElement(</b><em>"p"</em><b>);</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.body<b>.appendChild(</b><em>p</em><b>)</b>;
+          </p>
+          <p>
+            The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_blank">Node.removeChild()</a></b> method removes a child node from the DOM and returns the removed node, which still exists in memory, but is no longer part of the DOM. The removed node can be referenced for later usage using the first syntax, but an error will be thrown for the second.
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            var oldChild = node<b>.removeChild(</b><em>child</em><b>)</b>; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            node<b>.removeChild(</b><em>child</em><b>)</b>;
+          </p>
+        </div>
+        <!-- -->
         <h4>HTMLElement Interface</h4>
         <p>
            The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement" target="_blank">HTMLElement Interface</a></b> represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it. Properties of this interface practiced here include <em>style</em>, <em>title</em> and <em>innerText</em>.
@@ -312,20 +292,6 @@
           &nbsp;target<b>.style</b>.property &#61; &#39;value&#39;;&nbsp;
           &#125; &#41;;
         </p>
-        <div class="textGroup">
-          <p>
-            The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">HTMLElement.title</a></b> property represents the title of an element displayed as a <em>tooltip</em> when a user places a mouse over a node. <b><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">HTML attributes</a></b> exist as properties on element objects and can be modified in this same fashion. 
-            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#40;'type', &#40;&#41; &#61;&#62; &#123;
-            &nbsp;target<b>.title</b> &#61; &#39;value&#39;;&nbsp;
-            &#125; &#41;;
-          </p>
-          <p>
-          The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">HTMLElement.innerText</a></b> property of the HTMLElement interface represents the "rendered" text content of a node and its descendants
-          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#40;'type', &#40;&#41; &#61;&#62; &#123;
-          &nbsp;target<b>.innerText</b> &#61; &#39;text string&#39;;&nbsp;
-          &#125; &#41;;
-        </p>
-        </div>
         <table>
           <tr>
             <th><em>HTMLElement</em> Properties</th>
@@ -360,6 +326,20 @@
             <td>Displays Rendered HTML Node Content</td>
           </tr>
         </table>
+        <div class="textGroup">
+          <p>
+            The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title" target="_blank">HTMLElement.title</a></b> property represents the title of an element displayed as a <em>tooltip</em> when a user places a mouse over a node. <b><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">HTML attributes</a></b> exist as properties on element objects and can be modified in this same fashion. 
+            <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#40;'type', &#40;&#41; &#61;&#62; &#123;
+            &nbsp;target<b>.title</b> &#61; &#39;value&#39;;&nbsp;
+            &#125; &#41;;
+          </p>
+          <p>
+          The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">HTMLElement.innerText</a></b> property of the HTMLElement interface represents the "rendered" text content of a node and its descendants
+          <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#40;'type', &#40;&#41; &#61;&#62; &#123;
+          &nbsp;target<b>.innerText</b> &#61; &#39;text string&#39;;&nbsp;
+          &#125; &#41;;
+        </p>
+        </div>
       </article>
       <hr style="margin-top: 16px;">
       <!-- [*] Function Examples -->
