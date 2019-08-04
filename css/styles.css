@@ -14,16 +14,20 @@ ul.table {
   text-align: center;
 }
 ul.notes {
+  margin: 0px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 125px);
   grid-auto-rows: auto;
   grid-gap: 8px 0;
 }
 .textGroup {
+  margin-top: -16px;
   display: grid;
   grid-auto-flow: row; 
-    grid-gap: 0; 
+  grid-gap: 0; 
 }
+.textGroup + p {
+  margin-top: -16px;}
 .codeGroup {
   display: grid;
   grid-auto-flow: row;  
