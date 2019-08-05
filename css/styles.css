@@ -2,95 +2,18 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 
-/* +++++++++++++++++++MY Styles +++++++++++++++++++++++++++++++ */
+/* ++++++++Temp Styles +++++++++++++++++++++++ */
 article {background-color: mistyrose;}
 article:nth-child(odd) {  background-color: mediumspringgreen;}
 section {background-color: lemonchiffon;}
-ul.table {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(88px, 95px));
-  grid-auto-rows: auto;
-  grid-gap: 8px 0;
-  text-align: center;
-}
-ul.notes {
-  margin: 0px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 125px);
-  grid-auto-rows: auto;
-  grid-gap: 8px 0;
-}
-.textGroup {
-  margin-top: -16px;
-  display: grid;
-  grid-auto-flow: row; 
-  grid-gap: 0; 
-}
-.textGroup + p {
-  margin-top: -16px;}
-.codeGroup {
-  display: grid;
-  grid-auto-flow: row;  
-}
-.exampleGroup {
-  display: grid;
-  grid-auto-flow: column;
-}
-.exampleArea{
-  background-color: #eff6ff;
-  border: 1px solid #7cb3ff;
-  border-radius: 4px;
-  padding: 4px 12px;
-}
-.workingExample {
-  border: 1px solid #000;
-  border-radius: 4px;
-  margin: 12px 0;
-  padding: 4px 12px;
-}
-@media only screen and (min-width: 1111px) {
-  ul.table {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 125px));
-    grid-auto-rows: auto;
-    grid-gap: 16px 0;
-  }
-  .textGroup {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0 4px;
-  }
-  .codeGroup {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 8px 16px;
-  }
-  .exampleGroup {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    grid-gap: 8px 16px;
-  }
-}
-/**/
-table {
-  font-family: arial, sans-serif;
-  font-size: 0.88em;
-  border-collapse: collapse;
-  width: 100%;
-  padding: 0;
-}
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 2px;
-}
-tr:nth-child(even) {background-color: #dddddd;}
+a { color: #fff;}
 
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 body {
-  margin: 0 2em;
+  margin: 0 0.8em;
   color: #484848;
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
@@ -102,12 +25,12 @@ body {
   }
 }
 
-h3 + div.codeGroup { margin-top: -32px;}
-h3 + p, h4 + p { margin-top: -20px;}
+
+h3 + p, h3 + div { margin-top: -20px;}
 h4 + img {margin-top: -20px;}
 h5 {margin: 0 auto;}
 h5 + p { margin-top: -2px;}
-/*h4 + p { margin-top: -5px;}*/
+p {margin: 5px 0;}
 p + ul { margin-top: -10px;}
 ul {padding-left: 0;}
 li {
@@ -152,3 +75,93 @@ li button:first-child {
   background: #508abc;
 }
 .tempLayout {padding-top: 16px;}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+/* +++++++++++++++++++SPECIAL Styles ++++++++++++++++++++++++ */
+ul.table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(88px, 95px));
+  grid-auto-rows: auto;
+  grid-gap: 8px 0;
+  text-align: center;
+}
+ul.notes {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 125px);
+  grid-auto-rows: auto;
+  grid-gap: 8px 0;
+}
+.textGroup {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: row; 
+  grid-gap: 0; 
+}
+.codeGroup {
+  display: grid;
+  grid-auto-flow: row;  
+}
+.exampleGroup {
+  display: grid;
+  grid-auto-flow: column;
+}
+.exampleArea{
+  background-color: #eff6ff;
+  border: 1px solid #7cb3ff;
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+.workingExample {
+  border: 1px solid #000;
+  border-radius: 4px;
+  margin: 12px 0;
+  padding: 4px 12px;
+}
+@media only screen and (min-width: 1111px) {
+  ul.table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 125px));
+    grid-auto-rows: auto;
+    grid-gap: 16px 0;
+  }
+  .textGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:auto;
+    grid-gap: 0 8px;
+  }
+  .codeGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px 16px;
+  }
+  .exampleGroup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-gap: 8px 16px;
+  }
+}
+/**/
+table {
+  margin: 8px 0;
+  font-family: arial, sans-serif;
+  font-size: 0.88em;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 0;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 2px;
+}
+tr:nth-child(even) {background-color: #dddddd;}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
