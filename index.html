@@ -94,7 +94,7 @@
       <hr style="margin-top: 16px;">
       <!-- [2] Pass Element to .addEventListener() -->
       <article>
-        <h2>[2] Pass Selector to an Event Listener</h2>
+        <h2>[2] Pass Selector to an Event Listener</h2><div>
         <p>
           Anytime a user interacts with a webpage, they generate some type of event. An <em>event</em> is something that occurs on a webpage such as a user action (ie clicking on a link) or an automated notification. The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget Interface</a></b> method <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">addEventListener()</a></b> sets up a function that will be called whenever that event is delivered to the document object. This method works by adding a function or an object that implements <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">EventListener</a></b> to the list of event listeners for the specified event type on the EventTarget on which it's called. It is appended to the <em>selector</em> to instantiate a function that will, again, be delivered to the document object when called. It registers an event handler and accepts two parameters: the first parameter defines the <em>type of event</em> to listen for while the second parameter represents the <em>listener</em> (ie Event Handler) that receives a notification when an event of the specified type occurs. 
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; selector<b>.addEventListener&#40;'type', &#40;&#41; &#61;&#62; &#123;listener&#125; &#41;</b>;
@@ -121,7 +121,7 @@
           <p>
             An <b>'<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/input">input</a>'</b> event is fired when the value of <em>&#60;input&#62;</em>, <em>&#60;select&#62;</em> and <em>&#60;textarea&#62;</em> elements have been modified.
           </p>
-        </div>
+        </div></div>
       </article>
       <hr>
       <!-- [3] Add Function to Listener -->
@@ -149,6 +149,7 @@
                 <br>In the second example, a function called <em>exec</em> uses the previous function as a parameter. The <em>func</em> keyword represents the <em>function say&#40;&#41;&#123;&#125;</em> while the <em>arg</em> keyword represents the actual argument. When called, the function passes the say function and a string as arguments.
               </p>
             </div>
+            <!-- -->
             <div>
               <h5>Function Expression</h5> 
               <img src="img/functions/functionExpression.png"> 
@@ -158,6 +159,7 @@
                 A function <em>Expression</em> allows usage of a function as a parameter for another function. In this example, the <em>function say&#40;&#41;&#123;&#125;</em> is passed directly into the <em>function exec&#40;&#41;&#123;&#125;</em> as a <em>parameter</em>, transforming the Declaration into an Expression! An expression can be used as a IIFE (Immediately Invoked Function Expression) which runs as soon as it is defined.
               </p>
             </div>
+            <!-- -->
             <div>
               <h5>Anonymous Function</h5> 
               <img src="img/functions/anonFunction.png">  
@@ -167,6 +169,7 @@
                 The main difference between the declaration and expression above is the function name. When a function is passed as a parameter, its name can be omitted during definition: the result is an <em>Anoymous Function</em>, which is a best practice for working in the DOM. That was until ES^ (see below). 
               </p>
             </div>
+            <!-- -->
             <div>
               <h5>Arrow Function</h5> 
               <img src="img/functions/arrowFunction.png"> 
@@ -179,6 +182,7 @@
           </div>
           To conclude, the sum of each declaration or expression will produce the exact same result. To be clear: a function can be passed as an argument/parameter, returned as values, contain methods and properties, and be stored in variables.
         </details>
+        <!-- -->
         <h3>Window Interface</h3>
         <p>
           The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">Window Interface</a></b> represents a window containing a DOM Document that points to the <em>document interface</em> that is loadded into that window. 
@@ -222,8 +226,7 @@
           DOM events allow JavaScript to register different event handlers on elements in an HTML document. The <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Document Interface</a></b> represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <em>DOM tree</em>: elements such as &#60;body&#62; and &#60;table&#62;that provides functionality globally to the document. This interface describes the common <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Properties">properties</a></b> and <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods">methods</a></b> for any kind of document and inherits from the Node and EventTarget interfaces.
         </p>
         <p>
-          The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">Document.createElement()</a></b> method creates the HTML element specified by tagName, which is a string that specifies the type of element to be created. The node of the created element is initialized with the value of tagName, returning the new element. 
-          <br><small>This method is used in unison with <code>appendChild()</code>: an advanced method was introduced in ES6:  <em> the <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">ParentNode.append()</a></b> method to replaced <code>appendChild()</code> as it supports multiple arguments and appending strings.</em></small>
+          The <b><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">Document.createElement()</a></b> method creates the HTML element specified by tagName, which is a string that specifies the type of element to be created. The node of the created element is initialized with the value of tagName, returning the new element. <small>This method is used in unison with <code>appendChild()</code>: an advanced method was introduced in ES6:  <em> the <b><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">ParentNode.append()</a></b> method to replaced <code>appendChild()</code> as it supports multiple arguments and appending strings.</em></small>
           <br><b>Syntax</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
           var element = document<b>.createElement(</b>tagName<b>)</b>;
         </p>
